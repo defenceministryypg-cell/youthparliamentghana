@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate profile links for Youth Parliament Ghana MPs and Appointees">
+  <title>Profile Link Generator | Youth Parliament Ghana</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --generator-navy: #0d2b50;
+      --generator-gold: #b08d57;
+    }
+
+    body {
+      background: #f6f8fb;
+    }
+
+    .generator-hero {
+      background: linear-gradient(135deg, #071b35, #0d2b50);
+      color: white;
+      padding: 145px 0 78px;
+    }
+
+    .generator-hero h1 {
+      font-weight: 800;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+    }
+
+    .generator-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: rgba(255,255,255,.78);
+      line-height: 1.8;
+    }
+
+    .generator-panel,
+    .stat-card {
+      background: white;
+      border: 1px solid #e2e7ed;
+      border-radius: 14px;
+      box-shadow: 0 14px 40px rgba(7,27,53,.06);
+    }
+
+    .stat-card {
+      padding: 18px;
+      height: 100%;
+      box-shadow: none;
+    }
+
+    .stat-number {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--generator-navy);
+    }
+
+    .stat-label,
+    .helper-note {
+      color: #687586;
+      font-size: .85rem;
+    }
+
+    .form-label {
+      font-size: .84rem;
+      font-weight: 700;
+      color: var(--generator-navy);
+    }
+
+    .form-control,
+    .form-select {
+      min-height: 46px;
+      border-color: #dce3eb;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--generator-gold);
+      box-shadow: 0 0 0 .2rem rgba(176,141,87,.15);
+    }
+
+    .btn-gold-custom {
+      background: var(--generator-gold);
+      border-color: var(--generator-gold);
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn-gold-custom:hover {
+      background: #92713f;
+      border-color: #92713f;
+      color: white;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    .table {
+      vertical-align: middle;
+      min-width: 820px;
+    }
+
+    .table thead th {
+      background: #f4f6f9;
+      color: var(--generator-navy);
+      font-size: .78rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .member-name {
+      color: var(--generator-navy);
+      font-weight: 750;
+    }
+
+    .member-subtitle {
+      color: #748092;
+      font-size: .83rem;
+    }
+
+    .profile-url {
+      display: block;
+      max-width: 330px;
+      overflow-wrap: anywhere;
+      font-size: .82rem;
+    }
+
+    .status-pill {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 30px;
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .status-active {
+      background: #e7f6ed;
+      color: #17683b;
+    }
+
+    .status-revoked {
+      background: #fbe9e9;
+      color: #a42323;
+    }
+
+    .type-pill {
+      background: #edf2f8;
+      color: #304968;
+    }
+
+    .empty-state {
+      padding: 55px 20px;
+      text-align: center;
+      color: #738094;
+    }
+
+    .empty-state i {
+      font-size: 2.7rem;
+      color: var(--generator-gold);
+    }
+
+    @media (max-width: 767px) {
+      .generator-hero {
+        padding: 120px 18px 65px;
+      }
+
+      .toolbar-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/YPG-LOGO.webp"
+           alt="Youth Parliament Ghana logo"
+           class="site-logo">
+
+      <span class="brand-text">
+        <strong>Youth Parliament Ghana</strong>
+        <small>Empowering Young Voices</small>
+      </span>
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-label="Toggle navigation">
+      <i class="bi bi-list text-white fs-3"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="mps.html">MPs</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="appointees.html">Appointees</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="ministries.html">Ministries</a>
+        </li>
+
+        <li class="nav-item ms-lg-3">
+          <a class="btn btn-gold-custom" href="mps.html">
+            Explore Directory
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="generator-hero text-center">
+  <div class="container">
+    <div class="section-label light mb-3">PUBLIC DIRECTORY TOOL</div>
+    <h1>Profile Link Generator</h1>
+    <p>
+      Search for any Member of Parliament or Presidential Appointee
+      and generate a direct link to their individual profile.
+    </p>
+  </div>
+</header>
+
+<main class="container py-5">
+
+  <!-- STATISTICS -->
+  <section class="row g-3 mb-4">
+    <div class="col-6 col-lg-3">
+      <div class="stat-card">
+        <div class="stat-number" id="totalCount">0</div>
+        <div class="stat-label">Profiles listed</div>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-3">
+      <div class="stat-card">
+        <div class="stat-number" id="mpCount">0</div>
+        <div class="stat-label">MP profiles</div>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-3">
+      <div class="stat-card">
+        <div class="stat-number" id="appointeeCount">0</div>
+        <div class="stat-label">Appointee profiles</div>
+      </div>
+    </div>
+
+    <div class="col-6 col-lg-3">
+      <div class="stat-card">
+        <div class="stat-number" id="revokedCount">0</div>
+        <div class="stat-label">Revoked profiles</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH AND FILTERS -->
+  <section class="generator-panel p-3 p-md-4 mb-4">
+    <div class="row g-3 align-items-end">
+
+      <div class="col-lg-5">
+        <label for="searchInput" class="form-label">
+          Search members
+        </label>
+
+        <div class="input-group">
+          <span class="input-group-text bg-white">
+            <i class="bi bi-search"></i>
+          </span>
+
+          <input id="searchInput"
+                 class="form-control"
+                 type="search"
+                 placeholder="Name, ID, constituency, position...">
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-2">
+        <label for="typeFilter" class="form-label">Member type</label>
+
+        <select id="typeFilter" class="form-select">
+          <option value="all">All members</option>
+          <option value="mp">MPs only</option>
+          <option value="appointee">Appointees only</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6 col-lg-2">
+        <label for="statusFilter" class="form-label">Status</label>
+
+        <select id="statusFilter" class="form-select">
+          <option value="all">All statuses</option>
+          <option value="active">Active</option>
+          <option value="revoked">Revoked</option>
+        </select>
+      </div>
+
+      <div class="col-sm-6 col-lg-3 d-grid">
+        <button type="button"
+                class="btn btn-gold-custom"
+                id="resetButton">
+          <i class="bi bi-arrow-counterclockwise me-1"></i>
+          Reset filters
+        </button>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row
+                justify-content-between align-items-md-center
+                gap-3 mt-4">
+
+      <div class="helper-note">
+        Links use existing member IDs and open in direct-profile view.
+        Revoked profiles remain subject to the access restrictions
+        enforced by their profile pages.
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row gap-2 toolbar-buttons">
+        <button type="button"
+                id="copyVisibleButton"
+                class="btn btn-outline-primary">
+          <i class="bi bi-copy me-1"></i>
+          Copy visible links
+        </button>
+
+        <button type="button"
+                id="exportButton"
+                class="btn btn-outline-primary">
+          <i class="bi bi-download me-1"></i>
+          Export CSV
+        </button>
+      </div>
+    </div>
+
+    <div id="statusMessage"
+         class="small mt-3"
+         role="status"
+         aria-live="polite"></div>
+  </section>
+
+  <!-- GENERATED LINKS -->
+  <section class="generator-panel">
+    <div class="d-flex justify-content-between align-items-center
+                flex-wrap gap-2 p-3 p-md-4 border-bottom">
+
+      <h2 class="h5 mb-0"
+          style="color:#0d2b50;font-weight:800">
+        Generated Profile Links
+      </h2>
+
+      <span class="small text-secondary">
+        Showing <strong id="visibleCount">0</strong> profiles
+      </span>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table table-hover mb-0">
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Individual profile link</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="linksTableBody"></tbody>
+      </table>
+    </div>
+
+    <div id="emptyState" class="empty-state d-none">
+      <i class="bi bi-link-45deg"></i>
+      <h3 class="h5 mt-3">No profiles found</h3>
+      <p class="mb-0">Try another search or filter.</p>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="footer-brand">
+          <img src="images/YPG-LOGO.webp"
+               alt="Youth Parliament Ghana logo"
+               class="site-logo">
+
+          <div>
+            <strong>Youth Parliament Ghana</strong>
+            <small>Empowering Young Voices</small>
+          </div>
+        </div>
+
+        <p class="mt-3">
+          A public directory supporting youth participation,
+          civic leadership and public service.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <h5>Directory</h5>
+        <a href="mps.html">Members of Parliament</a>
+        <a href="appointees.html">Appointees</a>
+      </div>
+
+      <div class="col-lg-3 col-6">
+        <h5>Explore</h5>
+        <a href="about.html">About Us</a>
+        <a href="news.html">News</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <span>© 2026 Youth Parliament Ghana. All rights reserved.</span>
+      <span>Empowering Young Voices</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- EXISTING WEBSITE DATA -->
+<script src="js/mp-data.js"></script>
+<script src="js/constituency-data.js"></script>
+<script src="js/appointee-data.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const $ = id => document.getElementById(id);
+
+  const searchInput = $("searchInput");
+  const typeFilter = $("typeFilter");
+  const statusFilter = $("statusFilter");
+  const tbody = $("linksTableBody");
+  const emptyState = $("emptyState");
+  const statusMessage = $("statusMessage");
+
+  const liveBase =
+    "https://youth-parliament-ghana-site.vercel.app/";
+
+  let allProfiles = [];
+
+  function text(value) {
+    return String(value == null ? "" : value).trim();
+  }
+
+  function norm(value) {
+    return text(value).toLowerCase().replace(/\s+/g, " ");
+  }
+
+  function escapeHTML(value) {
+    return text(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function statusOf(record) {
+    return norm(record.status) === "revoked"
+      ? "revoked"
+      : "active";
+  }
+
+  /*
+   * DIRECT PROFILE LINKS
+   * Existing IDs are preserved.
+   * The profile pages must recognize view=direct
+   * and hide navigation for these links.
+   */
+
+  function getMPUrl(record) {
+    return liveBase + "profile.html?id=" +
+      encodeURIComponent(text(record.id)) +
+      "&view=direct";
+  }
+
+  function getAppointeeUrl(record) {
+    return liveBase + "appointee-profile.html?id=" +
+      encodeURIComponent(text(record.id)) +
+      "&view=direct";
+  }
+
+  function normalizeConstituency(value) {
+    if (typeof window.normalizeConstituencyName === "function") {
+      return window.normalizeConstituencyName(value);
+    }
+
+    return norm(value)
+      .replace(/\bconstituency\b/g, "")
+      .replace(/[-/]+/g, " ")
+      .replace(/[^\w\s]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function officialConstituency(constituency, region) {
+    if (!text(constituency)) return null;
+
+    if (typeof window.getOfficialConstituency === "function") {
+      try {
+        const found =
+          window.getOfficialConstituency(
+            text(constituency),
+            text(region)
+          );
+
+        if (found) return found;
+      } catch (error) {}
+
+      try {
+        const found =
+          window.getOfficialConstituency(text(constituency));
+
+        if (found) return found;
+      } catch (error) {}
+    }
+
+    if (Array.isArray(window.constituencyData)) {
+      const input = normalizeConstituency(constituency);
+
+      const matches = window.constituencyData.filter(item => {
+        const candidate =
+          normalizeConstituency(item.constituency);
+
+        const regionMatches =
+          !text(region) ||
+          !text(item.region) ||
+          norm(region) === norm(item.region);
+
+        return candidate === input && regionMatches;
+      });
+
+      if (matches.length === 1) return matches[0];
+    }
+
+    return null;
+  }
+
+  function isLocalAppointment(person) {
+    const position = norm(person.position);
+
+    const keywords = [
+      "mce",
+      "municipal chief executive",
+      "dce",
+      "district chief executive",
+      "metropolitan chief executive",
+      "metro chief executive",
+      "district coordinator",
+      "municipal coordinator",
+      "metropolitan coordinator",
+      "metro coordinator",
+      "constituency coordinator",
+      "constituency representative",
+      "constituency director",
+      "district director",
+      "municipal director",
+      "metropolitan director",
+      "metro director",
+      "district representative",
+      "municipal representative",
+      "metropolitan representative",
+      "metro representative",
+      "district officer",
+      "municipal officer",
+      "metropolitan officer",
+      "constituency officer",
+      "district liaison",
+      "municipal liaison",
+      "metropolitan liaison",
+      "constituency liaison"
+    ];
+
+    return !!position &&
+      keywords.some(keyword =>
+        position === keyword || position.includes(keyword)
+      );
+  }
+
+  function prepareData() {
+    const mps =
+      (Array.isArray(window.mpData)
+        ? window.mpData
+        : typeof mpData !== "undefined" && Array.isArray(mpData)
+          ? mpData
+          : [])
+      .filter(person =>
+        person && text(person.id) && text(person.name)
+      )
+      .map(person => ({
+        id: text(person.id),
+        name: text(person.name),
+        type: "mp",
+        typeLabel: "MP",
+        position: text(person.position) || "Member of Parliament",
+        area: [
+          text(person.constituency),
+          text(person.region)
+        ].filter(Boolean).join(" · "),
+        ministry: "",
+        status: statusOf(person),
+        url: getMPUrl(person)
+      }));
+
+    const appointees =
+      (Array.isArray(window.appointeeData)
+        ? window.appointeeData
+        : typeof appointeeData !== "undefined" &&
+          Array.isArray(appointeeData)
+          ? appointeeData
+          : [])
+      .filter(person =>
+        person && text(person.id) && text(person.name)
+      )
+      .filter(person => {
+        // Preserve the existing rule for invalid local appointments.
+        const local = isLocalAppointment(person);
+
+        const official = officialConstituency(
+          person.constituency,
+          person.region
+        );
+
+        return !(local && !official);
+      })
+      .map(person => ({
+        id: text(person.id),
+        name: text(person.name),
+        type: "appointee",
+        typeLabel: "Appointee",
+        position: text(person.position) || "Appointee",
+        area: [
+          text(person.constituency),
+          text(person.region)
+        ].filter(Boolean).join(" · "),
+        ministry: text(person.ministry),
+        status: statusOf(person),
+        url: getAppointeeUrl(person)
+      }));
+
+    allProfiles = [...mps, ...appointees]
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    $("totalCount").textContent = allProfiles.length;
+    $("mpCount").textContent = mps.length;
+    $("appointeeCount").textContent = appointees.length;
+
+    $("revokedCount").textContent =
+      allProfiles.filter(person =>
+        person.status === "revoked"
+      ).length;
+  }
+
+  function filteredProfiles() {
+    const query = norm(searchInput.value);
+    const type = typeFilter.value;
+    const status = statusFilter.value;
+
+    return allProfiles.filter(person => {
+      const searchable = norm([
+        person.id,
+        person.name,
+        person.position,
+        person.area,
+        person.ministry,
+        person.typeLabel,
+        person.status
+      ].join(" "));
+
+      return (!query || searchable.includes(query)) &&
+        (type === "all" || person.type === type) &&
+        (status === "all" || person.status === status);
+    });
+  }
+
+  function render() {
+    const data = filteredProfiles();
+
+    tbody.innerHTML = "";
+
+    $("visibleCount").textContent = data.length;
+    emptyState.classList.toggle("d-none", data.length !== 0);
+
+    data.forEach(person => {
+      const tr = document.createElement("tr");
+
+      const area = person.area
+        ? `<div class="member-subtitle">${escapeHTML(person.area)}</div>`
+        : "";
+
+      const ministry = person.ministry
+        ? `<div class="member-subtitle">${escapeHTML(person.ministry)}</div>`
+        : "";
+
+      tr.innerHTML = `
+        <td>
+          <div class="member-name">${escapeHTML(person.name)}</div>
+
+          <div class="member-subtitle">
+            ${escapeHTML(person.id)} · ${escapeHTML(person.position)}
+          </div>
+
+          ${area}${ministry}
+        </td>
+
+        <td>
+          <span class="status-pill type-pill">
+            ${escapeHTML(person.typeLabel)}
+          </span>
+        </td>
+
+        <td>
+          <span class="status-pill ${
+            person.status === "revoked"
+              ? "status-revoked"
+              : "status-active"
+          }">
+            ${escapeHTML(person.status)}
+          </span>
+        </td>
+
+        <td>
+          <a class="profile-url"
+             href="${escapeHTML(person.url)}"
+             target="_blank"
+             rel="noopener">
+            ${escapeHTML(person.url)}
+          </a>
+        </td>
+
+        <td>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-primary action-btn copy-one"
+                    type="button"
+                    data-id="${escapeHTML(person.id)}"
+                    data-type="${person.type}">
+              <i class="bi bi-copy me-1"></i>Copy
+            </button>
+
+            <button class="btn btn-sm btn-outline-secondary action-btn share-one"
+                    type="button"
+                    data-id="${escapeHTML(person.id)}"
+                    data-type="${person.type}">
+              <i class="bi bi-share me-1"></i>Share
+            </button>
+          </div>
+        </td>
+      `;
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  async function copyText(value) {
+    try {
+      await navigator.clipboard.writeText(value);
+
+      statusMessage.className = "small mt-3 text-success";
+      statusMessage.textContent = "Link copied to clipboard.";
+    } catch (error) {
+      window.prompt("Copy this link:", value);
+    }
+  }
+
+  searchInput.addEventListener("input", render);
+  typeFilter.addEventListener("change", render);
+  statusFilter.addEventListener("change", render);
+
+  $("resetButton").addEventListener("click", function () {
+    searchInput.value = "";
+    typeFilter.value = "all";
+    statusFilter.value = "all";
+    statusMessage.textContent = "";
+    render();
+  });
+
+  tbody.addEventListener("click", async function (event) {
+    const copyButton = event.target.closest(".copy-one");
+    const shareButton = event.target.closest(".share-one");
+    const button = copyButton || shareButton;
+
+    if (!button) return;
+
+    const person = allProfiles.find(item =>
+      item.id === button.dataset.id &&
+      item.type === button.dataset.type
+    );
+
+    if (!person) return;
+
+    if (copyButton) {
+      await copyText(person.url);
+      return;
+    }
+
+    const shareData = {
+      title: person.name + " | Youth Parliament Ghana",
+      text: "View " + person.name + "'s profile:",
+      url: person.url
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          await copyText(person.url);
+        }
+      }
+    } else {
+      await copyText(person.url);
+    }
+  });
+
+  $("copyVisibleButton").addEventListener("click", async function () {
+    const data = filteredProfiles();
+
+    if (!data.length) {
+      statusMessage.className = "small mt-3 text-warning";
+      statusMessage.textContent =
+        "There are no visible links to copy.";
+      return;
+    }
+
+    const links = data.map(person =>
+      `${person.name} (${person.id}) — ${person.url}`
+    ).join("\n");
+
+    await copyText(links);
+  });
+
+  $("exportButton").addEventListener("click", function () {
+    const data = filteredProfiles();
+
+    if (!data.length) {
+      statusMessage.className = "small mt-3 text-warning";
+      statusMessage.textContent =
+        "There are no visible links to export.";
+      return;
+    }
+
+    const columns = [
+      "Name",
+      "ID",
+      "Type",
+      "Position",
+      "Constituency/Region",
+      "Ministry",
+      "Status",
+      "Profile URL"
+    ];
+
+    const csvCell = value =>
+      '"' + text(value).replace(/"/g, '""') + '"';
+
+    const rows = [
+      columns,
+      ...data.map(person => [
+        person.name,
+        person.id,
+        person.typeLabel,
+        person.position,
+        person.area,
+        person.ministry,
+        person.status,
+        person.url
+      ])
+    ];
+
+    const csv = "\uFEFF" +
+      rows.map(row =>
+        row.map(csvCell).join(",")
+      ).join("\r\n");
+
+    const blob = new Blob([csv], {
+      type: "text/csv;charset=utf-8;"
+    });
+
+    const downloadUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = downloadUrl;
+    link.download = "ypg-profile-links.csv";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    URL.revokeObjectURL(downloadUrl);
+
+    statusMessage.className = "small mt-3 text-success";
+    statusMessage.textContent = "CSV export generated.";
+  });
+
+  try {
+    prepareData();
+    render();
+  } catch (error) {
+    console.error(error);
+
+    statusMessage.className = "small mt-3 text-danger";
+    statusMessage.textContent =
+      "Unable to load profile records. Check that your data files are available.";
+  }
+});
+</script>
+
+</body>
+</html>

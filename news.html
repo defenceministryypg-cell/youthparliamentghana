@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>News & Updates | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+    <meta name="description"
+          content="Read the latest news, official announcements, statements, ministry updates, programmes and events from Youth Parliament Ghana.">
+
+    <meta name="keywords"
+          content="Youth Parliament Ghana news, Youth Parliament Ghana updates, Ghana youth news, Youth Parliament announcements, Youth Parliament events">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://youth-parliament-ghana-site.vercel.app/news.html">
+
+    <!-- Bootstrap -->
+    
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+
+    <style>
+
+        /* =========================
+           NEWS HEADER
+        ========================= */
+
+        .news-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 27, 53, 0.98),
+                    rgba(13, 43, 80, 0.95)
+                );
+
+            padding: 150px 0 80px;
+
+            color: white;
+        }
+
+
+        .news-header h1 {
+
+            font-size: clamp(40px, 5vw, 58px);
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+
+        .news-header p {
+
+            max-width: 680px;
+
+            margin: auto;
+
+            color:
+                rgba(255,255,255,0.72);
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FILTER AREA
+        ========================= */
+
+        .news-tools {
+
+            margin-top: -35px;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        .filter-card {
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(7, 27, 53, 0.10);
+        }
+
+
+        .filter-card label {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--navy);
+
+            margin-bottom: 8px;
+        }
+
+
+        .filter-card .form-control,
+        .filter-card .form-select {
+
+            min-height: 48px;
+
+            border-color:
+                var(--border);
+
+            border-radius: 7px;
+        }
+
+
+        .filter-card .form-control:focus,
+        .filter-card .form-select:focus {
+
+            border-color:
+                var(--gold);
+
+            box-shadow:
+                0 0 0 0.2rem
+                rgba(215,169,40,0.12);
+        }
+
+
+        /* =========================
+           FEATURED NEWS
+        ========================= */
+
+        .featured-news {
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy),
+                    var(--navy-light)
+                );
+
+            color: white;
+
+            margin-bottom: 55px;
+        }
+
+
+        .featured-image {
+
+            min-height: 350px;
+
+            background:
+                linear-gradient(
+                    rgba(7,27,53,0.15),
+                    rgba(7,27,53,0.55)
+                ),
+                url("images/ypg.webp")
+                center/cover no-repeat;
+        }
+
+
+        .featured-content {
+
+            padding: 45px;
+        }
+
+
+        .featured-badge {
+
+            display: inline-block;
+
+            background:
+                rgba(215,169,40,0.16);
+
+            border:
+                1px solid
+                rgba(215,169,40,0.45);
+
+            color:
+                var(--gold-light);
+
+            padding: 7px 13px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .featured-content h2 {
+
+            font-size: 32px;
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+
+        .featured-content p {
+
+            color:
+                rgba(255,255,255,0.70);
+
+            line-height: 1.8;
+
+            margin-bottom: 22px;
+        }
+
+
+        .news-date {
+
+            color:
+                #9a7410;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+        }
+
+
+        .featured-content .news-date {
+
+            color:
+                var(--gold-light);
+        }
+
+
+        /* =========================
+           NEWS CARD
+        ========================= */
+
+        .news-item {
+
+            height: 100%;
+        }
+
+
+        .news-card {
+
+            height: 100%;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+        }
+
+
+        .news-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(7,27,53,0.10);
+        }
+
+
+        .news-card-image {
+    width: 100%;
+    height: 280px;
+    background: #f5f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-card-image img {
+    transform: scale(1.02);
+}
+
+
+        .news-card:hover
+        .news-card-image img {
+
+            transform:
+                scale(1.04);
+        }
+
+
+        .news-placeholder {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color:
+                #9a7410;
+
+            font-size: 50px;
+        }
+
+
+        .news-card-content {
+
+            padding: 25px;
+        }
+
+
+        .news-category {
+
+            display: inline-block;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            color:
+                #9a7410;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .news-card h3 {
+
+            color:
+                var(--navy);
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            line-height: 1.4;
+
+            margin-bottom: 12px;
+        }
+
+
+        .news-card p {
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            margin-bottom: 18px;
+        }
+
+
+        .read-more {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            color:
+                #9a7410;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+
+        .read-more i {
+
+            margin-left: 7px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .read-more:hover {
+
+            color:
+                var(--gold);
+        }
+
+
+        .read-more:hover i {
+
+            transform:
+                translateX(4px);
+        }
+
+
+        /* =========================
+           RESULTS
+        ========================= */
+
+        .result-count {
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .result-count strong {
+
+            color:
+                var(--navy);
+        }
+
+
+        /* =========================
+           NO RESULTS
+        ========================= */
+
+        .no-results {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+
+        .no-results i {
+
+            font-size: 55px;
+
+            color:
+                #b8c0c9;
+
+            margin-bottom: 20px;
+        }
+
+
+        .no-results h3 {
+
+            color:
+                var(--navy);
+
+            font-weight: 800;
+        }
+
+
+        .no-results p {
+
+            color:
+                var(--muted);
+        }
+    /* ==============================
+   SWEARING-IN VIDEO
+================================ */
+
+.video-container {
+    width: 100%;
+    height: auto;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: #000;
+}
+@media (max-width: 768px) {
+
+    .video-container video {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .news-header {
+
+                padding:
+                    130px 20px 70px;
+            }
+
+
+            .news-header h1 {
+
+                font-size: 38px;
+            }
+
+
+            .news-tools {
+
+                margin-top: -25px;
+            }
+
+
+            .featured-content {
+
+                padding: 30px 25px;
+            }
+
+
+            .featured-content h2 {
+
+                font-size: 26px;
+            }
+
+
+            .featured-image {
+
+                min-height: 250px;
+            }
+        .featured-image {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    animation: swearingFlyerMove 6s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes swearingFlyerMove {
+    0% {
+        transform: scale(1.05) translateX(-12px);
+    }
+
+    50% {
+        transform: scale(1.08) translateX(0);
+    }
+
+    100% {
+        transform: scale(1.05) translateX(12px);
+    }
+}
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+
+        <a
+            class="navbar-brand d-flex align-items-center"
+            href="index.html">
+
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana"
+                class="site-logo">
+
+
+            <span class="brand-text">
+
+                <strong>
+                    Youth Parliament Ghana
+                </strong>
+
+                <small>
+                    Parliamentary Directory
+                </small>
+
+            </span>
+
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <i class="bi bi-list text-white fs-3"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+
+            <ul
+                class="navbar-nav ms-auto
+                       align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="mps.html">
+
+                        MPs
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="appointees.html">
+
+                        Appointees
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="ministries.html">
+
+                        Ministries
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="news.html">
+
+                        News
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        href="mps.html"
+                        class="btn btn-gold">
+
+                        Explore Directory
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     NEWS HEADER
+========================= -->
+
+<section class="news-header">
+
+    <div class="container text-center">
+
+        <div class="section-label light">
+            NEWS & UPDATES
+        </div>
+
+        <h1>
+            Latest News & Updates
+        </h1>
+
+        <p>
+            Stay informed with the latest news, official announcements,
+            statements, activities, programmes and events from
+            Youth Parliament Ghana.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FILTERS
+========================= -->
+
+<section class="news-tools">
+
+    <div class="container">
+
+
+        <div class="filter-card">
+
+
+            <div class="row g-3">
+
+
+                <!-- SEARCH -->
+
+                <div class="col-lg-6">
+
+                    <label for="newsSearch">
+
+                        Search News
+
+                    </label>
+
+
+                    <div class="input-group">
+
+
+                        <span
+                            class="input-group-text bg-white">
+
+                            <i class="bi bi-search"></i>
+
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="newsSearch"
+                            class="form-control"
+                            placeholder="Search news...">
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="col-lg-4">
+
+                    <label for="newsCategory">
+
+                        Category
+
+                    </label>
+
+
+                    <select
+                        id="newsCategory"
+                        class="form-select">
+
+
+                        <option value="">
+
+                            All Categories
+
+                        </option>
+
+
+                        <option value="announcement">
+
+                            Announcements
+
+                        </option>
+
+
+                        <option value="event">
+
+                            Events
+
+                        </option>
+
+
+                        <option value="parliament">
+
+                            Parliament
+
+                        </option>
+
+
+                        <option value="youth">
+
+                            Youth
+
+                        </option>
+
+
+                        <option value="general">
+
+                            General
+
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+                <!-- RESET -->
+
+                <div
+                    class="col-lg-2
+                           d-flex
+                           align-items-end">
+
+
+                    <button
+                        type="button"
+                        id="resetNews"
+                        class="btn btn-outline-secondary
+                               w-100">
+
+                        <i
+                            class="bi bi-arrow-counterclockwise">
+                        </i>
+
+                        Reset
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWS CONTENT
+========================= -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <!-- FEATURED -->
+
+        <div class="featured-news">
+
+            <div class="row g-0
+                        align-items-stretch">
+
+
+                <div
+                    class="col-lg-6
+                           featured-image">
+                </div>
+
+
+                <div
+                    class="col-lg-6
+                           featured-content">
+
+
+                    <div class="featured-badge">
+
+                        FEATURED
+
+                    </div>
+
+
+                    <div class="news-date">
+
+                        September 2026
+
+                    </div>
+
+
+                    <h2>
+
+                        Youth Parliament Ghana
+                        Public Directory
+
+                    </h2>
+
+
+                    <p>
+
+                        The Youth Parliament Ghana
+                        public directory provides an
+                        accessible platform for viewing
+                        parliamentary representatives,
+                        appointees and ministries.
+
+                    </p>
+
+
+                    <a
+                        href="#"
+                        class="btn btn-gold">
+
+                        Read More
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TITLE -->
+
+        <div
+            class="d-flex
+                   justify-content-between
+                   align-items-center
+                   mb-4">
+
+
+            <h2 class="section-title mb-0">
+
+                News & Updates
+
+            </h2>
+
+
+            <div class="result-count">
+
+                Showing
+
+                <strong id="resultCount">
+                    6
+                </strong>
+
+                stories
+
+            </div>
+
+        </div>
+
+
+        <!-- NEWS GRID -->
+
+        <div
+            class="row g-4"
+            id="newsGrid">
+
+
+          <!-- NEWS 1 — UPCOMING SWEARING-IN CEREMONY -->
+
+<div
+    class="col-lg-4 col-md-6 news-item"
+    data-title="Youth Parliament Ghana Swearing-In Ceremony"
+    data-category="event"
+>
+
+    <article class="news-card">
+
+        <!-- NEWS IMAGE -->
+        <div class="news-card-image">
+
+            <img
+                src="images/swearing.webp"
+                alt="Youth Parliament Ghana Swearing-In Ceremony"
+            >
+
+        </div>
+
+
+        <!-- NEWS CONTENT -->
+        <div class="news-card-content">
+
+            <div class="news-category">
+                Upcoming Event
+            </div>
+
+
+            <div class="news-date">
+                November 2026
+            </div>
+
+
+            <h3>
+                Youth Parliament Ghana
+                Swearing-In Ceremony
+            </h3>
+
+
+            <p>
+                Youth Parliament Ghana is set to hold its
+                official Swearing-In Ceremony for newly
+                appointed and elected Youth Members of
+                Parliament and officials.
+            </p>
+
+
+            <a
+                href="#"
+                class="read-more"
+            >
+
+                Event Details
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+            <!-- NEWS 2 — SWEARING-IN CEREMONY -->
+<!-- NEWS 2 — SWEARING-IN CEREMONY -->
+<div
+    class="col-lg-4 col-md-6 news-item"
+    data-title="Youth Parliament Ghana Swearing-In Ceremony"
+    data-category="event"
+>
+    <article class="news-card">
+
+        <div class="news-card-image video-container">
+
+            <video
+                id="swearingInVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+            >
+                <source
+                    src="images/swearing-In.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support HTML5 video.
+            </video>
+
+        </div>
+
+        <div class="news-card-content">
+
+            <div class="news-category">
+                Upcoming Event
+            </div>
+
+            <div class="news-date">
+                November 2026
+            </div>
+
+            <h3>
+                Youth Parliament Ghana Swearing-In Ceremony
+            </h3>
+
+            <p>
+                Youth Parliament Ghana is set to hold its
+                official Swearing-In Ceremony for newly
+                appointed and elected Youth Members of
+                Parliament and officials.
+            </p>
+
+            <a href="#" class="read-more">
+                Event Details
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </article>
+</div>
+            <!-- NEWS 3 -->
+
+            <div
+                class="col-lg-4 col-md-6 news-item"
+                data-title="Youth Parliament Event"
+                data-category="event">
+
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <div class="news-placeholder">
+
+                            <i
+                                class="bi bi-calendar-event">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-category">
+
+                            Event
+
+                        </div>
+
+
+                        <div class="news-date">
+
+                            September 2026
+
+                        </div>
+
+
+                        <h3>
+
+                            Youth Parliament Event
+
+                        </h3>
+
+
+                        <p>
+
+                            Details about upcoming Youth
+                            Parliament events and programmes
+                            can be published here.
+
+                        </p>
+
+
+                        <a
+                            href="#"
+                            class="read-more">
+
+                            Read Article
+
+                            <i
+                                class="bi bi-arrow-right">
+                            </i>
+
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- NEWS 4 -->
+
+            <div
+                class="col-lg-4 col-md-6 news-item"
+                data-title="Youth Participation Parliament"
+                data-category="youth">
+
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <div class="news-placeholder">
+
+                            <i
+                                class="bi bi-people">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-category">
+
+                            Youth
+
+                        </div>
+
+
+                        <div class="news-date">
+
+                            September 2026
+
+                        </div>
+
+
+                        <h3>
+
+                            Youth Participation
+
+                        </h3>
+
+
+                        <p>
+
+                            Updates on youth participation,
+                            leadership and civic engagement.
+
+                        </p>
+
+
+                        <a
+                            href="#"
+                            class="read-more">
+
+                            Read Article
+
+                            <i
+                                class="bi bi-arrow-right">
+                            </i>
+
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- NEWS 5 -->
+
+            <div
+                class="col-lg-4 col-md-6 news-item"
+                data-title="Parliamentary Update"
+                data-category="parliament">
+
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <div class="news-placeholder">
+
+                            <i
+                                class="bi bi-building">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-category">
+
+                            Parliament
+
+                        </div>
+
+
+                        <div class="news-date">
+
+                            September 2026
+
+                        </div>
+
+
+                        <h3>
+
+                            Parliamentary Update
+
+                        </h3>
+
+
+                        <p>
+
+                            Parliamentary information,
+                            activities and updates can
+                            be published in this section.
+
+                        </p>
+
+
+                        <a
+                            href="#"
+                            class="read-more">
+
+                            Read Article
+
+                            <i
+                                class="bi bi-arrow-right">
+                            </i>
+
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- NEWS 6 -->
+
+            <div
+                class="col-lg-4 col-md-6 news-item"
+                data-title="Youth Parliament General Update"
+                data-category="general">
+
+
+                <article class="news-card">
+
+
+                    <div class="news-card-image">
+
+                        <div class="news-placeholder">
+
+                            <i
+                                class="bi bi-newspaper">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="news-card-content">
+
+
+                        <div class="news-category">
+
+                            General
+
+                        </div>
+
+
+                        <div class="news-date">
+
+                            September 2026
+
+                        </div>
+
+
+                        <h3>
+
+                            General Update
+
+                        </h3>
+
+
+                        <p>
+
+                            General news and updates from
+                            the Youth Parliament Ghana
+                            platform.
+
+                        </p>
+
+
+                        <a
+                            href="#"
+                            class="read-more">
+
+                            Read Article
+
+                            <i
+                                class="bi bi-arrow-right">
+                            </i>
+
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="no-results"
+            id="noResults">
+
+
+            <i class="bi bi-newspaper"></i>
+
+
+            <h3>
+
+                No News Found
+
+            </h3>
+
+
+            <p>
+
+                Try changing your search or
+                category filter.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-5">
+
+
+                <div class="footer-brand">
+
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo">
+
+
+                    <div>
+
+                        <strong>
+                            Youth Parliament Ghana
+                        </strong>
+
+                        <small>
+                            Parliamentary Directory
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    A public directory designed to provide
+                    accessible information about parliamentary
+                    representatives, appointees and ministries.
+
+                </p>
+
+
+                  <div class="social-links">
+
+    <!-- Facebook -->
+    <a
+        href="https://www.facebook.com/share/1LT8P5ibFE/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/youthparliamentgh?stkn=MTg4YjJ6NDMwa25oNA%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- X / Twitter -->
+    <a
+        href="https://x.com/youthparl?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on X">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+        href="https://www.tiktok.com/@YouthParliamentGH"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <!-- YouTube -->
+<a
+    href="https://youtube.com/@youthparliament-d4f?si=9gVg4iPJhuSQm0vC"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Youth Parliament Ghana on YouTube">
+
+    <i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+
+                <h5>
+                    Directory
+                </h5>
+
+
+                <a href="mps.html">
+                    Members of Parliament
+                </a>
+
+
+                <a href="appointees.html">
+                    Appointees
+                </a>
+
+
+                <a href="ministries.html">
+                    Ministries
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+
+                <h5>
+                    Explore
+                </h5>
+
+
+                <a href="news.html">
+                    News
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-4">
+
+
+                <h5>
+                    Information
+                </h5>
+
+
+                <p>
+
+                    This directory is intended to provide
+                    accessible civic information.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+
+            <span>
+
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+
+            </span>
+
+
+            <span>
+
+                Parliamentary Directory
+
+            </span>
+
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Main JS -->
+
+<script src="js/main.js"></script>
+
+
+<!-- News Filtering -->
+
+<script>
+
+    const newsSearch =
+        document.getElementById(
+            "newsSearch"
+        );
+
+
+    const newsCategory =
+        document.getElementById(
+            "newsCategory"
+        );
+
+
+    const resetNews =
+        document.getElementById(
+            "resetNews"
+        );
+
+
+    const newsItems =
+        document.querySelectorAll(
+            ".news-item"
+        );
+
+
+    const resultCount =
+        document.getElementById(
+            "resultCount"
+        );
+
+
+    const noResults =
+        document.getElementById(
+            "noResults"
+        );
+
+
+    function filterNews() {
+
+
+        const search =
+            newsSearch.value
+                .toLowerCase()
+                .trim();
+
+
+        const category =
+            newsCategory.value
+                .toLowerCase();
+
+
+        let visibleCount = 0;
+
+
+        newsItems.forEach(
+            news => {
+
+
+                const title =
+                    news.dataset.title
+                        .toLowerCase();
+
+
+                const newsCategoryValue =
+                    news.dataset.category
+                        .toLowerCase();
+
+
+                const matchesSearch =
+                    title.includes(search);
+
+
+                const matchesCategory =
+                    !category ||
+                    newsCategoryValue === category;
+
+
+                if (
+                    matchesSearch &&
+                    matchesCategory
+                ) {
+
+                    news.style.display = "";
+
+                    visibleCount++;
+
+                } else {
+
+                    news.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        resultCount.textContent =
+            visibleCount;
+
+
+        if (visibleCount === 0) {
+
+            noResults.style.display =
+                "block";
+
+        } else {
+
+            noResults.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    newsSearch.addEventListener(
+        "input",
+        filterNews
+    );
+
+
+    newsCategory.addEventListener(
+        "change",
+        filterNews
+    );
+
+
+    resetNews.addEventListener(
+        "click",
+        function () {
+
+            newsSearch.value = "";
+
+            newsCategory.value = "";
+
+            filterNews();
+
+        }
+    );
+
+</script>
+
+
+</body>
+</html>

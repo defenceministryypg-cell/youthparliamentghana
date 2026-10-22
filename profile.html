@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="View official member profiles of Youth Parliament Ghana, including parliamentary information, constituency, education, profession, experience and biography.">
+
+    <meta name="keywords"
+          content="Youth Parliament Ghana members, Youth Parliament Ghana MP profiles, Ghana youth representatives, member profiles">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://youth-parliament-ghana-site.vercel.app/profile.html">
+
+    <title>Member Profiles | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+    <!-- Bootstrap -->
+    
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ========================================
+   PAGE TOP & DOWN BUTTONS
+======================================== */
+
+.page-navigation {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page-navigation button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #b08d57;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.page-navigation button:hover {
+    background: #8f713f;
+    transform: translateY(-3px);
+}
+
+.page-navigation button:active {
+    transform: scale(0.95);
+}
+
+        /* =========================
+           PROFILE HEADER
+        ========================= */
+
+        .profile-header {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 27, 53, 0.98),
+                    rgba(13, 43, 80, 0.96)
+                );
+
+            padding: 80px 0 100px;
+
+            color: white;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            color: rgba(255,255,255,0.75);
+
+            font-size: 14px;
+
+            margin-bottom: 35px;
+
+            transition: 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--gold-light);
+        }
+
+
+        /* =========================
+           PROFILE CARD
+        ========================= */
+
+        .profile-card {
+            background: white;
+
+            border-radius: 18px;
+
+            border: 1px solid var(--border);
+
+            margin-top: -70px;
+
+            position: relative;
+
+            z-index: 5;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 20px 50px rgba(7, 27, 53, 0.10);
+        }
+
+
+        /* =========================
+           PROFILE TOP
+        ========================= */
+
+        .profile-top {
+            padding: 40px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 35px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        /* PROFILE IMAGE */
+
+        .profile-photo {
+            width: 180px;
+            height: 210px;
+
+            flex-shrink: 0;
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            background: var(--light);
+
+            border: 4px solid white;
+
+            box-shadow:
+                0 8px 25px rgba(7, 27, 53, 0.12);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        /* PLACEHOLDER */
+
+        .profile-placeholder {
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            color: #a67c0d;
+
+            font-size: 70px;
+        }
+
+
+        /* PROFILE DETAILS */
+
+        .profile-main {
+            flex: 1;
+        }
+
+        .profile-label {
+            display: inline-block;
+
+            color: #9a7410;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+        .profile-main h1 {
+            color: var(--navy);
+
+            font-size: 38px;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+        }
+
+        .profile-position {
+            color: var(--muted);
+
+            font-size: 16px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* PROFILE META */
+
+        .profile-meta {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .meta-item {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            background: var(--light);
+
+            color: var(--text);
+
+            padding: 9px 13px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+        }
+
+        .meta-item i {
+            color: var(--gold);
+        }
+
+        @media (max-width: 576px) {
+    .page-navigation {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .page-navigation button {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+
+        /* =========================
+           PROFILE CONTENT
+        ========================= */
+
+        .profile-content {
+            padding: 45px;
+        }
+
+        .profile-section {
+            margin-bottom: 45px;
+        }
+
+        .profile-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .profile-section h2 {
+            color: var(--navy);
+
+            font-size: 23px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            padding-bottom: 12px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .profile-section p {
+            color: var(--muted);
+
+            line-height: 1.9;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           INFORMATION LIST
+        ========================= */
+
+        .info-list {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .info-list li {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list strong {
+            color: var(--navy);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            background: var(--light);
+
+            border-radius: 12px;
+
+            padding: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 15px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            background: rgba(215,169,40,0.15);
+
+            color: #9a7410;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           SOCIAL LINKS
+        ========================= */
+
+        .profile-socials {
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+        }
+
+        .profile-socials a {
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            border: 1px solid var(--border);
+
+            color: var(--navy);
+
+            transition: 0.3s ease;
+        }
+
+        .profile-socials a:hover {
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: var(--navy);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .profile-header {
+                padding: 60px 0 80px;
+            }
+
+            .profile-card {
+                margin-top: -50px;
+            }
+
+            .profile-top {
+                padding: 25px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 25px;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 180px;
+            }
+
+            .profile-main h1 {
+                font-size: 30px;
+            }
+
+            .profile-content {
+                padding: 28px 25px;
+            }
+
+            .profile-section h2 {
+                font-size: 20px;
+            }
+
+            .info-list li {
+                flex-direction: column;
+
+                gap: 5px;
+            }
+            .profile-list {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.profile-list li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.profile-list li::marker {
+    color: #b08d57;
+    font-weight: bold;
+}
+
+        }
+        /* ========================================
+   REVOKED PROFILE ACCESS
+======================================== */
+
+.revoked-profile {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 50px 30px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eadede;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(7, 27, 53, 0.10);
+}
+
+.revoked-profile .revoked-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(180, 40, 40, 0.10);
+    color: #b42828;
+    font-size: 38px;
+}
+
+.revoked-profile h2 {
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.revoked-profile p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+.revoked-profile .member-name {
+    color: #b42828;
+    font-weight: 800;
+}
+
+.revoked-profile .admin-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: #faf7ef;
+    border: 1px solid rgba(215,169,40,0.25);
+    border-radius: 10px;
+    color: #7d641c;
+    font-weight: 600;
+}
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center"
+           href="index.html">
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana Logo"
+                class="site-logo">
+
+            <span class="brand-text">
+
+                <strong>
+                    Youth Parliament Ghana
+                </strong>
+
+                <small>
+                    Empowering Young Voices
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="mps.html">
+                        MPs
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="appointees.html">
+                        Appointees
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="ministries.html">
+                        Ministries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="news.html">
+                        News
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+
+                    <a href="mps.html"
+                       class="btn btn-gold">
+
+                        Explore Directory
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     PROFILE HEADER
+========================= -->
+
+<section class="profile-header">
+
+    <div class="container">
+
+        <a
+            href="mps.html"
+            class="back-link">
+
+            <i class="bi bi-arrow-left"></i>
+
+            Back to MPs Directory
+
+        </a>
+
+
+        <span class="profile-label text-white">
+
+            Parliamentary Profile
+
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROFILE CARD
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="profile-card">
+
+
+            <!-- PROFILE TOP -->
+
+            <div class="profile-top">
+
+
+                <!-- PHOTO -->
+
+                <div class="profile-photo">
+
+                    <div class="profile-placeholder">
+
+                        <i class="bi bi-person"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MAIN INFORMATION -->
+
+                <div class="profile-main">
+
+                    <span class="profile-label">
+
+                        Member of Parliament
+
+                    </span>
+
+
+                    <h1>
+                        Sample Member
+                    </h1>
+
+
+                    <div class="profile-position">
+
+                        Member of Parliament
+
+                    </div>
+
+
+                    <div class="profile-meta">
+
+                        <span class="meta-item">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            Sample Constituency
+
+                        </span>
+
+
+                        <span class="meta-item">
+
+                            <i class="bi bi-map"></i>
+
+                            Greater Accra Region
+
+                        </span>
+
+
+                        <span class="meta-item">
+
+                            <i class="bi bi-building"></i>
+
+                            Parliament of Ghana
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- PAGE NAVIGATION BUTTONS -->
+<div class="page-navigation">
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <button id="scrollDownBtn" title="Go down">
+        <i class="bi bi-chevron-down"></i>
+    </button>
+</div>
+
+
+
+            <!-- PROFILE CONTENT -->
+
+            <div class="profile-content">
+
+
+                <!-- BIOGRAPHY -->
+
+                <div class="profile-section">
+
+                    <h2>
+                        Biography
+                    </h2>
+
+                    <p>
+                        This section contains a brief biography
+                        of the member. It can include information
+                        about their background, public service,
+                        leadership experience and other relevant
+                        professional information.
+                    </p>
+
+                    <p>
+                       
+                    </p>
+
+                </div>
+
+
+
+                <!-- PARLIAMENTARY INFORMATION -->
+
+                <div class="profile-section">
+
+                    <h2>
+                        Parliamentary Information
+                    </h2>
+
+
+                    <ul class="info-list">
+
+                        <li>
+
+                            <strong>
+                                Constituency
+                            </strong>
+
+                            <span>
+                                Sample Constituency
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Region
+                            </strong>
+
+                            <span>
+                                Greater Accra
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Position
+                            </strong>
+
+                            <span>
+                                Member of Parliament
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Parliament
+                            </strong>
+
+                            <span>
+                                Parliament of Ghana
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Parliamentary Committee
+                            </strong>
+
+                            <span>
+                                Information to be updated
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- EDUCATION -->
+
+                <div class="profile-section">
+
+                    <h2>
+                        Education & Professional Background
+                    </h2>
+
+                    <p>
+                        
+                    </p>
+
+                    <ul class="info-list">
+
+                        <li>
+
+                            <strong>
+                                Education
+                            </strong>
+
+                            <span>
+                                Information to be updated
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Profession
+                            </strong>
+
+                            <span>
+                                Information to be updated
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Previous Experience
+                            </strong>
+
+                            <span>
+                                Information to be updated
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="profile-section">
+
+                    <h2>
+                        Public Contact
+                    </h2>
+
+
+                    <div class="contact-box">
+
+                        <div class="contact-item">
+
+                            <i class="bi bi-envelope"></i>
+
+                            <span>
+                                Official email to be added
+                            </span>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <i class="bi bi-telephone"></i>
+
+                            <span>
+                                Official contact to be added
+                            </span>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <i class="bi bi-globe"></i>
+
+                            <span>
+                                Official website to be added
+                            </span>
+
+                        </div>
+
+
+                        <div class="profile-socials">
+
+                            <a href="#">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                            <a href="#">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana Logo"
+                        class="site-logo">
+
+                    <div>
+
+                        <strong>
+                            Youth Parliament Ghana
+                        </strong>
+
+                        <small>
+                            Empowering Young Voices
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+                    A platform dedicated to promoting youth
+                    participation, civic leadership and public
+                    service.
+                </p>
+
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+                    Directory
+                </h5>
+
+                <a href="mps.html">
+                    MPs
+                </a>
+
+                <a href="appointees.html">
+                    Appointees
+                </a>
+
+                <a href="ministries.html">
+                    Ministries
+                </a>
+
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+                    Explore
+                </h5>
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>
+                    Connect
+                </h5>
+
+                <div class="social-links">
+
+    <!-- Facebook -->
+    <a
+        href="https://www.facebook.com/share/1LT8P5ibFE/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/youthparliamentgh?stkn=MTg4YjJ6NDMwa25oNA%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- X / Twitter -->
+    <a
+        href="https://x.com/youthparl?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on X">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+        href="https://www.tiktok.com/@YouthParliamentGH"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <!-- YouTube -->
+<a
+    href="https://youtube.com/@youthparliament-d4f?si=9gVg4iPJhuSQm0vC"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Youth Parliament Ghana on YouTube">
+
+    <i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+            </span>
+
+            <span>
+                Civic Leadership • Youth Participation • Public Service
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="js/mp-data.js"></script>
+
+<script>
+
+    const params = new URLSearchParams(window.location.search);
+
+    const mpId = params.get("id");
+
+    const member = mpData.find(mp => mp.id === mpId);
+
+
+    if (member) {
+
+        /*
+        ========================================
+        PROFILE ACCESS CONTROL
+        ========================================
+        */
+
+        const memberStatus =
+            String(member.status || "active")
+                .toLowerCase()
+                .trim();
+
+
+        /*
+        ========================================
+        REVOKED MEMBER
+        ========================================
+        */
+
+        if (memberStatus === "revoked") {
+
+            document.title =
+                "Profile Access Revoked | Youth Parliament Ghana";
+
+
+            // Hide the normal profile card
+            const profileCard =
+                document.querySelector(".profile-card");
+
+            if (profileCard) {
+                profileCard.style.display = "none";
+            }
+
+
+            // Change profile header label
+            const profileLabel =
+                document.querySelector(".profile-header .profile-label");
+
+            if (profileLabel) {
+                profileLabel.textContent =
+                    "Profile Access Restricted";
+            }
+
+
+            // Create revoked message
+            const revokedSection =
+                document.createElement("section");
+
+            revokedSection.innerHTML = `
+
+                <div class="container">
+
+                    <div class="revoked-profile">
+
+                        <div class="revoked-icon">
+                            <i class="bi bi-lock-fill"></i>
+                        </div>
+
+                        <h2>
+                            PROFILE ACCESS REVOKED
+                        </h2>
+
+                        <p>
+                            Access to the profile of
+                            <span class="member-name">
+                                ${member.name}
+                            </span>
+                            is currently unavailable.
+                        </p>
+
+                        <p>
+                            This member's profile access has been
+                            temporarily revoked.
+                        </p>
+
+                        <div class="admin-message">
+
+                            <i class="bi bi-info-circle"></i>
+
+                            Please contact the Administrator
+                            for assistance.
+
+                        </div>
+
+                        <a
+                            href="mps.html"
+                            class="btn btn-gold mt-4">
+
+                            <i class="bi bi-arrow-left"></i>
+                            Back to MPs Directory
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            // Insert warning after profile header
+            const profileHeader =
+                document.querySelector(".profile-header");
+
+            if (profileHeader) {
+
+                profileHeader.insertAdjacentElement(
+                    "afterend",
+                    revokedSection
+                );
+
+            }
+
+            // Stop loading the private profile information
+            throw new Error("Profile access revoked.");
+
+        }
+
+
+        /*
+        ========================================
+        ACTIVE MEMBER
+        ========================================
+        */
+
+        document.title =
+            member.name +
+            " | Youth Parliament Ghana";
+
+
+        // Name
+        document.querySelector(".profile-main h1").textContent =
+            member.name;
+
+
+        // Position
+        document.querySelector(".profile-position").textContent =
+            member.position;
+
+
+        // Constituency / Region / Parliament
+        const metaItems =
+            document.querySelectorAll(".meta-item");
+
+
+        metaItems[0].innerHTML =
+            `<i class="bi bi-geo-alt"></i>
+             ${member.constituency}`;
+
+
+        metaItems[1].innerHTML =
+            `<i class="bi bi-map"></i>
+             ${member.region}`;
+
+
+        metaItems[2].innerHTML =
+            `<i class="bi bi-building"></i>
+             ${member.parliament}`;
+
+
+        // Biography
+        const biography =
+            document.querySelector(".profile-section p");
+
+
+        biography.textContent =
+            member.biography;
+
+
+        // Parliamentary information
+        const infoItems =
+            document.querySelectorAll(".info-list")[0]
+                .querySelectorAll("li");
+
+
+        infoItems[0].querySelector("span").textContent =
+            member.constituency;
+
+
+        infoItems[1].querySelector("span").textContent =
+            member.region;
+
+
+        infoItems[2].querySelector("span").textContent =
+            member.position;
+
+
+        infoItems[3].querySelector("span").textContent =
+            member.parliament;
+
+
+        infoItems[4].querySelector("span").textContent =
+            member.committee;
+
+
+        // Education / professional information
+        const backgroundItems =
+            document.querySelectorAll(".info-list")[1]
+                .querySelectorAll("li");
+
+
+        backgroundItems[0].querySelector("span").textContent =
+            member.education;
+
+
+        backgroundItems[1].querySelector("span").textContent =
+            member.profession;
+
+
+        backgroundItems[2].querySelector("span").textContent =
+            member.experience;
+
+
+        // Contact
+        const contactItems =
+            document.querySelectorAll(".contact-item");
+
+
+        contactItems[0].querySelector("span").textContent =
+            member.email;
+
+
+        contactItems[1].querySelector("span").textContent =
+            member.phone;
+
+
+        const website =
+            contactItems[2].querySelector("span");
+
+
+        website.innerHTML =
+            `<a href="${member.website}" target="_blank">
+                Official website
+             </a>`;
+
+
+        // Profile photo
+        const photoContainer =
+            document.querySelector(".profile-photo");
+
+
+        photoContainer.innerHTML =
+            `<img
+                src="${member.image}"
+                alt="${member.name}"
+            >`;
+
+
+
+    } else {
+
+        document.title =
+            "Member Not Found | Youth Parliament Ghana";
+
+
+        document.querySelector(".profile-main h1").textContent =
+            "Member Not Found";
+
+    }
+
+</script>
+
+<script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    const scrollDownBtn = document.getElementById("scrollDownBtn");
+
+    // Go to top
+    scrollTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    // Go down
+    scrollDownBtn.addEventListener("click", function () {
+        window.scrollBy({
+            top: window.innerHeight * 0.8,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>

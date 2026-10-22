@@ -1,0 +1,4421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore the Presidential Appointees of Youth Parliament Ghana, including their positions, ministries, regions, appointment information, professional backgrounds and official profiles.">
+
+    <meta name="keywords"
+          content="Youth Parliament Ghana appointees, Presidential Appointees Ghana, Youth Parliament Ghana appointments, Youth Parliament ministries, Ghana youth leadership">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://youth-parliament-ghana-site.vercel.app/appointees.html">
+
+    <title>Presidential Appointees | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+    <!-- Bootstrap -->
+    
+    <!-- =========================
+         BOOTSTRAP
+    ========================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         MAIN CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+        /* ========================================
+   PAGE TOP & DOWN BUTTONS
+======================================== */
+
+.page-navigation {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page-navigation button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #b08d57;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.page-navigation button:hover {
+    background: #8f713f;
+    transform: translateY(-3px);
+}
+
+.page-navigation button:active {
+    transform: scale(0.95);
+}
+
+        /* =========================
+           DIRECTORY HEADER
+        ========================== */
+
+        .directory-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 27, 53, 0.98),
+                    rgba(13, 43, 80, 0.95)
+                );
+
+            padding: 150px 0 80px;
+
+            color: white;
+        }
+
+
+        .directory-header h1 {
+
+            font-size: clamp(38px, 5vw, 58px);
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+
+        .directory-header p {
+
+            max-width: 650px;
+
+            color: rgba(255,255,255,0.72);
+
+            line-height: 1.8;
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           FILTER AREA
+        ========================== */
+
+        .directory-tools {
+
+            margin-top: -35px;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        .filter-card {
+
+            background: white;
+
+            border-radius: 14px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(7, 27, 53, 0.10);
+
+            border: 1px solid var(--border);
+        }
+
+
+        .filter-card label {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--navy);
+
+            margin-bottom: 8px;
+        }
+
+
+        .filter-card .form-control,
+        .filter-card .form-select {
+
+            min-height: 48px;
+
+            border-color: var(--border);
+
+            border-radius: 7px;
+        }
+
+
+        .filter-card .form-control:focus,
+        .filter-card .form-select:focus {
+
+            border-color: var(--gold);
+
+            box-shadow:
+                0 0 0 0.2rem
+                rgba(215, 169, 40, 0.12);
+        }
+
+
+        /* =========================
+           APPOINTEE CARDS
+        ========================== */
+
+        .appointee-card {
+
+            height: 100%;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+        }
+
+
+        .appointee-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(7, 27, 53, 0.10);
+        }
+
+
+        .appointee-photo {
+
+            height: 350px;
+
+            background: #f5f7fa;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .appointee-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: 50% 15%;
+
+            transition: 0.4s ease;
+        }
+
+
+        .appointee-card:hover
+        .appointee-photo img {
+
+            transform: scale(1.03);
+        }
+
+
+        .default-photo {
+
+            font-size: 75px;
+
+            color: #aab3bd;
+        }
+
+
+        .appointee-content {
+
+            padding: 25px;
+        }
+
+
+        .appointee-content h3 {
+
+            color: var(--navy);
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+        }
+
+
+        .appointee-position {
+
+            color: #9a7410;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+
+        .appointee-meta {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 9px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .appointee-meta span {
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        .appointee-meta i {
+
+            color: #9a7410;
+
+            margin-right: 7px;
+        }
+
+
+        .view-profile {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            color: #9a7410;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .view-profile i {
+
+            margin-left: 7px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .view-profile:hover {
+
+            color: var(--gold);
+        }
+
+
+        .view-profile:hover i {
+
+            transform: translateX(4px);
+        }
+
+
+        /* =========================
+           RESULT COUNT
+        ========================== */
+
+        .result-count {
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .result-count strong {
+
+            color: var(--navy);
+        }
+
+
+        /* =========================
+           NO RESULTS
+        ========================== */
+
+        .no-results {
+
+            display: none;
+
+            padding: 70px 20px;
+
+            text-align: center;
+        }
+
+
+        .no-results i {
+
+            font-size: 55px;
+
+            color: #b8c0c9;
+
+            margin-bottom: 20px;
+        }
+
+
+        .no-results h3 {
+
+            color: var(--navy);
+
+            font-weight: 800;
+        }
+
+
+        .no-results p {
+
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 767px) {
+
+            .directory-header {
+
+                padding: 130px 20px 70px;
+            }
+
+
+            .directory-header h1 {
+
+                font-size: 38px;
+            }
+
+
+            .directory-tools {
+
+                margin-top: -25px;
+            }
+
+
+            .filter-card {
+
+                padding: 20px;
+            }
+
+
+            .appointee-photo {
+
+                height: 300px;
+            }
+
+        }
+        @media (max-width: 576px) {
+    .page-navigation {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .page-navigation button {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+/* =========================================================
+   APPOINTEE CONSTITUENCY VERIFICATION
+========================================================= */
+
+.appointee-constituency {
+    display: block;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   VERIFIED CONSTITUENCY
+========================================================= */
+
+.official-constituency {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+
+.constituency-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px 7px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    background: rgba(25, 135, 84, 0.12);
+
+    color: #198754;
+
+    border: 1px solid rgba(25, 135, 84, 0.25);
+}
+
+
+/* =========================================================
+   UNVERIFIED CONSTITUENCY
+========================================================= */
+
+.unverified-constituency {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    color: #856404;
+}
+
+
+.unverified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    background: #fff3cd;
+
+    color: #856404;
+
+    border: 1px solid #ffe69c;
+}
+
+
+/* =========================================================
+   UNVERIFIED WARNING
+========================================================= */
+
+.constituency-verification-warning {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    margin-top: 8px;
+
+    padding: 8px 10px;
+
+    border-radius: 8px;
+
+    background: #fff8e1;
+
+    border: 1px solid #ffe69c;
+
+    color: #856404;
+
+    font-size: 11px;
+
+    line-height: 1.45;
+}
+
+
+.constituency-verification-warning i {
+    flex-shrink: 0;
+
+    margin-top: 1px;
+}
+
+
+/* =========================================================
+   VERIFIED CARD
+========================================================= */
+
+.appointee-card.appointee-verified
+.appointee-constituency {
+    color: inherit;
+}
+
+
+/* =========================================================
+   UNVERIFIED CARD
+========================================================= */
+
+.appointee-card.appointee-unverified
+.appointee-constituency {
+    color: #856404;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+    max-width: 576px
+) {
+
+    .constituency-verified-badge,
+    .unverified-badge {
+
+        font-size: 8px;
+
+        padding: 2px 6px;
+    }
+
+
+    .constituency-verification-warning {
+
+        font-size: 10px;
+
+        padding: 7px 8px;
+    }
+
+}
+
+/* ========================================
+   YPG APPOINTEE DIRECTORY GRID
+======================================== */
+
+#appointeeGrid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100%;
+    margin: 0 !important;
+}
+
+/* Override Bootstrap row and column sizing */
+#appointeeGrid > .appointee-item {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Five profiles per row on large screens */
+@media (min-width: 1200px) {
+    #appointeeGrid {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+}
+
+/* Three profiles per row on smaller screens */
+@media (max-width: 1199.98px) {
+    #appointeeGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+}
+
+/* Mobile card adjustments */
+@media (max-width: 576px) {
+    #appointeeGrid .appointee-card {
+        height: 100%;
+        min-width: 0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    #appointeeGrid .appointee-photo {
+        height: 120px;
+        overflow: hidden;
+    }
+
+    #appointeeGrid .appointee-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+
+    #appointeeGrid .appointee-content {
+        padding: 7px;
+        min-width: 0;
+    }
+
+    #appointeeGrid .appointee-content h3 {
+        font-size: 10px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    #appointeeGrid .appointee-position,
+    #appointeeGrid .appointee-meta,
+    #appointeeGrid .appointee-constituency {
+        font-size: 9px;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
+    }
+
+    #appointeeGrid .view-profile {
+        font-size: 10px;
+    }
+}
+
+/* =========================================
+   YPG PROFESSIONAL APPOINTEE DIRECTORY
+========================================= */
+
+#appointeeGrid {
+    align-items: stretch;
+    gap: 22px 16px !important;
+}
+
+/* Individual grid item */
+#appointeeGrid > .appointee-item {
+    display: flex;
+    min-width: 0;
+}
+
+/* Main card */
+#appointeeGrid .appointee-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #e1e7ef;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(7, 27, 53, 0.04);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+#appointeeGrid .appointee-card:hover {
+    transform: translateY(-4px);
+    border-color: #c5a04b;
+    box-shadow: 0 12px 28px rgba(7, 27, 53, 0.10);
+}
+
+/* Photograph */
+#appointeeGrid .appointee-photo {
+    width: 100%;
+    height: 220px;
+    flex-shrink: 0;
+    background: #f1f4f8;
+    overflow: hidden;
+}
+
+#appointeeGrid .appointee-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    transition: transform 0.3s ease;
+}
+
+#appointeeGrid .appointee-card:hover .appointee-photo img {
+    transform: scale(1.025);
+}
+
+/* Card body */
+#appointeeGrid .appointee-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 18px 16px;
+}
+
+/* Appointee name */
+#appointeeGrid .appointee-content h3 {
+    margin: 0 0 8px;
+    color: #071b35;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+/* Official position */
+#appointeeGrid .appointee-position {
+    margin-bottom: 14px;
+    color: #9a7410;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Ministry, region and constituency information */
+#appointeeGrid .appointee-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 13px;
+    border-top: 1px solid #edf0f4;
+}
+
+#appointeeGrid .appointee-meta > span,
+#appointeeGrid .appointee-constituency {
+    display: block;
+    min-width: 0;
+    color: #66758a;
+    font-size: 12px;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+#appointeeGrid .appointee-meta i {
+    margin-right: 6px;
+    color: #b08d35;
+}
+
+/* Verification badges */
+#appointeeGrid .constituency-verified-badge,
+#appointeeGrid .unverified-badge {
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 5px 0 0;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    line-height: 1.4;
+}
+
+#appointeeGrid .constituency-verified-badge {
+    color: #276749;
+    background: #e7f5ed;
+    border: 1px solid #b8e0c8;
+}
+
+#appointeeGrid .unverified-badge {
+    color: #8a5b00;
+    background: #fff4d6;
+    border: 1px solid #f0d68b;
+}
+
+/* Verification warning */
+#appointeeGrid .constituency-verification-warning {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 7px;
+    background: #fff8e6;
+    color: #8a5b00;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Consistent profile link at the bottom */
+#appointeeGrid .view-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: auto;
+    padding-top: 18px;
+    color: #946d0b;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#appointeeGrid .view-profile:hover {
+    color: #071b35;
+}
+
+/* Five cards on large screens */
+@media (min-width: 1200px) {
+    #appointeeGrid {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Three cards on tablets and phones */
+@media (max-width: 1199.98px) {
+    #appointeeGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Compact, readable mobile layout */
+@media (max-width: 576px) {
+    #appointeeGrid {
+        gap: 12px 8px !important;
+    }
+
+    #appointeeGrid .appointee-photo {
+        height: 125px;
+    }
+
+    #appointeeGrid .appointee-content {
+        padding: 10px 8px;
+    }
+
+    #appointeeGrid .appointee-content h3 {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    #appointeeGrid .appointee-position {
+        margin-bottom: 10px;
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    #appointeeGrid .appointee-meta {
+        gap: 7px;
+        padding-top: 9px;
+    }
+
+    #appointeeGrid .appointee-meta > span,
+    #appointeeGrid .appointee-constituency {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    #appointeeGrid .view-profile {
+        padding-top: 12px;
+        font-size: 10px;
+    }
+}
+
+/* ==========================================
+   YPG APPOINTEES — REFINED OFFICIAL DESIGN
+========================================== */
+
+#appointeeGrid {
+    align-items: stretch;
+    gap: 24px 18px !important;
+}
+
+/* Card wrapper */
+#appointeeGrid > .appointee-item {
+    display: flex;
+    min-width: 0;
+}
+
+/* Main card */
+#appointeeGrid .appointee-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #e4e9f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(7, 27, 53, 0.045);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+}
+
+/* Subtle official gold accent */
+#appointeeGrid .appointee-card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    flex-shrink: 0;
+    background: #b08d35;
+}
+
+#appointeeGrid .appointee-card:hover {
+    transform: translateY(-4px);
+    border-color: #d5bd82;
+    box-shadow: 0 12px 28px rgba(7, 27, 53, 0.09);
+}
+
+/* Portrait */
+#appointeeGrid .appointee-photo {
+    height: 205px;
+    width: 100%;
+    flex-shrink: 0;
+    padding: 10px 10px 0;
+    background: #f7f8fa;
+    overflow: hidden;
+}
+
+#appointeeGrid .appointee-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 7px 7px 0 0;
+}
+
+/* Content layout */
+#appointeeGrid .appointee-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 17px 15px 16px;
+}
+
+/* Name */
+#appointeeGrid .appointee-content h3 {
+    margin: 0 0 7px;
+    color: #071b35;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+    overflow-wrap: anywhere;
+}
+
+/* Position */
+#appointeeGrid .appointee-position {
+    margin: 0 0 15px;
+    color: #9a7410;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+/* Office details section */
+#appointeeGrid .appointee-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 13px 0 0;
+    border-top: 1px solid #edf0f4;
+}
+
+#appointeeGrid .appointee-meta > span,
+#appointeeGrid .appointee-constituency {
+    display: block;
+    min-width: 0;
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#appointeeGrid .appointee-meta i {
+    color: #b08d35;
+    margin-right: 6px;
+}
+
+/* Constituency verification */
+#appointeeGrid .constituency-verified-badge,
+#appointeeGrid .unverified-badge {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+#appointeeGrid .constituency-verified-badge {
+    color: #236846;
+    background: #eaf5ee;
+    border: 1px solid #c9e5d2;
+}
+
+#appointeeGrid .unverified-badge {
+    color: #875d0a;
+    background: #fff5dc;
+    border: 1px solid #f0dfb0;
+}
+
+/* Warning for unverified records */
+#appointeeGrid .constituency-verification-warning {
+    margin-top: 10px;
+    padding: 8px;
+    border-left: 3px solid #d5a32a;
+    border-radius: 4px;
+    background: #fff9e9;
+    color: #785710;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* Profile action */
+#appointeeGrid .view-profile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 15px;
+    color: #8c6b17;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#appointeeGrid .view-profile i {
+    transition: transform 0.2s ease;
+}
+
+#appointeeGrid .view-profile:hover {
+    color: #071b35;
+}
+
+#appointeeGrid .view-profile:hover i {
+    transform: translateX(3px);
+}
+
+/* Five cards on desktop */
+@media (min-width: 1200px) {
+    #appointeeGrid {
+        grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Three cards on tablets and phones */
+@media (max-width: 1199.98px) {
+    #appointeeGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 14px 10px !important;
+    }
+}
+
+/* Compact mobile cards */
+@media (max-width: 576px) {
+    #appointeeGrid .appointee-photo {
+        height: 125px;
+        padding: 6px 6px 0;
+    }
+
+    #appointeeGrid .appointee-content {
+        padding: 10px 8px 11px;
+    }
+
+    #appointeeGrid .appointee-content h3 {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    #appointeeGrid .appointee-position {
+        font-size: 10px;
+        line-height: 1.45;
+        margin-bottom: 10px;
+    }
+
+    #appointeeGrid .appointee-meta {
+        gap: 7px;
+        padding-top: 9px;
+    }
+
+    #appointeeGrid .appointee-meta > span,
+    #appointeeGrid .appointee-constituency {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    #appointeeGrid .view-profile {
+        font-size: 10px;
+        padding-top: 12px;
+    }
+}
+
+        
+
+
+
+    </style>
+</head>
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+
+        <a class="navbar-brand d-flex align-items-center"
+           href="index.html">
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana"
+                class="site-logo">
+
+            <span class="brand-text">
+
+                <strong>
+                    Youth Parliament Ghana
+                </strong>
+
+                <small>
+                    Parliamentary Directory
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <i class="bi bi-list text-white fs-3"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="mps.html">
+
+                        MPs
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="appointees.html">
+
+                        Appointees
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="ministries.html">
+
+                        Ministries
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="news.html">
+
+                        News
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        href="mps.html"
+                        class="btn btn-gold">
+
+                        Explore Directory
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     PAGE HEADER
+========================== -->
+
+<!-- =========================
+     PAGE HEADER
+========================== -->
+
+<section class="directory-header">
+
+    <div class="container text-center">
+
+        <div class="section-label light">
+            PUBLIC DIRECTORY
+        </div>
+
+        <h1>
+            Presidential Appointees
+        </h1>
+
+        <p>
+            Explore the official profiles of Presidential Appointees
+            and appointed officials serving within the Youth Parliament
+            Ghana structure, including their positions, ministries,
+            regions and professional backgrounds.
+        </p>
+
+        <!-- REVOKED APPOINTEES BUTTON -->
+        <div class="mt-4">
+            <a href="revoked-appointees.html"
+               class="btn btn-danger">
+                <i class="bi bi-person-x-fill"></i>
+                Revoked Appointees
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FILTERS
+========================== -->
+
+<section class="directory-tools">
+
+    <div class="container">
+
+        <div class="filter-card">
+
+            <div class="row g-3">
+
+
+                <!-- SEARCH -->
+
+                <div class="col-lg-5">
+
+                    <label for="appointeeSearch">
+
+                        Search Appointee
+
+                    </label>
+
+
+                    <div class="input-group">
+
+                        <span
+                            class="input-group-text bg-white">
+
+                            <i class="bi bi-search"></i>
+
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="appointeeSearch"
+                            class="form-control"
+                            placeholder="Search by name or position...">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MINISTRY -->
+
+                <div class="col-lg-3">
+
+                    <label for="ministryFilter">
+
+                        Ministry
+
+                    </label>
+
+
+                    <select
+                        id="ministryFilter"
+                        class="form-select">
+
+                        <option value="">
+                            All Ministries
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- REGION -->
+
+                <div class="col-lg-3">
+
+                    <label for="appointeeRegion">
+
+                        Region
+
+                    </label>
+
+
+                    <select
+                        id="appointeeRegion"
+                        class="form-select">
+
+                        <option value="">
+                            All Regions
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- RESET -->
+
+                <div class="col-lg-1 d-flex align-items-end">
+
+                    <button
+                        type="button"
+                        id="resetFilters"
+                        class="btn btn-outline-secondary w-100"
+                        title="Reset filters">
+
+                        <i class="bi bi-arrow-counterclockwise"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     APPOINTEES
+========================== -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <div
+            class="d-flex justify-content-between
+                   align-items-center mb-4">
+
+
+            <h2 class="section-title mb-0">
+
+                Appointees
+
+            </h2>
+
+
+            <div class="result-count">
+
+                Showing
+
+                <strong id="resultCount">
+                    0
+                </strong>
+
+                profiles
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DYNAMIC APPoinTEE GRID -->
+
+        <div
+            class="row g-4"
+            id="appointeeGrid">
+
+        </div>
+
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="no-results"
+            id="noResults">
+
+            <i class="bi bi-person-x"></i>
+
+
+            <h3>
+
+                No Appointee Found
+
+            </h3>
+
+
+            <p>
+
+                Try changing your search or filter criteria.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- PAGE NAVIGATION BUTTONS -->
+<div class="page-navigation">
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <button id="scrollDownBtn" title="Go down">
+        <i class="bi bi-chevron-down"></i>
+    </button>
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo">
+
+
+                    <div>
+
+                        <strong>
+
+                            Youth Parliament Ghana
+
+                        </strong>
+
+
+                        <small>
+
+                            Parliamentary Directory
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    A public directory designed to provide
+                    accessible information about parliamentary
+                    representatives, appointees and ministries.
+
+                </p>
+
+
+               <div class="social-links">
+
+    <!-- Facebook -->
+    <a
+        href="https://www.facebook.com/share/1LT8P5ibFE/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/youthparliamentgh?stkn=MTg4YjJ6NDMwa25oNA%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- X / Twitter -->
+    <a
+        href="https://x.com/youthparl?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on X">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+        href="https://www.tiktok.com/@YouthParliamentGH"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <!-- YouTube -->
+<a
+    href="https://youtube.com/@youthparliament-d4f?si=9gVg4iPJhuSQm0vC"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Youth Parliament Ghana on YouTube">
+
+    <i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+
+                    Directory
+
+                </h5>
+
+
+                <a href="mps.html">
+
+                    Members of Parliament
+
+                </a>
+
+
+                <a href="appointees.html">
+
+                    Appointees
+
+                </a>
+
+
+                <a href="ministries.html">
+
+                    Ministries
+
+                </a>
+
+            </div>
+
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+
+                    Explore
+
+                </h5>
+
+
+                <a href="news.html">
+
+                    News
+
+                </a>
+
+
+                <a href="about.html">
+
+                    About
+
+                </a>
+
+
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>
+
+                    Information
+
+                </h5>
+
+
+                <p>
+
+                    This directory is intended to provide
+                    accessible civic information.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+
+            </span>
+
+
+            <span>
+
+                Parliamentary Directory
+
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     BOOTSTRAP JS
+========================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =========================
+     MAIN JS
+========================== -->
+
+<script src="js/main.js"></script>
+
+<script src="js/constituency-data.js"></script>
+
+
+<!-- =========================
+     APPOINTEE DATA
+========================== -->
+
+<script src="js/appointee-data.js"></script>
+
+
+<!-- =========================
+     APPOINTEE DIRECTORY JS
+========================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        /* =========================================================
+           ELEMENTS
+        ========================================================== */
+
+        const grid =
+            document.getElementById(
+                "appointeeGrid"
+            );
+
+        const searchInput =
+            document.getElementById(
+                "appointeeSearch"
+            );
+
+        const ministryFilter =
+            document.getElementById(
+                "ministryFilter"
+            );
+
+        const regionFilter =
+            document.getElementById(
+                "appointeeRegion"
+            );
+
+        const resetButton =
+            document.getElementById(
+                "resetFilters"
+            );
+
+        const resultCount =
+            document.getElementById(
+                "resultCount"
+            );
+
+        const noResults =
+            document.getElementById(
+                "noResults"
+            );
+
+
+        /* =========================================================
+           CHECK REQUIRED ELEMENTS
+        ========================================================== */
+
+        if (!grid) {
+
+            console.error(
+                "Appointee grid element #appointeeGrid was not found."
+            );
+
+            return;
+        }
+
+
+        if (!searchInput) {
+
+            console.error(
+                "Appointee search element #appointeeSearch was not found."
+            );
+
+            return;
+        }
+
+
+        if (!ministryFilter) {
+
+            console.error(
+                "Ministry filter #ministryFilter was not found."
+            );
+
+            return;
+        }
+
+
+        if (!regionFilter) {
+
+            console.error(
+                "Region filter #appointeeRegion was not found."
+            );
+
+            return;
+        }
+
+
+        if (!resetButton) {
+
+            console.error(
+                "Reset button #resetFilters was not found."
+            );
+
+            return;
+        }
+
+
+        /* =========================================================
+           CHECK APPOINTEE DATA
+        ========================================================== */
+
+        if (
+            typeof appointeeData === "undefined"
+        ) {
+
+            console.error(
+                "appointeeData was not found."
+            );
+
+            grid.innerHTML = `
+                <div class="col-12 text-center py-5">
+
+                    <p class="text-danger">
+                        Appointee data could not be loaded.
+                    </p>
+
+                </div>
+            `;
+
+            return;
+        }
+
+
+        /* =========================================================
+           NORMALIZE GENERAL TEXT
+        ========================================================== */
+
+        function normalizeText(
+            value
+        ) {
+
+            return String(
+                value || ""
+            )
+                .trim()
+                .toLowerCase()
+                .replace(/[–—]/g, "-")
+                .replace(/\s+/g, " ")
+                .trim();
+        }
+
+
+        /* =========================================================
+           NORMALIZE REGION
+        ========================================================== */
+
+        function normalizeRegion(
+            value
+        ) {
+
+            const text =
+                String(
+                    value || ""
+                )
+                    .trim()
+                    .toLowerCase()
+                    .replace(/\s+/g, " ");
+
+            if (
+                typeof normalizeRegionName ===
+                "function"
+            ) {
+
+                return normalizeRegionName(
+                    value
+                );
+            }
+
+            return text;
+        }
+
+
+        /* =========================================================
+           NORMALIZE CONSTITUENCY
+        ========================================================== */
+
+        function normalizeConstituency(
+            value
+        ) {
+
+            if (
+                typeof normalizeConstituencyName ===
+                "function"
+            ) {
+
+                return normalizeConstituencyName(
+                    value
+                );
+            }
+
+            return String(
+                value || ""
+            )
+                .trim()
+                .toLowerCase()
+                .replace(/[–—]/g, "-")
+                .replace(/\s+/g, " ")
+                .replace(
+                    /\s+constituency$/i,
+                    ""
+                )
+                .trim();
+        }
+
+
+        /* =========================================================
+           CHECK WHETHER CONSTITUENCY DATA EXISTS
+        ========================================================== */
+
+        function hasConstituencyRegistry() {
+
+            return (
+                Array.isArray(
+                    window.constituencyData
+                ) &&
+                window.constituencyData.length > 0
+            );
+        }
+
+
+        /* =========================================================
+           GET OFFICIAL CONSTITUENCY
+           
+           constituency-data.js is the official authority.
+        ========================================================== */
+
+        function getOfficialConstituencyRecord(
+            submittedConstituency,
+            submittedRegion
+        ) {
+
+            const rawConstituency =
+                String(
+                    submittedConstituency || ""
+                ).trim();
+
+            if (
+                !rawConstituency
+            ) {
+
+                return null;
+            }
+
+
+            /*
+             * First use the official helper supplied
+             * by constituency-data.js.
+             */
+
+            if (
+                typeof window.getOfficialConstituency ===
+                "function"
+            ) {
+
+                let official =
+                    null;
+
+                try {
+
+                    /*
+                     * Some versions of the constituency
+                     * registry accept one argument.
+                     */
+
+                    official =
+                        window.getOfficialConstituency(
+                            rawConstituency
+                        );
+
+                } catch (
+                    error
+                ) {
+
+                    console.warn(
+                        "One-argument constituency validation failed:",
+                        error
+                    );
+                }
+
+
+                if (
+                    official
+                ) {
+
+                    return official;
+                }
+
+
+                /*
+                 * Some versions accept constituency
+                 * and region.
+                 */
+
+                if (
+                    submittedRegion
+                ) {
+
+                    try {
+
+                        official =
+                            window.getOfficialConstituency(
+                                rawConstituency,
+                                submittedRegion
+                            );
+
+                    } catch (
+                        error
+                    ) {
+
+                        console.warn(
+                            "Two-argument constituency validation failed:",
+                            error
+                        );
+                    }
+
+
+                    if (
+                        official
+                    ) {
+
+                        return official;
+                    }
+                }
+            }
+
+
+            /*
+             * Fallback:
+             * compare directly against the official
+             * constituencyData registry.
+             */
+
+            if (
+                !hasConstituencyRegistry()
+            ) {
+
+                return null;
+            }
+
+
+            const normalizedInput =
+                normalizeConstituency(
+                    rawConstituency
+                );
+
+
+            const matches =
+                window.constituencyData.filter(
+                    function (
+                        item
+                    ) {
+
+                        return (
+                            normalizeConstituency(
+                                item.constituency
+                            ) ===
+                            normalizedInput
+                        );
+                    }
+                );
+
+
+            if (
+                matches.length === 1
+            ) {
+
+                return matches[0];
+            }
+
+
+            /*
+             * Approved aliases from constituency-data.js
+             */
+
+            if (
+                window.constituencyAliases
+            ) {
+
+                const aliases =
+                    window.constituencyAliases;
+
+
+                for (
+                    const officialName
+                    in aliases
+                ) {
+
+                    const aliasList =
+                        aliases[
+                            officialName
+                        ] || [];
+
+
+                    const aliasMatch =
+                        aliasList.some(
+                            function (
+                                alias
+                            ) {
+
+                                return (
+                                    normalizeConstituency(
+                                        alias
+                                    ) ===
+                                    normalizedInput
+                                );
+                            }
+                        );
+
+
+                    if (
+                        aliasMatch
+                    ) {
+
+                        const officialMatch =
+                            window.constituencyData.find(
+                                function (
+                                    item
+                                ) {
+
+                                    return (
+                                        normalizeConstituency(
+                                            item.constituency
+                                        ) ===
+                                        normalizeConstituency(
+                                            officialName
+                                        )
+                                    );
+                                }
+                            );
+
+
+                        if (
+                            officialMatch
+                        ) {
+
+                            return officialMatch;
+                        }
+                    }
+                }
+            }
+
+
+            return null;
+        }
+
+
+        /* =========================================================
+           DETERMINE WHETHER APPOINTEE IS CONSTITUENCY-BASED
+           
+           IMPORTANT:
+           We DO NOT use isMP to make this decision.
+
+           MCE / DCE / local / constituency positions
+           are treated as constituency-based.
+
+           Ministers and other national appointments
+           remain visible even if their constituency is
+           not found in the official constituency registry.
+        ========================================================== */
+
+        function isConstituencyBasedAppointee(
+            appointee
+        ) {
+
+            const position =
+                normalizeText(
+                    appointee.position
+                );
+
+
+            if (
+                !position
+            ) {
+
+                return false;
+            }
+
+
+            const constituencyBasedKeywords = [
+
+                "mce",
+
+                "municipal chief executive",
+
+                "dce",
+
+                "district chief executive",
+
+                "metropolitan chief executive",
+
+                "metro chief executive",
+
+                "district coordinator",
+
+                "municipal coordinator",
+
+                "metropolitan coordinator",
+
+                "metro coordinator",
+
+                "constituency coordinator",
+
+                "constituency representative",
+
+                "constituency director",
+
+                "district director",
+
+                "municipal director",
+
+                "metropolitan director",
+
+                "metro director",
+
+                "district representative",
+
+                "municipal representative",
+
+                "metropolitan representative",
+
+                "metro representative",
+
+                "district officer",
+
+                "municipal officer",
+
+                "metropolitan officer",
+
+                "constituency officer",
+
+                "district liaison",
+
+                "municipal liaison",
+
+                "metropolitan liaison",
+
+                "constituency liaison"
+
+            ];
+
+
+            return constituencyBasedKeywords.some(
+                function (
+                    keyword
+                ) {
+
+                    return (
+                        position === keyword ||
+                        position.includes(
+                            keyword
+                        )
+                    );
+                }
+            );
+        }
+
+
+        /* =========================================================
+           VALIDATE APPOINTEE CONSTITUENCY
+           
+           THREE POSSIBLE STATES:
+
+           1. VERIFIED
+              Correct official constituency.
+              
+           2. UNVERIFIED
+              National appointee with a constituency
+              that is not found in the official registry.
+              
+           3. HIDDEN
+              Constituency-based appointee such as MCE/DCE
+              with an invalid/unregistered constituency.
+        ========================================================== */
+
+        function validateAppointeeConstituency(
+            appointee
+        ) {
+
+            const submittedConstituency =
+                String(
+                    appointee.constituency || ""
+                ).trim();
+
+
+            const submittedRegion =
+                String(
+                    appointee.region || ""
+                ).trim();
+
+
+            const constituencyBased =
+                isConstituencyBasedAppointee(
+                    appointee
+                );
+
+
+            /*
+             * No constituency was submitted.
+             */
+
+            if (
+                !submittedConstituency
+            ) {
+
+                if (
+                    constituencyBased
+                ) {
+
+                    return {
+
+                        status: "hidden",
+
+                        verified: false,
+
+                        unverified: false,
+
+                        constituencyBased: true,
+
+                        visibleInDirectory: false,
+
+                        searchable: false,
+
+                        profileAccessible: false,
+
+                        submittedConstituency: "",
+
+                        officialConstituency: null,
+
+                        officialRegion: null
+
+                    };
+                }
+
+
+                /*
+                 * National appointee:
+                 * no constituency still means unverified,
+                 * but it remains visible.
+                 */
+
+                return {
+
+                    status: "unverified",
+
+                    verified: false,
+
+                    unverified: true,
+
+                    constituencyBased: false,
+
+                    visibleInDirectory: true,
+
+                    searchable: true,
+
+                    profileAccessible: true,
+
+                    submittedConstituency: "",
+
+                    officialConstituency: null,
+
+                    officialRegion: null
+
+                };
+            }
+
+
+            /*
+             * Look up constituency against official registry.
+             */
+
+            const official =
+                getOfficialConstituencyRecord(
+                    submittedConstituency,
+                    submittedRegion
+                );
+
+
+            /*
+             * VALID CONSTITUENCY
+             */
+
+            if (
+                official
+            ) {
+
+                return {
+
+                    status: "verified",
+
+                    verified: true,
+
+                    unverified: false,
+
+                    constituencyBased:
+                        constituencyBased,
+
+                    visibleInDirectory: true,
+
+                    searchable: true,
+
+                    profileAccessible: true,
+
+                    submittedConstituency:
+                        submittedConstituency,
+
+                    officialConstituency:
+                        official.constituency ||
+                        submittedConstituency,
+
+                    officialRegion:
+                        official.region ||
+                        submittedRegion,
+
+                    officialRecord:
+                        official
+
+                };
+            }
+
+
+            /*
+             * INVALID CONSTITUENCY + LOCAL/CONSTITUENCY
+             * APPOINTEE = HIDE COMPLETELY.
+             */
+
+            if (
+                constituencyBased
+            ) {
+
+                return {
+
+                    status: "hidden",
+
+                    verified: false,
+
+                    unverified: false,
+
+                    constituencyBased: true,
+
+                    visibleInDirectory: false,
+
+                    searchable: false,
+
+                    profileAccessible: false,
+
+                    submittedConstituency:
+                        submittedConstituency,
+
+                    officialConstituency:
+                        null,
+
+                    officialRegion:
+                        null
+
+                };
+            }
+
+
+            /*
+             * INVALID CONSTITUENCY + NATIONAL APPOINTEE
+             * = KEEP VISIBLE AND SEARCHABLE AS UNVERIFIED.
+             */
+
+            return {
+
+                status: "unverified",
+
+                verified: false,
+
+                unverified: true,
+
+                constituencyBased: false,
+
+                visibleInDirectory: true,
+
+                searchable: true,
+
+                profileAccessible: true,
+
+                submittedConstituency:
+                    submittedConstituency,
+
+                officialConstituency:
+                    null,
+
+                officialRegion:
+                    null
+
+            };
+        }
+
+
+        /* =========================================================
+           PREPARE APPOINTEE
+           
+           Validation information is attached to the record
+           in memory only.
+           
+           You DO NOT need to edit appointee-data.js manually.
+        ========================================================== */
+
+        function prepareAppointee(
+            appointee
+        ) {
+
+            const validation =
+                validateAppointeeConstituency(
+                    appointee
+                );
+
+
+            return {
+
+                ...appointee,
+
+                constituencyValidation:
+                    validation,
+
+                constituencyStatus:
+                    validation.status,
+
+                constituencyVerified:
+                    validation.verified,
+
+                constituencyUnverified:
+                    validation.unverified,
+
+                constituencyBased:
+                    validation.constituencyBased,
+
+                visibleInDirectory:
+                    validation.visibleInDirectory,
+
+                searchable:
+                    validation.searchable,
+
+                profileAccessible:
+                    validation.profileAccessible,
+
+                officialConstituency:
+                    validation.officialConstituency,
+
+                officialRegion:
+                    validation.officialRegion
+
+            };
+        }
+
+
+        /* =========================================================
+           ACTIVE APPOINTEES ONLY
+        ========================================================== */
+
+        const activeAppointees =
+            appointeeData
+                .filter(
+                    function (
+                        person
+                    ) {
+
+                        return (
+                            normalizeText(
+                                person.status
+                            ) === "active"
+                        );
+                    }
+                )
+                .map(
+                    function (
+                        person
+                    ) {
+
+                        return prepareAppointee(
+                            person
+                        );
+                    }
+                );
+
+
+        /* =========================================================
+           PUBLIC DIRECTORY APPOINTEES
+           
+           National invalid records remain.
+           
+           Local invalid records are removed.
+        ========================================================== */
+
+        const publicAppointees =
+            activeAppointees.filter(
+                function (
+                    person
+                ) {
+
+                    return (
+                        person.visibleInDirectory ===
+                        true
+                    );
+                }
+            );
+
+
+        /* =========================================================
+           SEARCHABLE APPOINTEES
+           
+           Same public rule:
+           
+           National invalid = searchable.
+           
+           Local invalid = not searchable.
+        ========================================================== */
+
+        const searchableAppointees =
+            activeAppointees.filter(
+                function (
+                    person
+                ) {
+
+                    return (
+                        person.searchable ===
+                        true
+                    );
+                }
+            );
+
+
+        /* =========================================================
+           ESCAPE HTML
+        ========================================================== */
+
+        function escapeHTML(
+            value
+        ) {
+
+            return String(
+                value || ""
+            )
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+        }
+
+
+        /* =========================================================
+           GET CONSTITUENCY DISPLAY
+           
+           VERIFIED:
+           Official constituency name.
+           
+           UNVERIFIED:
+           Submitted constituency + UNVERIFIED badge.
+        ========================================================== */
+
+        function getConstituencyDisplay(
+            appointee
+        ) {
+
+            const validation =
+                appointee.constituencyValidation ||
+                validateAppointeeConstituency(
+                    appointee
+                );
+
+
+            /*
+             * VERIFIED
+             */
+
+            if (
+                validation.verified
+            ) {
+
+                const officialName =
+                    validation.officialConstituency ||
+                    validation.submittedConstituency ||
+                    "Not available";
+
+
+                return `
+                    <span class="official-constituency">
+                        <i class="bi bi-geo-alt"></i>
+
+                        ${escapeHTML(
+                            officialName
+                        )}
+
+                        <span class="constituency-verified-badge">
+                            VERIFIED
+                        </span>
+                    </span>
+                `;
+            }
+
+
+            /*
+             * UNVERIFIED NATIONAL APPOINTEE
+             */
+
+            if (
+                validation.unverified
+            ) {
+
+                const submitted =
+                    validation.submittedConstituency;
+
+
+                return `
+                    <span class="unverified-constituency">
+                        <i class="bi bi-geo-alt"></i>
+
+                        ${
+                            submitted
+                                ? escapeHTML(
+                                    submitted
+                                )
+                                : "Constituency not verified"
+                        }
+
+                        <span class="unverified-badge">
+                            UNVERIFIED
+                        </span>
+                    </span>
+                `;
+            }
+
+
+            /*
+             * Hidden local records should never
+             * reach the card renderer.
+             */
+
+            return "";
+        }
+
+
+        /* =========================================================
+           CREATE APPOINTEE CARD
+        ========================================================== */
+
+        function createAppointeeCard(
+            appointee
+        ) {
+
+            /*
+             * Safety check.
+             *
+             * If a constituency-based appointee is invalid,
+             * do not render the card.
+             */
+
+            if (
+                !appointee.visibleInDirectory
+            ) {
+
+                return null;
+            }
+
+
+            const column =
+                document.createElement(
+                    "div"
+                );
+
+
+            column.className = "appointee-item";
+
+
+            column.dataset.name =
+                appointee.name || "";
+
+
+            column.dataset.position =
+                appointee.position || "";
+
+
+            column.dataset.ministry =
+                appointee.ministry || "";
+
+
+            column.dataset.region =
+                appointee.region || "";
+
+
+            column.dataset.constituency =
+                appointee.constituency || "";
+
+
+            column.dataset.constituencyStatus =
+                appointee.constituencyStatus || "";
+
+
+            /* =====================================================
+               CARD
+            ====================================================== */
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+
+            card.className =
+                "appointee-card";
+
+
+            /*
+             * Add an unverified class to the card
+             * for styling if necessary.
+             */
+
+            if (
+                appointee.constituencyUnverified
+            ) {
+
+                card.classList.add(
+                    "appointee-unverified"
+                );
+            }
+
+
+            if (
+                appointee.constituencyVerified
+            ) {
+
+                card.classList.add(
+                    "appointee-verified"
+                );
+            }
+
+
+            /* =====================================================
+               PHOTO
+            ====================================================== */
+
+            const photo =
+                document.createElement(
+                    "div"
+                );
+
+
+            photo.className =
+                "appointee-photo";
+
+
+            const image =
+                document.createElement(
+                    "img"
+                );
+
+
+            image.src =
+                appointee.image ||
+                "images/profiles/default.jpg";
+
+
+            image.alt =
+                appointee.name ||
+                "Appointee";
+
+
+            image.loading =
+                "lazy";
+
+
+            image.onerror =
+                function () {
+
+                    this.onerror =
+                        null;
+
+                    this.src =
+                        "images/profiles/default.jpg";
+                };
+
+
+            photo.appendChild(
+                image
+            );
+
+
+            /* =====================================================
+               CONTENT
+            ====================================================== */
+
+            const content =
+                document.createElement(
+                    "div"
+                );
+
+
+            content.className =
+                "appointee-content";
+
+
+            /* =====================================================
+               NAME
+            ====================================================== */
+
+            const name =
+                document.createElement(
+                    "h3"
+                );
+
+
+            name.textContent =
+                appointee.name ||
+                "Name not available";
+
+
+            /* =====================================================
+               POSITION
+            ====================================================== */
+
+            const position =
+                document.createElement(
+                    "div"
+                );
+
+
+            position.className =
+                "appointee-position";
+
+
+            position.textContent =
+                appointee.position ||
+                "Position not available";
+
+
+            /* =====================================================
+               META
+            ====================================================== */
+
+            const meta =
+                document.createElement(
+                    "div"
+                );
+
+
+            meta.className =
+                "appointee-meta";
+
+
+            /* =====================================================
+               MINISTRY
+            ====================================================== */
+
+            const ministry =
+                document.createElement(
+                    "span"
+                );
+
+
+            ministry.innerHTML = `
+                <i class="bi bi-building"></i>
+
+                ${escapeHTML(
+                    appointee.ministry ||
+                    "Ministry not available"
+                )}
+            `;
+
+
+            /* =====================================================
+               REGION
+            ====================================================== */
+
+            const region =
+                document.createElement(
+                    "span"
+                );
+
+
+            region.innerHTML = `
+                <i class="bi bi-geo-alt"></i>
+
+                ${escapeHTML(
+                    appointee.region ||
+                    "Region not available"
+                )}
+            `;
+
+
+            /* =====================================================
+               CONSTITUENCY
+            ====================================================== */
+
+            const constituency =
+                document.createElement(
+                    "span"
+                );
+
+
+            constituency.className =
+                "appointee-constituency";
+
+
+            constituency.innerHTML =
+                getConstituencyDisplay(
+                    appointee
+                );
+
+
+            /* =====================================================
+               UNVERIFIED WARNING
+            ====================================================== */
+
+            let verificationWarning =
+                null;
+
+
+            if (
+                appointee.constituencyUnverified
+            ) {
+
+                verificationWarning =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                verificationWarning.className =
+                    "constituency-verification-warning";
+
+
+                verificationWarning.innerHTML = `
+                    <i class="bi bi-exclamation-triangle"></i>
+
+                    <span>
+                        Constituency information is
+                        currently unverified.
+                    </span>
+                `;
+            }
+
+
+            /* =====================================================
+               PROFILE LINK
+            ====================================================== */
+
+            const profileLink =
+                document.createElement(
+                    "a"
+                );
+
+
+            profileLink.className =
+                "view-profile";
+
+
+            /*
+             * Because invalid constituency-based
+             * appointees never reach this function,
+             * this profile link is safe to display.
+             */
+
+            profileLink.href =
+                `appointee-profile.html?id=${encodeURIComponent(
+                    appointee.id
+                )}`;
+
+
+            profileLink.innerHTML = `
+                View Profile
+
+                <i class="bi bi-arrow-right"></i>
+            `;
+
+
+            /* =====================================================
+               APPEND META
+            ====================================================== */
+
+            meta.appendChild(
+                ministry
+            );
+
+
+            meta.appendChild(
+                region
+            );
+
+
+            meta.appendChild(
+                constituency
+            );
+
+
+            /* =====================================================
+               APPEND CONTENT
+            ====================================================== */
+
+            content.appendChild(
+                name
+            );
+
+
+            content.appendChild(
+                position
+            );
+
+
+            content.appendChild(
+                meta
+            );
+
+
+            if (
+                verificationWarning
+            ) {
+
+                content.appendChild(
+                    verificationWarning
+                );
+            }
+
+
+            content.appendChild(
+                profileLink
+            );
+
+
+            /* =====================================================
+               APPEND CARD
+            ====================================================== */
+
+            card.appendChild(
+                photo
+            );
+
+
+            card.appendChild(
+                content
+            );
+
+
+            column.appendChild(
+                card
+            );
+
+
+            return column;
+        }
+
+
+        /* =========================================================
+           RENDER APPOINTEES
+        ========================================================== */
+
+        function renderAppointees(
+            data
+        ) {
+
+            grid.innerHTML =
+                "";
+
+
+            /*
+             * Only records allowed into the public
+             * directory are rendered.
+             */
+
+            const visibleData =
+                data.filter(
+                    function (
+                        appointee
+                    ) {
+
+                        return (
+                            appointee &&
+                            appointee.visibleInDirectory ===
+                            true
+                        );
+                    }
+                );
+
+
+            visibleData.forEach(
+                function (
+                    appointee
+                ) {
+
+                    const card =
+                        createAppointeeCard(
+                            appointee
+                        );
+
+
+                    if (
+                        card
+                    ) {
+
+                        grid.appendChild(
+                            card
+                        );
+                    }
+                }
+            );
+
+
+            if (
+                resultCount
+            ) {
+
+                resultCount.textContent =
+                    visibleData.length;
+            }
+
+
+            if (
+                visibleData.length === 0
+            ) {
+
+                if (
+                    noResults
+                ) {
+
+                    noResults.style.display =
+                        "block";
+                }
+
+            } else {
+
+                if (
+                    noResults
+                ) {
+
+                    noResults.style.display =
+                        "none";
+                }
+            }
+        }
+
+
+        /* =========================================================
+           LOAD MINISTRIES
+           
+           Only publicly visible appointees are used.
+        ========================================================== */
+
+        function loadMinistries() {
+
+            const ministries =
+                [
+                    ...new Set(
+                        publicAppointees
+                            .map(
+                                function (
+                                    person
+                                ) {
+
+                                    return (
+                                        person.ministry
+                                    );
+                                }
+                            )
+                            .filter(
+                                Boolean
+                            )
+                    )
+                ]
+                .sort(
+                    function (
+                        a,
+                        b
+                    ) {
+
+                        return String(
+                            a
+                        ).localeCompare(
+                            String(
+                                b
+                            )
+                        );
+                    }
+                );
+
+
+            /*
+             * Keep the existing first/default option.
+             */
+
+            ministries.forEach(
+                function (
+                    ministry
+                ) {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+
+                    option.value =
+                        ministry;
+
+
+                    option.textContent =
+                        ministry
+                            .replace(
+                                /^Ministry of /i,
+                                ""
+                            )
+                            .replace(
+                                /^Ministry for /i,
+                                ""
+                            );
+
+
+                    ministryFilter.appendChild(
+                        option
+                    );
+                }
+            );
+        }
+
+
+        /* =========================================================
+           LOAD REGIONS
+           
+           Only publicly visible appointees are used.
+        ========================================================== */
+
+        function loadRegions() {
+
+            const regions =
+                [
+                    ...new Set(
+                        publicAppointees
+                            .map(
+                                function (
+                                    person
+                                ) {
+
+                                    return (
+                                        person.region
+                                    );
+                                }
+                            )
+                            .filter(
+                                Boolean
+                            )
+                    )
+                ]
+                .sort(
+                    function (
+                        a,
+                        b
+                    ) {
+
+                        return String(
+                            a
+                        ).localeCompare(
+                            String(
+                                b
+                            )
+                        );
+                    }
+                );
+
+
+            regions.forEach(
+                function (
+                    region
+                ) {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+
+                    option.value =
+                        region;
+
+
+                    option.textContent =
+                        region;
+
+
+                    regionFilter.appendChild(
+                        option
+                    );
+                }
+            );
+        }
+
+
+        /* =========================================================
+           SEARCH TEXT BUILDER
+           
+           This includes:
+           - Name
+           - Position
+           - Ministry
+           - Region
+           - Submitted constituency
+           - Official constituency
+           - UNVERIFIED
+           
+           Therefore national appointees with an invalid
+           constituency remain searchable.
+        ========================================================== */
+
+        function buildSearchText(
+            person
+        ) {
+
+            const validation =
+                person.constituencyValidation ||
+                validateAppointeeConstituency(
+                    person
+                );
+
+
+            const values = [
+
+                person.name,
+
+                person.position,
+
+                person.ministry,
+
+                person.region,
+
+                validation.submittedConstituency,
+
+                validation.officialConstituency,
+
+                validation.unverified
+                    ? "unverified"
+                    : "",
+
+                validation.verified
+                    ? "verified"
+                    : ""
+
+            ];
+
+
+            return values
+                .map(
+                    function (
+                        value
+                    ) {
+
+                        return normalizeText(
+                            value
+                        );
+                    }
+                )
+                .filter(
+                    Boolean
+                )
+                .join(
+                    " "
+                );
+        }
+
+
+        /* =========================================================
+           FILTER APPOINTEES
+           
+           IMPORTANT:
+           We filter from searchableAppointees, NOT from the
+           raw appointeeData.
+
+           Therefore:
+           
+           - National invalid constituency = searchable
+           - Local invalid constituency = excluded
+        ========================================================== */
+
+        function filterAppointees() {
+
+            const rawSearch =
+                searchInput.value
+                    .trim();
+
+
+            const search =
+                rawSearch.toLowerCase();
+
+
+            const normalizedSearch =
+                normalizeConstituency(
+                    rawSearch
+                );
+
+
+            const ministry =
+                ministryFilter.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const selectedRegion =
+                regionFilter.value
+                    .trim();
+
+
+            const normalizedSelectedRegion =
+                normalizeRegion(
+                    selectedRegion
+                );
+
+
+            const filtered =
+                searchableAppointees.filter(
+                    function (
+                        person
+                    ) {
+
+                        /* =========================================
+                           SEARCH TEXT
+                        ========================================== */
+
+                        const searchableText =
+                            buildSearchText(
+                                person
+                            );
+
+
+                        /* =========================================
+                           NAME
+                        ========================================== */
+
+                        const name =
+                            normalizeText(
+                                person.name
+                            );
+
+
+                        /* =========================================
+                           POSITION
+                        ========================================== */
+
+                        const position =
+                            normalizeText(
+                                person.position
+                            );
+
+
+                        /* =========================================
+                           CONSTITUENCY
+                        ========================================== */
+
+                        const rawConstituency =
+                            String(
+                                person.constituency ||
+                                ""
+                            ).trim();
+
+
+                        const normalizedConstituency =
+                            normalizeConstituency(
+                                rawConstituency
+                            );
+
+
+                        /* =========================================
+                           MINISTRY
+                        ========================================== */
+
+                        const personMinistry =
+                            normalizeText(
+                                person.ministry
+                            );
+
+
+                        /* =========================================
+                           REGION
+                        ========================================== */
+
+                        const rawRegion =
+                            String(
+                                person.region ||
+                                ""
+                            ).trim();
+
+
+                        const normalizedPersonRegion =
+                            normalizeRegion(
+                                rawRegion
+                            );
+
+
+                        /* =========================================
+                           VALIDATION
+                        ========================================== */
+
+                        const validation =
+                            person.constituencyValidation ||
+                            validateAppointeeConstituency(
+                                person
+                            );
+
+
+                        /*
+                         * Safety:
+                         * hidden local appointees must NEVER
+                         * appear in search results.
+                         */
+
+                        if (
+                            !validation.searchable
+                        ) {
+
+                            return false;
+                        }
+
+
+                        /* =========================================
+                           SEARCH MATCH
+                        ========================================== */
+
+                        const matchesSearch =
+                            !search ||
+
+                            searchableText.includes(
+                                search
+                            ) ||
+
+                            name.includes(
+                                search
+                            ) ||
+
+                            position.includes(
+                                search
+                            ) ||
+
+                            rawConstituency
+                                .toLowerCase()
+                                .includes(
+                                    search
+                                ) ||
+
+                            normalizedConstituency.includes(
+                                normalizedSearch
+                            );
+
+
+                        /* =========================================
+                           MINISTRY MATCH
+                        ========================================== */
+
+                        const matchesMinistry =
+                            !ministry ||
+
+                            personMinistry ===
+                                ministry;
+
+
+                        /* =========================================
+                           REGION MATCH
+                        ========================================== */
+
+                        const matchesRegion =
+                            !normalizedSelectedRegion ||
+
+                            normalizedPersonRegion ===
+                                normalizedSelectedRegion;
+
+
+                        return (
+                            matchesSearch &&
+                            matchesMinistry &&
+                            matchesRegion
+                        );
+                    }
+                );
+
+
+            renderAppointees(
+                filtered
+            );
+        }
+
+
+        /* =========================================================
+           RESET FILTERS
+        ========================================================== */
+
+        function resetFilters() {
+
+            searchInput.value =
+                "";
+
+
+            ministryFilter.value =
+                "";
+
+
+            regionFilter.value =
+                "";
+
+
+            renderAppointees(
+                publicAppointees
+            );
+        }
+
+
+        /* =========================================================
+           SEARCH EVENT
+        ========================================================== */
+
+        searchInput.addEventListener(
+            "input",
+            filterAppointees
+        );
+
+
+        /* =========================================================
+           MINISTRY EVENT
+        ========================================================== */
+
+        ministryFilter.addEventListener(
+            "change",
+            filterAppointees
+        );
+
+
+        /* =========================================================
+           REGION EVENT
+        ========================================================== */
+
+        regionFilter.addEventListener(
+            "change",
+            filterAppointees
+        );
+
+
+        /* =========================================================
+           RESET EVENT
+        ========================================================== */
+
+        resetButton.addEventListener(
+            "click",
+            resetFilters
+        );
+
+
+       /* =========================================================
+   DUPLICATE APPOINTMENT CHECK
+
+   RULE:
+   A duplicate only exists when the SAME POSITION
+   is assigned to the SAME CONSTITUENCY / AREA.
+
+   Therefore:
+
+   MCE + Lower West Akim
+   MCE + Obuasi Municipality
+
+   = NOT DUPLICATES
+
+   MCE + Lower West Akim
+   MCE + Lower West Akim
+
+   = DUPLICATE
+========================================================= */
+
+function checkDuplicateAppointees() {
+
+    const appointmentMap = {};
+    const duplicates = [];
+
+
+    activeAppointees.forEach(function (person) {
+
+        /* -----------------------------------------
+           POSITION
+        ----------------------------------------- */
+
+        const position =
+            String(
+                person.position || ""
+            )
+            .trim()
+            .replace(/\s+/g, " ")
+            .toLowerCase();
+
+
+        if (!position) {
+            return;
+        }
+
+
+        /* -----------------------------------------
+           CONSTITUENCY / AREA
+        ----------------------------------------- */
+
+        const constituency =
+            normalizeConstituency(
+                person.constituency || ""
+            );
+
+
+        /*
+         * National appointments without a
+         * constituency should be checked by
+         * position only.
+         *
+         * Example:
+         *
+         * Minister for Defence
+         * Minister for Defence
+         *
+         * = duplicate
+         */
+
+        let duplicateKey;
+
+
+        if (constituency) {
+
+            duplicateKey =
+                `${position}||${constituency}`;
+
+        } else {
+
+            duplicateKey =
+                `${position}||national`;
+
+        }
+
+
+        /* -----------------------------------------
+           DUPLICATE CHECK
+        ----------------------------------------- */
+
+        if (
+            appointmentMap[
+                duplicateKey
+            ]
+        ) {
+
+            duplicates.push({
+
+                position:
+                    person.position,
+
+                constituency:
+                    person.constituency ||
+                    "National",
+
+                firstAppointee:
+                    appointmentMap[
+                        duplicateKey
+                    ],
+
+                duplicateAppointee:
+                    person
+
+            });
+
+        } else {
+
+            appointmentMap[
+                duplicateKey
+            ] = person;
+
+        }
+
+    });
+
+
+    /* -----------------------------------------
+       SHOW DUPLICATES
+    ----------------------------------------- */
+
+    if (
+        duplicates.length > 0
+    ) {
+
+        let message =
+            "⚠️ DUPLICATE APPOINTMENT DETECTED\n\n" +
+
+            "The same position cannot be assigned " +
+            "to the same constituency or area twice.\n\n";
+
+
+        duplicates.forEach(
+            function (
+                duplicate,
+                index
+            ) {
+
+                message +=
+
+                    `${index + 1}. ` +
+                    `${duplicate.position}\n` +
+
+                    `Area: ` +
+                    `${duplicate.constituency}\n` +
+
+                    `Existing Appointee: ` +
+                    `${duplicate.firstAppointee.name} ` +
+                    `(${duplicate.firstAppointee.id})\n` +
+
+                    `Duplicate Appointee: ` +
+                    `${duplicate.duplicateAppointee.name} ` +
+                    `(${duplicate.duplicateAppointee.id})\n\n`;
+
+            }
+        );
+
+
+        alert(
+            message
+        );
+
+
+        console.error(
+            "Duplicate appointments detected:",
+            duplicates
+        );
+
+    }
+
+}
+
+        /* =========================================================
+           DEBUG / VALIDATION REPORT
+           
+           Open browser console and run:
+           
+           appointeeValidationReport()
+           
+           to see which records are:
+           
+           VERIFIED
+           UNVERIFIED
+           HIDDEN
+        ========================================================== */
+
+        window.appointeeValidationReport =
+            function () {
+
+                const report =
+                    activeAppointees.map(
+                        function (
+                            person
+                        ) {
+
+                            const validation =
+                                person.constituencyValidation;
+
+
+                            return {
+
+                                id:
+                                    person.id,
+
+                                name:
+                                    person.name,
+
+                                position:
+                                    person.position,
+
+                                submittedConstituency:
+                                    validation.submittedConstituency,
+
+                                officialConstituency:
+                                    validation.officialConstituency,
+
+                                region:
+                                    person.region,
+
+                                constituencyBased:
+                                    validation.constituencyBased,
+
+                                status:
+                                    validation.status,
+
+                                visible:
+                                    validation.visibleInDirectory,
+
+                                searchable:
+                                    validation.searchable,
+
+                                profileAccessible:
+                                    validation.profileAccessible
+                            };
+                        }
+                    );
+
+
+                console.table(
+                    report
+                );
+
+
+                return report;
+            };
+
+
+        /* =========================================================
+           GET ONE APPOINTEE VALIDATION
+           
+           Example:
+           
+           getAppointeeValidation("app001")
+        ========================================================== */
+
+        window.getAppointeeValidation =
+            function (
+                appointeeId
+            ) {
+
+                const person =
+                    activeAppointees.find(
+                        function (
+                            item
+                        ) {
+
+                            return (
+                                String(
+                                    item.id
+                                ) ===
+                                String(
+                                    appointeeId
+                                )
+                            );
+                        }
+                    );
+
+
+                if (
+                    !person
+                ) {
+
+                    return null;
+                }
+
+
+                return (
+                    person.constituencyValidation
+                );
+            };
+
+
+        /* =========================================================
+           INITIALIZE DUPLICATE CHECK
+        ========================================================== */
+
+        checkDuplicateAppointees();
+
+
+        /* =========================================================
+           INITIALIZE MINISTRIES
+        ========================================================== */
+
+        loadMinistries();
+
+
+        /* =========================================================
+           INITIALIZE REGIONS
+        ========================================================== */
+
+        loadRegions();
+
+
+        /* =========================================================
+           SHOW PUBLIC APPOINTEES
+           
+           This is NOT activeAppointees anymore.
+           
+           It is publicAppointees.
+           
+           Therefore invalid MCE/DCE/local appointees are hidden.
+        ========================================================== */
+
+        renderAppointees(
+            publicAppointees
+        );
+
+
+        /* =========================================================
+           CONSOLE INFORMATION
+        ========================================================== */
+
+        console.info(
+            "YPG Appointee Directory initialized."
+        );
+
+
+        console.info(
+            `Total active appointees: ${activeAppointees.length}`
+        );
+
+
+        console.info(
+            `Public appointees: ${publicAppointees.length}`
+        );
+
+
+        console.info(
+            `Searchable appointees: ${searchableAppointees.length}`
+        );
+
+
+        const verifiedCount =
+            activeAppointees.filter(
+                function (
+                    person
+                ) {
+
+                    return (
+                        person.constituencyVerified
+                    );
+                }
+            ).length;
+
+
+        const unverifiedCount =
+            activeAppointees.filter(
+                function (
+                    person
+                ) {
+
+                    return (
+                        person.constituencyUnverified
+                    );
+                }
+            ).length;
+
+
+        const hiddenCount =
+            activeAppointees.filter(
+                function (
+                    person
+                ) {
+
+                    return (
+                        !person.visibleInDirectory
+                    );
+                }
+            ).length;
+
+
+        console.info(
+            `Verified constituencies: ${verifiedCount}`
+        );
+
+
+        console.info(
+            `Unverified national appointees: ${unverifiedCount}`
+        );
+
+
+        console.info(
+            `Hidden constituency-based appointees: ${hiddenCount}`
+        );
+
+    }
+);
+
+
+/* =============================================================
+   SCROLL BUTTONS
+============================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const scrollTopBtn =
+            document.getElementById(
+                "scrollTopBtn"
+            );
+
+
+        const scrollDownBtn =
+            document.getElementById(
+                "scrollDownBtn"
+            );
+
+
+        /* =========================================================
+           GO TO TOP
+        ========================================================== */
+
+        if (
+            scrollTopBtn
+        ) {
+
+            scrollTopBtn.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollTo({
+
+                        top: 0,
+
+                        behavior: "smooth"
+
+                    });
+
+                }
+            );
+        }
+
+
+        /* =========================================================
+           GO DOWN
+        ========================================================== */
+
+        if (
+            scrollDownBtn
+        ) {
+
+            scrollDownBtn.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollBy({
+
+                        top:
+                            window.innerHeight *
+                            0.8,
+
+                        behavior:
+                            "smooth"
+
+                    });
+
+                }
+            );
+        }
+
+    }
+);
+</script>
+
+</body>
+</html>

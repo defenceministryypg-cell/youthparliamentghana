@@ -1,0 +1,3479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Description -->
+    <meta name="description"
+          content="View official appointee profiles, appointments and information from Youth Parliament Ghana.">
+
+    <meta name="keywords"
+          content="Youth Parliament Ghana, YPG, appointees, appointee profile, Ghana youth, youth leadership">
+
+    <meta name="author"
+          content="Youth Parliament Ghana">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <!-- Page Title -->
+    <title>Appointee Profile | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical"
+          href="https://youth-parliament-ghana-site.vercel.app/appointee-profile.html">
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/webp"
+          href="images/logo.webp">
+
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Appointee Profile | Youth Parliament Ghana">
+
+    <meta property="og:description"
+          content="View official appointee profiles and appointment information from Youth Parliament Ghana.">
+
+    <meta property="og:type"
+          content="profile">
+
+    <meta property="og:url"
+          content="https://youth-parliament-ghana-site.vercel.app/appointee-profile.html">
+
+    <meta property="og:image"
+          content="https://youth-parliament-ghana-site.vercel.app/images/logo.webp">
+
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Appointee Profile | Youth Parliament Ghana">
+
+    <meta name="twitter:description"
+          content="View official appointee profiles from Youth Parliament Ghana.">
+
+    <meta name="twitter:image"
+          content="https://youth-parliament-ghana-site.vercel.app/images/logo.webp">
+
+
+    <style>
+
+        /* =========================
+           PROFILE HEADER
+        ========================= */
+
+        .profile-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy),
+                    var(--navy-light)
+                );
+
+            padding: 150px 0 70px;
+
+            color: white;
+        }
+
+
+        .back-link {
+
+            color: var(--gold-light);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .back-link:hover {
+
+            color: white;
+        }
+
+
+        /* =========================
+           PROFILE CARD
+        ========================= */
+
+        .profile-card {
+
+            margin-top: -45px;
+
+            position: relative;
+
+            z-index: 5;
+
+            background: white;
+
+            border-radius: 16px;
+
+            border: 1px solid var(--border);
+
+            box-shadow:
+                0 20px 50px
+                rgba(7, 27, 53, 0.10);
+
+            overflow: hidden;
+        }
+
+
+        .profile-top {
+
+            padding: 40px;
+        }
+        /* ========================================
+   PAGE TOP & DOWN BUTTONS
+======================================== */
+
+.page-navigation {
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.page-navigation button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #b08d57;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+.page-navigation button:hover {
+    background: #8f713f;
+    transform: translateY(-3px);
+}
+
+.page-navigation button:active {
+    transform: scale(0.95);
+}
+@media (max-width: 576px) {
+    .page-navigation {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .page-navigation button {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+}
+
+
+        /* =========================
+           PHOTO
+        ========================= */
+
+        .profile-photo {
+
+            width: 220px;
+
+            height: 260px;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            background: var(--light);
+
+            margin: auto;
+        }
+
+
+        .profile-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: 50% 15%;
+
+            display: block;
+        }
+
+
+        /* =========================
+           PROFILE DETAILS
+        ========================= */
+
+        .profile-main h1 {
+
+            color: var(--navy);
+
+            font-size: 38px;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+        }
+
+
+        .profile-position {
+
+            color: #9a7410;
+
+            font-weight: 700;
+
+            font-size: 17px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .meta-list {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px 25px;
+        }
+
+
+        .meta-item {
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .meta-item i {
+
+            color: #9a7410;
+
+            margin-right: 6px;
+        }
+
+
+        /* =========================
+           PROFILE SECTIONS
+        ========================== */
+
+        .profile-section {
+
+            padding: 35px 40px;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .profile-section h2 {
+
+            color: var(--navy);
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+
+        .profile-section p {
+
+            color: var(--muted);
+
+            line-height: 1.9;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           INFORMATION LIST
+        ========================== */
+
+        .info-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+
+        .info-list li {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .info-list li:last-child {
+
+            border-bottom: none;
+        }
+
+
+        .info-list strong {
+
+            color: var(--navy);
+
+            font-size: 14px;
+
+            min-width: 120px;
+        }
+
+
+        .info-list span {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            text-align: right;
+
+            flex: 1;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .contact-item {
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            padding: 20px;
+
+            background: var(--light);
+        }
+
+
+        .contact-item i {
+
+            color: #9a7410;
+
+            font-size: 22px;
+
+            margin-bottom: 10px;
+
+            display: block;
+        }
+
+
+        .contact-item strong {
+
+            display: block;
+
+            color: var(--navy);
+
+            font-size: 13px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .contact-item span {
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            word-break: break-word;
+        }
+
+
+        .contact-item a {
+
+            color: #9a7410;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+
+        .contact-item a:hover {
+
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           PARLIAMENTARY INFORMATION
+        ========================== */
+
+        #parliamentaryInfo {
+
+            display: none;
+        }
+
+
+        /* =========================
+           NOT FOUND
+        ========================== */
+
+        .profile-not-found {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 120px 20px;
+        }
+
+
+        .profile-not-found i {
+
+            font-size: 60px;
+
+            color: #b7c0ca;
+
+            margin-bottom: 20px;
+        }
+
+
+        .profile-not-found h2 {
+
+            color: var(--navy);
+
+            font-weight: 800;
+        }
+
+
+        .profile-not-found p {
+
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 767px) {
+
+            .profile-header {
+
+                padding: 130px 20px 60px;
+            }
+
+
+            .profile-top {
+
+                padding: 25px;
+            }
+
+
+            .profile-photo {
+
+                width: 180px;
+
+                height: 220px;
+
+                margin-bottom: 30px;
+            }
+
+
+            .profile-main h1 {
+
+                font-size: 30px;
+            }
+
+
+            .profile-section {
+
+                padding: 30px 25px;
+            }
+
+
+            .info-list li {
+
+                flex-direction: column;
+
+                gap: 5px;
+            }
+
+
+            .info-list span {
+
+                text-align: left;
+            }
+
+
+            .contact-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+        /* ========================================
+   REVOKED PROFILE ACCESS
+======================================== */
+
+.revoked-profile {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 50px 30px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eadede;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(7, 27, 53, 0.10);
+}
+
+.revoked-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(180, 40, 40, 0.10);
+    color: #b42828;
+    font-size: 38px;
+}
+
+.revoked-profile h2 {
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.revoked-profile p {
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+.revoked-profile .member-name {
+    color: #b42828;
+    font-weight: 800;
+}
+
+.revoked-profile .admin-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: #faf7ef;
+    border: 1px solid rgba(215, 169, 40, 0.25);
+    border-radius: 10px;
+    color: #7d641c;
+    font-weight: 600;
+}
+        /* =========================================================
+   CONSTITUENCY VERIFICATION
+========================================================= */
+
+.official-constituency,
+.unverified-constituency {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+
+/* =========================================================
+   VERIFIED
+========================================================= */
+
+.constituency-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    background: rgba(25, 135, 84, 0.12);
+
+    border: 1px solid rgba(25, 135, 84, 0.25);
+
+    color: #198754;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   UNVERIFIED
+========================================================= */
+
+.unverified-constituency {
+    color: #856404;
+}
+
+
+.unverified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    background: #fff3cd;
+
+    border: 1px solid #ffe69c;
+
+    color: #856404;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   PROFILE UNVERIFIED WARNING
+========================================================= */
+
+.constituency-verification-warning {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 18px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #fff8e1;
+
+    border: 1px solid #ffe69c;
+
+    color: #856404;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+
+.constituency-verification-warning i {
+    flex-shrink: 0;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   PROFILE RESTRICTED
+========================================================= */
+
+.constituency-profile-restricted {
+    text-align: center;
+}
+
+
+.constituency-profile-restricted
+.revoked-icon {
+    color: #856404;
+}
+
+
+.constituency-profile-restricted h2 {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (
+    max-width: 576px
+) {
+
+    .constituency-verification-warning {
+
+        font-size: 12px;
+
+        padding: 10px 11px;
+
+    }
+
+
+    .constituency-verified-badge,
+    .unverified-badge {
+
+        font-size: 8px;
+
+        padding: 2px 6px;
+
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+
+        <a
+            class="navbar-brand d-flex align-items-center"
+            href="index.html"
+        >
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana"
+                class="site-logo"
+            >
+
+
+            <span class="brand-text">
+
+                <strong>
+                    Youth Parliament Ghana
+                </strong>
+
+                <small>
+                    Parliamentary Directory
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+
+            <i class="bi bi-list text-white fs-3"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul
+                class="navbar-nav ms-auto align-items-lg-center"
+            >
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="mps.html"
+                    >
+                        MPs
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="appointees.html"
+                    >
+                        Appointees
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="ministries.html"
+                    >
+                        Ministries
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="news.html"
+                    >
+                        News
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        href="mps.html"
+                        class="btn btn-gold"
+                    >
+                        Explore Directory
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     PROFILE HEADER
+========================== -->
+
+<section class="profile-header">
+
+    <div class="container">
+
+
+        <a
+            href="appointees.html"
+            class="back-link"
+        >
+
+            <i class="bi bi-arrow-left"></i>
+
+            Back to Appointees
+
+        </a>
+
+
+        <div class="section-label light">
+
+            OFFICIAL PROFILE
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROFILE CARD
+========================== -->
+
+<section>
+
+    <div class="container">
+
+
+        <div
+            class="profile-card"
+            id="profileCard"
+        >
+
+
+            <!-- =========================
+                 PROFILE TOP
+            ========================== -->
+
+            <div class="profile-top">
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- PHOTO -->
+
+                    <div class="col-lg-3 text-center">
+
+                        <div class="profile-photo">
+
+                            <img
+                                src="images/profiles/default.jpg"
+                                alt="Appointee"
+                                id="profileImage"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- DETAILS -->
+
+                    <div class="col-lg-9">
+
+                        <div class="profile-main">
+
+
+                            <h1 id="profileName">
+                                Loading...
+                            </h1>
+
+
+                            <div
+                                class="profile-position"
+                                id="profilePosition"
+                            >
+                                Loading...
+                            </div>
+
+
+                            <div class="meta-list">
+
+
+                                <div class="meta-item">
+
+                                    <i class="bi bi-building"></i>
+
+                                    <span id="profileMinistry">
+                                        —
+                                    </span>
+
+                                </div>
+
+
+
+                                <div class="meta-item">
+
+                                    <i class="bi bi-geo-alt"></i>
+
+                                    <span id="profileRegion">
+                                        —
+                                    </span>
+
+                                </div>
+
+
+
+                                <div class="meta-item">
+
+                                    <i class="bi bi-calendar3"></i>
+
+                                    <span id="profileAppointmentDate">
+                                        —
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BIOGRAPHY
+            ========================== -->
+
+            <div class="profile-section">
+
+                <h2>
+                    Biography
+                </h2>
+
+
+                <p id="profileBiography">
+                    Loading profile information...
+                </p>
+
+            </div>
+
+
+
+          <!-- =========================
+     APPOINTMENT INFORMATION
+========================== -->
+
+<div class="profile-section" id="appointmentInfo">
+
+    <h2>
+        <i class="bi bi-person-badge me-2"></i>
+        Appointment Information
+    </h2>
+
+    <ul class="info-list">
+
+        <li>
+            <strong>Position</strong>
+            <span id="appointmentPosition">—</span>
+        </li>
+
+        <li>
+            <strong>Ministry</strong>
+            <span id="appointmentMinistry">—</span>
+        </li>
+
+        <li>
+            <strong>Region</strong>
+            <span id="appointmentRegion">—</span>
+        </li>
+
+        <li>
+            <strong>Appointment Date</strong>
+            <span id="appointmentDate">—</span>
+        </li>
+
+        <li>
+            <strong>Constituency</strong>
+            <span id="appointmentConstituency">—</span>
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+            <!-- =========================
+                 PROFESSIONAL INFORMATION
+            ========================== -->
+
+            <div class="profile-section">
+
+                <h2>
+                    Education & Professional Background
+                </h2>
+
+
+                <ul class="info-list">
+
+
+                    <li>
+
+                        <strong>
+                            Education
+                        </strong>
+
+                        <span id="profileEducation">
+                            Information to be updated
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Profession
+                        </strong>
+
+                        <span id="profileProfession">
+                            Information to be updated
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Experience
+                        </strong>
+
+                        <span id="profileExperience">
+                            Information to be updated
+                        </span>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CONTACT
+            ========================== -->
+
+            <div class="profile-section">
+
+                <h2>
+                    Public Contact
+                </h2>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <span id="profileEmail">
+                            Not available
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone"></i>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <span id="profilePhone">
+                            Not available
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- WEBSITE -->
+
+                    <div class="contact-item">
+
+                        <i class="bi bi-globe"></i>
+
+                        <strong>
+                            Official Website
+                        </strong>
+
+                        <span id="profileWebsite">
+                            Not available
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             NOT FOUND
+        ========================== -->
+
+        <div
+            class="profile-not-found"
+            id="profileNotFound"
+        >
+
+            <i class="bi bi-person-x"></i>
+
+
+            <h2>
+                Appointee Not Found
+            </h2>
+
+
+            <p>
+                The requested profile could not be found.
+            </p>
+
+
+            <a
+                href="appointees.html"
+                class="btn btn-gold mt-3"
+            >
+                Back to Appointees
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- PAGE NAVIGATION BUTTONS -->
+<div class="page-navigation">
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <button id="scrollDownBtn" title="Go down">
+        <i class="bi bi-chevron-down"></i>
+    </button>
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="row g-5">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-5">
+
+
+                <div class="footer-brand">
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo"
+                    >
+
+
+                    <div>
+
+                        <strong>
+                            Youth Parliament Ghana
+                        </strong>
+
+                        <small>
+                            Parliamentary Directory
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    A public directory designed to provide
+                    accessible information about parliamentary
+                    representatives, appointees and ministries.
+
+                </p>
+
+
+                <div class="social-links">
+
+    <!-- Facebook -->
+    <a
+        href="https://www.facebook.com/share/1LT8P5ibFE/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/youthparliamentgh?stkn=MTg4YjJ6NDMwa25oNA%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- X / Twitter -->
+    <a
+        href="https://x.com/youthparl?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on X">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+        href="https://www.tiktok.com/@YouthParliamentGH"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <!-- YouTube -->
+<a
+    href="https://youtube.com/@youthparliament-d4f?si=9gVg4iPJhuSQm0vC"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Youth Parliament Ghana on YouTube">
+
+    <i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+            </div>
+
+
+
+            <!-- DIRECTORY -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+                    Directory
+                </h5>
+
+
+                <a href="mps.html">
+                    Members of Parliament
+                </a>
+
+
+                <a href="appointees.html">
+                    Appointees
+                </a>
+
+
+                <a href="ministries.html">
+                    Ministries
+                </a>
+
+            </div>
+
+
+
+            <!-- EXPLORE -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+                    Explore
+                </h5>
+
+
+                <a href="news.html">
+                    News
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </div>
+
+
+
+            <!-- INFORMATION -->
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>
+                    Information
+                </h5>
+
+
+                <p>
+
+                    This directory is intended to provide
+                    accessible civic information.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+            </span>
+
+
+            <span>
+                Parliamentary Directory
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     BOOTSTRAP JS
+========================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =========================================================
+     CONSTITUENCY DATA
+     MUST LOAD BEFORE APPOINTEE PROFILE VALIDATION
+========================================================== -->
+
+<script src="js/constituency-data.js"></script>
+
+
+<!-- =========================================================
+     APPOINTEE DATA
+========================================================== -->
+
+<script src="js/appointee-data.js"></script>
+
+
+<!-- =========================================================
+     MAIN JS
+========================================================== -->
+
+<script src="js/main.js"></script>
+
+
+<!-- =========================================================
+     DYNAMIC APPOINTEE PROFILE
+========================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================================
+           GET PROFILE ID
+        ====================================================== */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        const appointeeId =
+            String(
+                params.get("id") || ""
+            )
+                .trim()
+                .toLowerCase();
+
+
+        /* =====================================================
+           ELEMENTS
+        ====================================================== */
+
+        const profileCard =
+            document.getElementById(
+                "profileCard"
+            );
+
+
+        const profileNotFound =
+            document.getElementById(
+                "profileNotFound"
+            );
+
+
+        /* =====================================================
+           FIND EXACT APPOINTEE
+        ====================================================== */
+
+        const appointee =
+            Array.isArray(
+                appointeeData
+            )
+                ? appointeeData.find(
+                    function (
+                        person
+                    ) {
+
+                        return (
+                            String(
+                                person.id || ""
+                            )
+                                .trim()
+                                .toLowerCase() ===
+                            appointeeId
+                        );
+
+                    }
+                )
+                : null;
+
+
+        /* =====================================================
+           CHECK PROFILE
+        ====================================================== */
+
+        if (
+            !appointee
+        ) {
+
+            if (
+                profileCard
+            ) {
+
+                profileCard.style.display =
+                    "none";
+
+            }
+
+
+            if (
+                profileNotFound
+            ) {
+
+                profileNotFound.style.display =
+                    "block";
+
+            }
+
+
+            document.title =
+                "Profile Not Found | Youth Parliament Ghana";
+
+
+            return;
+
+        }
+
+
+        /* =====================================================
+           CHECK PROFILE STATUS
+        ====================================================== */
+
+        const appointeeStatus =
+            String(
+                appointee.status ||
+                "active"
+            )
+                .toLowerCase()
+                .trim();
+
+
+        /* =====================================================
+           REVOKED PROFILE
+        ====================================================== */
+
+        if (
+            appointeeStatus ===
+            "revoked"
+        ) {
+
+            document.title =
+                "Profile Access Revoked | Youth Parliament Ghana";
+
+
+            /* -------------------------------------------------
+               Hide normal profile
+            -------------------------------------------------- */
+
+            if (
+                profileCard
+            ) {
+
+                profileCard.style.display =
+                    "none";
+
+            }
+
+
+            /* -------------------------------------------------
+               Change header label
+            -------------------------------------------------- */
+
+            const profileHeaderLabel =
+                document.querySelector(
+                    ".profile-header .section-label"
+                );
+
+
+            if (
+                profileHeaderLabel
+            ) {
+
+                profileHeaderLabel.textContent =
+                    "PROFILE ACCESS RESTRICTED";
+
+            }
+
+
+            /* -------------------------------------------------
+               Create revoked message
+            -------------------------------------------------- */
+
+            const revokedSection =
+                document.createElement(
+                    "section"
+                );
+
+
+            revokedSection.className =
+                "profile-access-message";
+
+
+            revokedSection.innerHTML = `
+
+                <div class="container">
+
+                    <div class="revoked-profile">
+
+                        <div class="revoked-icon">
+
+                            <i class="bi bi-lock-fill"></i>
+
+                        </div>
+
+
+                        <h2>
+                            PROFILE ACCESS REVOKED
+                        </h2>
+
+
+                        <p>
+
+                            Access to the profile of
+
+                            <span class="member-name">
+
+                                ${escapeHTML(
+                                    appointee.name ||
+                                    "this appointee"
+                                )}
+
+                            </span>
+
+                            is currently unavailable.
+
+                        </p>
+
+
+                        <p>
+
+                            This member's profile access
+                            has been revoked.
+
+                        </p>
+
+
+                        <div class="admin-message">
+
+                            <i class="bi bi-info-circle me-1"></i>
+
+                            Please contact the Administrator
+                            for assistance.
+
+                        </div>
+
+
+                        <a
+                            href="appointees.html"
+                            class="btn btn-gold mt-4"
+                        >
+
+                            <i class="bi bi-arrow-left"></i>
+
+                            Back to Appointees
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            const profileHeader =
+                document.querySelector(
+                    ".profile-header"
+                );
+
+
+            if (
+                profileHeader
+            ) {
+
+                profileHeader.insertAdjacentElement(
+                    "afterend",
+                    revokedSection
+                );
+
+            }
+
+
+            return;
+
+        }
+
+
+        /* =====================================================
+           NORMALIZE TEXT
+        ====================================================== */
+
+        function normalizeText(
+            value
+        ) {
+
+            return String(
+                value || ""
+            )
+                .trim()
+                .toLowerCase()
+                .replace(
+                    /[–—]/g,
+                    "-"
+                )
+                .replace(
+                    /\s+/g,
+                    " "
+                )
+                .trim();
+
+        }
+
+
+        /* =====================================================
+           NORMALIZE CONSTITUENCY
+        ====================================================== */
+
+        function normalizeConstituency(
+            value
+        ) {
+
+            if (
+                typeof window.normalizeConstituencyName ===
+                "function"
+            ) {
+
+                return window.normalizeConstituencyName(
+                    value
+                );
+
+            }
+
+
+            return String(
+                value || ""
+            )
+                .trim()
+                .toLowerCase()
+                .replace(
+                    /[–—]/g,
+                    "-"
+                )
+                .replace(
+                    /\s+/g,
+                    " "
+                )
+                .replace(
+                    /\s+constituency$/i,
+                    ""
+                )
+                .trim();
+
+        }
+
+
+        /* =====================================================
+           GET OFFICIAL CONSTITUENCY
+           
+           constituency-data.js remains the authority.
+        ====================================================== */
+
+        function getOfficialConstituencyRecord(
+            submittedConstituency,
+            submittedRegion
+        ) {
+
+            const value =
+                String(
+                    submittedConstituency ||
+                    ""
+                ).trim();
+
+
+            if (
+                !value
+            ) {
+
+                return null;
+
+            }
+
+
+            /* -------------------------------------------------
+               Use official helper if available
+            -------------------------------------------------- */
+
+            if (
+                typeof window.getOfficialConstituency ===
+                "function"
+            ) {
+
+                let official =
+                    null;
+
+
+                try {
+
+                    official =
+                        window.getOfficialConstituency(
+                            value
+                        );
+
+                } catch (
+                    error
+                ) {
+
+                    console.warn(
+                        "Constituency validation error:",
+                        error
+                    );
+
+                }
+
+
+                if (
+                    official
+                ) {
+
+                    return official;
+
+                }
+
+
+                /*
+                 * Support versions of the helper that
+                 * accept constituency + region.
+                 */
+
+                if (
+                    submittedRegion
+                ) {
+
+                    try {
+
+                        official =
+                            window.getOfficialConstituency(
+                                value,
+                                submittedRegion
+                            );
+
+                    } catch (
+                        error
+                    ) {
+
+                        console.warn(
+                            "Regional constituency validation error:",
+                            error
+                        );
+
+                    }
+
+
+                    if (
+                        official
+                    ) {
+
+                        return official;
+
+                    }
+
+                }
+
+            }
+
+
+            /* -------------------------------------------------
+               Direct official registry fallback
+            -------------------------------------------------- */
+
+            if (
+                !Array.isArray(
+                    window.constituencyData
+                )
+            ) {
+
+                return null;
+
+            }
+
+
+            const normalizedInput =
+                normalizeConstituency(
+                    value
+                );
+
+
+            const exactMatches =
+                window.constituencyData.filter(
+                    function (
+                        item
+                    ) {
+
+                        return (
+                            normalizeConstituency(
+                                item.constituency
+                            ) ===
+                            normalizedInput
+                        );
+
+                    }
+                );
+
+
+            if (
+                exactMatches.length ===
+                1
+            ) {
+
+                return exactMatches[0];
+
+            }
+
+
+            /* -------------------------------------------------
+               Check approved aliases
+            -------------------------------------------------- */
+
+            if (
+                window.constituencyAliases
+            ) {
+
+                const aliases =
+                    window.constituencyAliases;
+
+
+                for (
+                    const officialName
+                    in aliases
+                ) {
+
+                    const aliasList =
+                        aliases[
+                            officialName
+                        ] || [];
+
+
+                    const matchedAlias =
+                        aliasList.some(
+                            function (
+                                alias
+                            ) {
+
+                                return (
+                                    normalizeConstituency(
+                                        alias
+                                    ) ===
+                                    normalizedInput
+                                );
+
+                            }
+                        );
+
+
+                    if (
+                        matchedAlias
+                    ) {
+
+                        const officialRecord =
+                            window.constituencyData.find(
+                                function (
+                                    item
+                                ) {
+
+                                    return (
+                                        normalizeConstituency(
+                                            item.constituency
+                                        ) ===
+                                        normalizeConstituency(
+                                            officialName
+                                        )
+                                    );
+
+                                }
+                            );
+
+
+                        if (
+                            officialRecord
+                        ) {
+
+                            return officialRecord;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+            return null;
+
+        }
+
+
+        /* =====================================================
+           DETERMINE CONSTITUENCY-BASED APPOINTEE
+           
+           IMPORTANT:
+           We intentionally DO NOT use isMP.
+           
+           Position determines whether the appointment is
+           constituency/local based.
+        ====================================================== */
+
+        function isConstituencyBasedAppointee(
+            person
+        ) {
+
+            const position =
+                normalizeText(
+                    person.position
+                );
+
+
+            if (
+                !position
+            ) {
+
+                return false;
+
+            }
+
+
+            const constituencyBasedKeywords = [
+
+                "mce",
+
+                "municipal chief executive",
+
+                "dce",
+
+                "district chief executive",
+
+                "metropolitan chief executive",
+
+                "metro chief executive",
+
+                "district coordinator",
+
+                "municipal coordinator",
+
+                "metropolitan coordinator",
+
+                "metro coordinator",
+
+                "constituency coordinator",
+
+                "constituency representative",
+
+                "constituency director",
+
+                "district director",
+
+                "municipal director",
+
+                "metropolitan director",
+
+                "metro director",
+
+                "district representative",
+
+                "municipal representative",
+
+                "metropolitan representative",
+
+                "metro representative",
+
+                "district officer",
+
+                "municipal officer",
+
+                "metropolitan officer",
+
+                "constituency officer",
+
+                "district liaison",
+
+                "municipal liaison",
+
+                "metropolitan liaison",
+
+                "constituency liaison"
+
+            ];
+
+
+            return (
+                constituencyBasedKeywords.some(
+                    function (
+                        keyword
+                    ) {
+
+                        return (
+                            position === keyword ||
+                            position.includes(
+                                keyword
+                            )
+                        );
+
+                    }
+                )
+            );
+
+        }
+
+
+        /* =====================================================
+           VALIDATE PROFILE CONSTITUENCY
+           
+           VERIFIED:
+           Correct official constituency.
+           
+           UNVERIFIED:
+           National appointee with invalid constituency.
+           
+           HIDDEN:
+           Constituency-based appointee with invalid
+           constituency.
+        ====================================================== */
+
+        function validateProfileConstituency(
+            person
+        ) {
+
+            const submittedConstituency =
+                String(
+                    person.constituency ||
+                    ""
+                ).trim();
+
+
+            const submittedRegion =
+                String(
+                    person.region ||
+                    ""
+                ).trim();
+
+
+            const constituencyBased =
+                isConstituencyBasedAppointee(
+                    person
+                );
+
+
+            /* -------------------------------------------------
+               No constituency supplied
+            -------------------------------------------------- */
+
+            if (
+                !submittedConstituency
+            ) {
+
+                if (
+                    constituencyBased
+                ) {
+
+                    return {
+
+                        status:
+                            "hidden",
+
+                        verified:
+                            false,
+
+                        unverified:
+                            false,
+
+                        constituencyBased:
+                            true,
+
+                        profileAccessible:
+                            false,
+
+                        submittedConstituency:
+                            "",
+
+                        officialConstituency:
+                            null,
+
+                        officialRegion:
+                            null
+
+                    };
+
+                }
+
+
+                /*
+                 * National appointee.
+                 * Keep accessible but mark unverified.
+                 */
+
+                return {
+
+                    status:
+                        "unverified",
+
+                    verified:
+                        false,
+
+                    unverified:
+                        true,
+
+                    constituencyBased:
+                        false,
+
+                    profileAccessible:
+                        true,
+
+                    submittedConstituency:
+                        "",
+
+                    officialConstituency:
+                        null,
+
+                    officialRegion:
+                        null
+
+                };
+
+            }
+
+
+            /* -------------------------------------------------
+               Check against official constituency registry
+            -------------------------------------------------- */
+
+            const official =
+                getOfficialConstituencyRecord(
+                    submittedConstituency,
+                    submittedRegion
+                );
+
+
+            /* -------------------------------------------------
+               VERIFIED
+            -------------------------------------------------- */
+
+            if (
+                official
+            ) {
+
+                return {
+
+                    status:
+                        "verified",
+
+                    verified:
+                        true,
+
+                    unverified:
+                        false,
+
+                    constituencyBased:
+                        constituencyBased,
+
+                    profileAccessible:
+                        true,
+
+                    submittedConstituency:
+                        submittedConstituency,
+
+                    officialConstituency:
+                        official.constituency ||
+                        submittedConstituency,
+
+                    officialRegion:
+                        official.region ||
+                        submittedRegion,
+
+                    officialRecord:
+                        official
+
+                };
+
+            }
+
+
+            /* -------------------------------------------------
+               INVALID LOCAL / CONSTITUENCY APPOINTEE
+               
+               Block profile.
+            -------------------------------------------------- */
+
+            if (
+                constituencyBased
+            ) {
+
+                return {
+
+                    status:
+                        "hidden",
+
+                    verified:
+                        false,
+
+                    unverified:
+                        false,
+
+                    constituencyBased:
+                        true,
+
+                    profileAccessible:
+                        false,
+
+                    submittedConstituency:
+                        submittedConstituency,
+
+                    officialConstituency:
+                        null,
+
+                    officialRegion:
+                        null
+
+                };
+
+            }
+
+
+            /* -------------------------------------------------
+               INVALID NATIONAL APPOINTEE
+               
+               Keep profile accessible.
+            -------------------------------------------------- */
+
+            return {
+
+                status:
+                    "unverified",
+
+                verified:
+                    false,
+
+                unverified:
+                    true,
+
+                constituencyBased:
+                    false,
+
+                profileAccessible:
+                    true,
+
+                submittedConstituency:
+                    submittedConstituency,
+
+                officialConstituency:
+                    null,
+
+                officialRegion:
+                    null
+
+            };
+
+        }
+
+
+        /* =====================================================
+           RUN CONSTITUENCY VALIDATION
+        ====================================================== */
+
+        const constituencyValidation =
+            validateProfileConstituency(
+                appointee
+            );
+
+
+        /* =====================================================
+           BLOCK INVALID CONSTITUENCY-BASED PROFILE
+        ====================================================== */
+
+        if (
+            !constituencyValidation.profileAccessible
+        ) {
+
+            document.title =
+                "Profile Unavailable | Youth Parliament Ghana";
+
+
+            if (
+                profileCard
+            ) {
+
+                profileCard.style.display =
+                    "none";
+
+            }
+
+
+            if (
+                profileNotFound
+            ) {
+
+                profileNotFound.style.display =
+                    "none";
+
+            }
+
+
+            const profileHeaderLabel =
+                document.querySelector(
+                    ".profile-header .section-label"
+                );
+
+
+            if (
+                profileHeaderLabel
+            ) {
+
+                profileHeaderLabel.textContent =
+                    "PROFILE ACCESS RESTRICTED";
+
+            }
+
+
+            const restrictedSection =
+                document.createElement(
+                    "section"
+                );
+
+
+            restrictedSection.className =
+                "profile-access-message";
+
+
+            restrictedSection.innerHTML = `
+
+                <div class="container">
+
+                    <div class="revoked-profile constituency-profile-restricted">
+
+                        <div class="revoked-icon">
+
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+
+                        </div>
+
+
+                        <h2>
+                            PROFILE UNAVAILABLE
+                        </h2>
+
+
+                        <p>
+
+                            The public profile of
+
+                            <span class="member-name">
+
+                                ${escapeHTML(
+                                    appointee.name ||
+                                    "this appointee"
+                                )}
+
+                            </span>
+
+                            is currently unavailable.
+
+                        </p>
+
+
+                        <p>
+
+                            The constituency information
+                            provided for this constituency-based
+                            appointment could not be verified
+                            against the official Youth Parliament
+                            Ghana constituency registry.
+
+                        </p>
+
+
+                        <div class="admin-message">
+
+                            <i class="bi bi-info-circle me-1"></i>
+
+                            Please provide the correct official
+                            constituency information to the
+                            Administrator.
+
+                        </div>
+
+
+                        <a
+                            href="appointees.html"
+                            class="btn btn-gold mt-4"
+                        >
+
+                            <i class="bi bi-arrow-left"></i>
+
+                            Back to Appointees
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            const profileHeader =
+                document.querySelector(
+                    ".profile-header"
+                );
+
+
+            if (
+                profileHeader
+            ) {
+
+                profileHeader.insertAdjacentElement(
+                    "afterend",
+                    restrictedSection
+                );
+
+            }
+
+
+            return;
+
+        }
+
+
+        /* =====================================================
+           PAGE TITLE
+        ====================================================== */
+
+        document.title =
+            `${appointee.name} | Youth Parliament Ghana`;
+
+
+        /* =====================================================
+           BASIC INFORMATION
+        ====================================================== */
+
+        const profileName =
+            document.getElementById(
+                "profileName"
+            );
+
+
+        if (
+            profileName
+        ) {
+
+            profileName.textContent =
+                appointee.name ||
+                "—";
+
+        }
+
+
+        const profilePosition =
+            document.getElementById(
+                "profilePosition"
+            );
+
+
+        if (
+            profilePosition
+        ) {
+
+            profilePosition.textContent =
+                appointee.position ||
+                "—";
+
+        }
+
+
+        const profileMinistry =
+            document.getElementById(
+                "profileMinistry"
+            );
+
+
+        if (
+            profileMinistry
+        ) {
+
+            profileMinistry.textContent =
+                appointee.ministry ||
+                "—";
+
+        }
+
+
+        const profileRegion =
+            document.getElementById(
+                "profileRegion"
+            );
+
+
+        if (
+            profileRegion
+        ) {
+
+            profileRegion.textContent =
+                appointee.region ||
+                "—";
+
+        }
+
+
+        const profileAppointmentDate =
+            document.getElementById(
+                "profileAppointmentDate"
+            );
+
+
+        if (
+            profileAppointmentDate
+        ) {
+
+            profileAppointmentDate.textContent =
+                appointee.appointmentDate ||
+                "—";
+
+        }
+
+
+        /* =====================================================
+           BIOGRAPHY
+        ====================================================== */
+
+        const profileBiography =
+            document.getElementById(
+                "profileBiography"
+            );
+
+
+        if (
+            profileBiography
+        ) {
+
+            profileBiography.textContent =
+                appointee.biography ||
+                "Information to be updated.";
+
+        }
+
+
+        /* =====================================================
+           PROFESSIONAL INFORMATION
+        ====================================================== */
+
+        const profileEducation =
+            document.getElementById(
+                "profileEducation"
+            );
+
+
+        if (
+            profileEducation
+        ) {
+
+            profileEducation.textContent =
+                appointee.education ||
+                "Information to be updated.";
+
+        }
+
+
+        const profileProfession =
+            document.getElementById(
+                "profileProfession"
+            );
+
+
+        if (
+            profileProfession
+        ) {
+
+            profileProfession.textContent =
+                appointee.profession ||
+                "Information to be updated.";
+
+        }
+
+
+        const profileExperience =
+            document.getElementById(
+                "profileExperience"
+            );
+
+
+        if (
+            profileExperience
+        ) {
+
+            profileExperience.textContent =
+                appointee.experience ||
+                "Information to be updated.";
+
+        }
+
+
+        /* =====================================================
+           PROFILE IMAGE
+        ====================================================== */
+
+        const image =
+            document.getElementById(
+                "profileImage"
+            );
+
+
+        if (
+            image
+        ) {
+
+            image.src =
+                appointee.image ||
+                "images/profiles/default.jpg";
+
+
+            image.alt =
+                appointee.name ||
+                "Appointee";
+
+
+            /* -------------------------------------------------
+               IMAGE FALLBACK
+            -------------------------------------------------- */
+
+            image.onerror =
+                function () {
+
+                    this.onerror =
+                        null;
+
+                    this.src =
+                        "images/profiles/default.jpg";
+
+                };
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ====================================================== */
+
+        const email =
+            document.getElementById(
+                "profileEmail"
+            );
+
+
+        const phone =
+            document.getElementById(
+                "profilePhone"
+            );
+
+
+        const website =
+            document.getElementById(
+                "profileWebsite"
+            );
+
+
+        /* =====================================================
+           EMAIL
+        ====================================================== */
+
+        if (
+            email
+        ) {
+
+            if (
+                appointee.email &&
+                appointee.email !== "#"
+            ) {
+
+                email.innerHTML =
+                    `
+                        <a
+                            href="mailto:${escapeAttribute(
+                                appointee.email
+                            )}"
+                        >
+
+                            ${escapeHTML(
+                                appointee.email
+                            )}
+
+                        </a>
+                    `;
+
+            } else {
+
+                email.textContent =
+                    "Not available";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           PHONE
+        ====================================================== */
+
+        if (
+            phone
+        ) {
+
+            if (
+                appointee.phone &&
+                appointee.phone !== "#"
+            ) {
+
+                const cleanPhone =
+                    String(
+                        appointee.phone
+                    )
+                        .replace(
+                            /[^\d+]/g,
+                            ""
+                        );
+
+
+                phone.innerHTML =
+                    `
+                        <a
+                            href="tel:${escapeAttribute(
+                                cleanPhone
+                            )}"
+                        >
+
+                            ${escapeHTML(
+                                appointee.phone
+                            )}
+
+                        </a>
+                    `;
+
+            } else {
+
+                phone.textContent =
+                    "Not available";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           WEBSITE
+        ====================================================== */
+
+        if (
+            website
+        ) {
+
+            if (
+                appointee.website &&
+                appointee.website !== "#"
+            ) {
+
+                website.innerHTML =
+                    `
+                        <a
+                            href="${escapeAttribute(
+                                appointee.website
+                            )}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            Visit Official Website
+
+                        </a>
+                    `;
+
+            } else {
+
+                website.textContent =
+                    "Not available";
+
+            }
+
+        }
+
+
+        /* =====================================================
+           APPOINTMENT INFORMATION
+        ====================================================== */
+
+        const appointmentInfo =
+            document.getElementById(
+                "appointmentInfo"
+            );
+
+
+        const appointmentPosition =
+            document.getElementById(
+                "appointmentPosition"
+            );
+
+
+        const appointmentMinistry =
+            document.getElementById(
+                "appointmentMinistry"
+            );
+
+
+        const appointmentRegion =
+            document.getElementById(
+                "appointmentRegion"
+            );
+
+
+        const appointmentDate =
+            document.getElementById(
+                "appointmentDate"
+            );
+
+
+        const appointmentConstituency =
+            document.getElementById(
+                "appointmentConstituency"
+            );
+
+
+        /* =====================================================
+           DISPLAY APPOINTMENT INFORMATION
+        ====================================================== */
+
+        if (
+            appointmentInfo
+        ) {
+
+            appointmentInfo.style.display =
+                "block";
+
+
+            if (
+                appointmentPosition
+            ) {
+
+                appointmentPosition.textContent =
+                    appointee.position ||
+                    "Information to be updated";
+
+            }
+
+
+            if (
+                appointmentMinistry
+            ) {
+
+                appointmentMinistry.textContent =
+                    appointee.ministry ||
+                    "Information to be updated";
+
+            }
+
+
+            if (
+                appointmentRegion
+            ) {
+
+                appointmentRegion.textContent =
+                    appointee.region ||
+                    "Information to be updated";
+
+            }
+
+
+            if (
+                appointmentDate
+            ) {
+
+                appointmentDate.textContent =
+                    appointee.appointmentDate ||
+                    "Information to be updated";
+
+            }
+
+
+            /* -------------------------------------------------
+               CONSTITUENCY DISPLAY
+            -------------------------------------------------- */
+
+            if (
+                appointmentConstituency
+            ) {
+
+                if (
+                    constituencyValidation.verified
+                ) {
+
+                    appointmentConstituency.innerHTML = `
+
+                        <span class="official-constituency">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            ${escapeHTML(
+                                constituencyValidation
+                                    .officialConstituency ||
+                                appointee.constituency ||
+                                "Information to be updated"
+                            )}
+
+                            <span
+                                class="constituency-verified-badge"
+                            >
+                                VERIFIED
+                            </span>
+
+                        </span>
+
+                    `;
+
+                } else if (
+                    constituencyValidation.unverified
+                ) {
+
+                    appointmentConstituency.innerHTML = `
+
+                        <span class="unverified-constituency">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            ${
+                                constituencyValidation
+                                    .submittedConstituency
+                                    ? escapeHTML(
+                                        constituencyValidation
+                                            .submittedConstituency
+                                    )
+                                    : "Constituency not verified"
+                            }
+
+                            <span
+                                class="unverified-badge"
+                            >
+                                UNVERIFIED
+                            </span>
+
+                        </span>
+
+                    `;
+
+                } else {
+
+                    appointmentConstituency.textContent =
+                        "Information to be updated";
+
+                }
+
+            }
+
+
+            /* -------------------------------------------------
+               NATIONAL APPoinTEE WARNING
+            -------------------------------------------------- */
+
+            if (
+                constituencyValidation.unverified
+            ) {
+
+                const existingWarning =
+                    document.getElementById(
+                        "constituencyVerificationWarning"
+                    );
+
+
+                if (
+                    !existingWarning
+                ) {
+
+                    const warning =
+                        document.createElement(
+                            "div"
+                        );
+
+
+                    warning.id =
+                        "constituencyVerificationWarning";
+
+
+                    warning.className =
+                        "constituency-verification-warning profile-constituency-warning";
+
+
+                    warning.innerHTML = `
+
+                        <i class="bi bi-exclamation-triangle-fill"></i>
+
+                       <span>
+    UNVERIFIED CONSTITUENCY — The constituency provided could not be matched with the official constituency registry.
+</span>
+
+                    `;
+
+
+                    if (
+                        appointmentInfo
+                    ) {
+
+                        appointmentInfo.appendChild(
+                            warning
+                        );
+
+                    }
+
+                }
+
+            }
+
+        }
+
+
+        /* =====================================================
+           PUBLIC VALIDATION OBJECT
+           
+           Useful for checking the profile from the browser
+           console.
+        ====================================================== */
+
+        window.currentAppointeeConstituencyValidation =
+            constituencyValidation;
+
+
+        console.info(
+            "YPG Appointee Constituency Validation:",
+            constituencyValidation
+        );
+
+
+    }
+);
+
+
+/* =============================================================
+   ESCAPE HTML
+============================================================= */
+
+function escapeHTML(
+    value
+) {
+
+    return String(
+        value ?? ""
+    )
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+/* =============================================================
+   ESCAPE ATTRIBUTE
+============================================================= */
+
+function escapeAttribute(
+    value
+) {
+
+    return String(
+        value ?? ""
+    )
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        );
+
+}
+
+</script>
+
+
+<!-- =========================================================
+     PROFILE SCROLL BUTTONS
+========================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const scrollTopBtn =
+            document.getElementById(
+                "scrollTopBtn"
+            );
+
+
+        const scrollDownBtn =
+            document.getElementById(
+                "scrollDownBtn"
+            );
+
+
+        /* =====================================================
+           GO TO TOP
+        ====================================================== */
+
+        if (
+            scrollTopBtn
+        ) {
+
+            scrollTopBtn.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollTo({
+
+                        top:
+                            0,
+
+                        behavior:
+                            "smooth"
+
+                    });
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           GO DOWN
+        ====================================================== */
+
+        if (
+            scrollDownBtn
+        ) {
+
+            scrollDownBtn.addEventListener(
+                "click",
+                function () {
+
+                    window.scrollBy({
+
+                        top:
+                            window.innerHeight *
+                            0.8,
+
+                        behavior:
+                            "smooth"
+
+                    });
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

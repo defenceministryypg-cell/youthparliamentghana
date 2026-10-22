@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ministers' Appointees Directory - Youth Parliament Ghana">
+
+    <title>Ministers' Appointees | Youth Parliament Ghana</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- Main YPG CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ========================================
+           DIRECTORY HEADER
+        ======================================== */
+
+        .ministers-header {
+            background: linear-gradient(
+                135deg,
+                rgba(7, 27, 53, 0.98),
+                rgba(13, 43, 80, 0.96)
+            );
+            padding: 150px 0 80px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ministers-header::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            right: -100px;
+            bottom: -180px;
+            border: 35px solid rgba(212, 175, 55, 0.12);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .ministers-header h1 {
+            font-size: clamp(34px, 5vw, 56px);
+            font-weight: 800;
+            margin: 15px 0;
+        }
+
+        .ministers-header p {
+            max-width: 720px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.8;
+        }
+
+        .ministers-header .header-icon {
+            color: #d4af37;
+            font-size: 38px;
+        }
+
+        /* ========================================
+           FILTER AREA
+        ======================================== */
+
+        .ministers-tools {
+            margin-top: -35px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .ministers-filter-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            box-shadow: 0 15px 40px rgba(7, 27, 53, 0.10);
+        }
+
+        .ministers-filter-card label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--navy);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .ministers-filter-card .form-control,
+        .ministers-filter-card .form-select,
+        .ministers-filter-card .input-group-text {
+            min-height: 48px;
+            border-color: var(--border);
+        }
+
+        .ministers-filter-card .form-control:focus,
+        .ministers-filter-card .form-select:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.15);
+        }
+
+        .ministers-reset-btn {
+            min-height: 48px;
+            border-radius: 7px;
+        }
+
+        /* ========================================
+           DIRECTORY TITLE AND COUNT
+        ======================================== */
+
+        .ministers-section-title {
+            color: var(--navy);
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .ministers-result-count {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .ministers-result-count strong {
+            color: var(--navy);
+        }
+
+        /* ========================================
+           APPOINTEE CARDS
+        ======================================== */
+
+        .minister-appointee-card {
+            height: 100%;
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .minister-appointee-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(7, 27, 53, 0.12);
+        }
+
+        .minister-appointee-photo {
+            height: 320px;
+            background: #f3f5f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .minister-appointee-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 15%;
+            transition: transform 0.4s ease;
+        }
+
+        .minister-appointee-card:hover
+        .minister-appointee-photo img {
+            transform: scale(1.035);
+        }
+
+        .minister-appointee-placeholder {
+            font-size: 75px;
+            color: #aab3bd;
+        }
+
+        .minister-appointee-content {
+            padding: 23px;
+        }
+
+        .minister-appointee-content h3 {
+            color: var(--navy);
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .minister-appointee-position {
+            color: #9a7410;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .minister-appointee-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .minister-appointee-meta span {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .minister-appointee-meta i {
+            color: #9a7410;
+            margin-right: 7px;
+        }
+
+        .minister-appointee-ministry {
+            display: inline-block;
+            padding: 6px 10px;
+            background: rgba(0, 107, 63, 0.08);
+            color: #006b3f;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .minister-appointee-view {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #9a7410;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .minister-appointee-view i {
+            transition: transform 0.3s ease;
+        }
+
+        .minister-appointee-view:hover {
+            color: var(--navy);
+        }
+
+        .minister-appointee-view:hover i {
+            transform: translateX(4px);
+        }
+
+        /* ========================================
+           NO RESULTS / DATA STATUS
+        ======================================== */
+
+        .ministers-no-results {
+            display: none;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .ministers-no-results > i {
+            display: block;
+            font-size: 55px;
+            color: #aab3bd;
+            margin-bottom: 18px;
+        }
+
+        .ministers-no-results h3 {
+            color: var(--navy);
+            font-weight: 800;
+        }
+
+        .ministers-no-results p {
+            color: var(--muted);
+        }
+
+        /* ========================================
+           PAGE NAVIGATION
+        ======================================== */
+
+        .ministers-page-navigation {
+            position: fixed;
+            right: 22px;
+            bottom: 25px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .ministers-page-navigation button {
+            width: 43px;
+            height: 43px;
+            border: none;
+            border-radius: 50%;
+            background: #b08d57;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+            transition: 0.3s ease;
+        }
+
+        .ministers-page-navigation button:hover {
+            background: #8f713f;
+            transform: translateY(-3px);
+        }
+
+        /* ========================================
+           MOBILE RESPONSIVENESS
+        ======================================== */
+
+        @media (max-width: 767px) {
+            .ministers-header {
+                padding: 130px 18px 65px;
+            }
+
+            .ministers-header h1 {
+                font-size: 36px;
+            }
+
+            .ministers-filter-card {
+                padding: 18px;
+            }
+
+            .minister-appointee-photo {
+                height: 300px;
+            }
+
+            .ministers-section-title {
+                font-size: 23px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .ministers-page-navigation {
+                right: 13px;
+                bottom: 18px;
+            }
+
+            .ministers-page-navigation button {
+                width: 39px;
+                height: 39px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========================================
+         NAVBAR
+    ======================================== -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center"
+               href="index.html">
+
+                <img
+                    src="images/YPG-LOGO.webp"
+                    alt="Youth Parliament Ghana"
+                    class="site-logo">
+
+                <span class="brand-text">
+                    <strong>Youth Parliament Ghana</strong>
+                    <small>Parliamentary Directory</small>
+                </span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <i class="bi bi-list text-white fs-3"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="mps.html">MPs</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="appointees.html">
+                            Presidential Appointees
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active ministers-appointees-link"
+                           href="ministers-appointees.html"
+                           aria-current="page">
+                            <i class="bi bi-person-badge-fill me-1"></i>
+                            Ministers' Appointees
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="ministries.html">
+                            Ministries
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                   
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         PAGE HEADER
+    ======================================== -->
+
+    <section class="ministers-header">
+        <div class="container text-center">
+
+            <i class="bi bi-person-badge-fill header-icon"></i>
+
+            <div class="section-label light mt-3">
+                OFFICIAL DIRECTORY
+            </div>
+
+            <h1>Ministers' Appointees Directory</h1>
+
+            <p>
+                Explore the appointed officials serving under the
+                various ministries of Youth Parliament Ghana.
+                Search for an appointee by name, position, ministry,
+                or constituency.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         SEARCH AND FILTERS
+    ======================================== -->
+
+    <section class="ministers-tools">
+        <div class="container">
+
+            <div class="ministers-filter-card">
+
+                <div class="row g-3">
+
+                    <!-- SEARCH -->
+                    <div class="col-lg-5 col-md-12">
+                        <label for="ministerAppointeeSearch">
+                            Search Appointee
+                        </label>
+
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="bi bi-search"></i>
+                            </span>
+
+                            <input
+                                type="search"
+                                id="ministerAppointeeSearch"
+                                class="form-control"
+                                placeholder="Search name, position, ministry..."
+                                autocomplete="off">
+                        </div>
+                    </div>
+
+                    <!-- MINISTRY FILTER -->
+                    <div class="col-lg-3 col-md-6">
+                        <label for="ministerAppointeeMinistry">
+                            Ministry
+                        </label>
+
+                        <select
+                            id="ministerAppointeeMinistry"
+                            class="form-select">
+
+                            <option value="">All Ministries</option>
+                        </select>
+                    </div>
+
+                    <!-- CONSTITUENCY FILTER -->
+                    <div class="col-lg-3 col-md-6">
+                        <label for="ministerAppointeeConstituency">
+                            Constituency
+                        </label>
+
+                        <select
+                            id="ministerAppointeeConstituency"
+                            class="form-select">
+
+                            <option value="">All Constituencies</option>
+                        </select>
+                    </div>
+
+                    <!-- RESET -->
+                    <div class="col-lg-1 col-md-12 d-flex align-items-end">
+                        <button
+                            type="button"
+                            id="ministerAppointeeReset"
+                            class="btn btn-outline-secondary ministers-reset-btn w-100"
+                            title="Reset filters"
+                            aria-label="Reset filters">
+
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         DIRECTORY CARDS
+    ======================================== -->
+
+    <section class="section-padding">
+        <div class="container">
+
+            <div class="d-flex justify-content-between
+                        align-items-center flex-wrap gap-3 mb-4">
+
+                <h2 class="ministers-section-title mb-0">
+                    <i class="bi bi-people-fill me-2"></i>
+                    Appointee Profiles
+                </h2>
+
+                <div class="ministers-result-count">
+                    Showing
+                    <strong id="ministerAppointeeResultCount">0</strong>
+                    profiles
+                </div>
+            </div>
+
+            <!-- CARDS ARE CREATED BY JAVASCRIPT -->
+            <div class="row g-4" id="ministerAppointeeGrid"></div>
+
+            <!-- NO RESULTS -->
+            <div class="ministers-no-results"
+                 id="ministerAppointeeNoResults">
+
+                <i class="bi bi-person-x"></i>
+
+                <h3>No Appointee Found</h3>
+
+                <p>
+                    No records match your search or filter criteria.
+                    Try another name or reset the filters.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-success mt-2"
+                    id="ministerAppointeeNoResultsReset">
+
+                    <i class="bi bi-arrow-counterclockwise me-1"></i>
+                    Reset Search
+                </button>
+            </div>
+
+            <!-- DATA LOADING / ERROR MESSAGE -->
+            <div class="text-center py-4 d-none"
+                 id="ministerAppointeeDataMessage"
+                 role="status"
+                 aria-live="polite">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+         PAGE NAVIGATION
+    ======================================== -->
+
+    <div class="ministers-page-navigation">
+        <button id="ministerAppointeeScrollTop"
+                type="button"
+                title="Go to top"
+                aria-label="Go to top">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+
+        <button id="ministerAppointeeScrollDown"
+                type="button"
+                title="Go to bottom"
+                aria-label="Go to bottom">
+            <i class="bi bi-chevron-down"></i>
+        </button>
+    </div>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-5">
+                    <div class="footer-brand">
+
+                        <img
+                            src="images/YPG-LOGO.webp"
+                            alt="Youth Parliament Ghana"
+                            class="site-logo">
+
+                        <div class="brand-text">
+                            <strong>Youth Parliament Ghana</strong>
+                            <small>Parliamentary Directory</small>
+                        </div>
+                    </div>
+
+                    <p class="mt-3">
+                        Promoting youth participation, representation,
+                        leadership, and civic engagement across Ghana.
+                    </p>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                    <h5>Quick Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="mps.html">Members of Parliament</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="appointees.html">
+                                Presidential Appointees
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="ministers-appointees.html">
+                                Ministers' Appointees
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-lg-4">
+                    <h5>Explore YPG</h5>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="ministries.html">Ministries</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="news.html">News & Updates</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom d-flex
+                        justify-content-between flex-wrap gap-2">
+
+                <span>
+                    &copy; 2026 Youth Parliament Ghana.
+                    All rights reserved.
+                </span>
+
+                <span>Parliamentary Directory</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========================================
+         JAVASCRIPT FILES
+    ======================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <script src="js/main.js"></script>
+
+    <!-- Separate Ministers' Appointees Dataset -->
+    <script src="js/ministers-appointee-data.js"></script>
+      <script src="js/constituency-data.js"></script>
+
+    <!-- Directory Search and Rendering -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const grid = document.getElementById("ministerAppointeeGrid");
+        const searchInput = document.getElementById("ministerAppointeeSearch");
+        const ministryFilter = document.getElementById("ministerAppointeeMinistry");
+        const constituencyFilter = document.getElementById("ministerAppointeeConstituency");
+        const resetButton = document.getElementById("ministerAppointeeReset");
+        const noResultsReset = document.getElementById("ministerAppointeeNoResultsReset");
+        const resultCount = document.getElementById("ministerAppointeeResultCount");
+        const noResults = document.getElementById("ministerAppointeeNoResults");
+        const dataMessage = document.getElementById("ministerAppointeeDataMessage");
+
+        function normalize(value) {
+            return String(value || "")
+                .normalize("NFKC")
+                .trim()
+                .toLowerCase()
+                .replace(/[–—]/g, "-")
+                .replace(/\s+/g, " ");
+        }
+
+        function escapeHTML(value) {
+            return String(value ?? "").replace(/[&<>"']/g, function (char) {
+                return {
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#39;"
+                }[char];
+            });
+        }
+
+        function getRecords() {
+            if (Array.isArray(window.ministersAppointeeData)) {
+                return window.ministersAppointeeData;
+            }
+
+            if (Array.isArray(window.ministerAppointeeData)) {
+                return window.ministerAppointeeData;
+            }
+
+            return [];
+        }
+
+        function getName(record) {
+            return record.name || record.fullName || "Name not provided";
+        }
+
+        function getPosition(record) {
+            return record.position || record.title || "Position not provided";
+        }
+
+        function getMinistry(record) {
+            return record.ministry || record.department || "Ministry not specified";
+        }
+
+        function getConstituency(record) {
+            return record.constituency || "";
+        }
+
+        function getImage(record) {
+            return record.image || record.photo || "images/profiles/default.jpg";
+        }
+
+        function populateFilters(records) {
+            const ministries = [...new Set(
+                records.map(getMinistry)
+                    .filter(value => value && value !== "Ministry not specified")
+            )].sort((a, b) => a.localeCompare(b));
+
+            const constituencies = [...new Set(
+                records.map(getConstituency).filter(Boolean)
+            )].sort((a, b) => a.localeCompare(b));
+
+            ministryFilter.innerHTML =
+                '<option value="">All Ministries</option>' +
+                ministries.map(value =>
+                    `<option value="${escapeHTML(value)}">${escapeHTML(value)}</option>`
+                ).join("");
+
+            constituencyFilter.innerHTML =
+                '<option value="">All Constituencies</option>' +
+                constituencies.map(value =>
+                    `<option value="${escapeHTML(value)}">${escapeHTML(value)}</option>`
+                ).join("");
+        }
+
+        function createCard(record) {
+            const name = getName(record);
+            const position = getPosition(record);
+            const ministry = getMinistry(record);
+            const constituency = getConstituency(record);
+            const image = getImage(record);
+
+            const profileId = record.id || record.appointeeId || "";
+            const profileURL = profileId
+                ? `minister-appointee-profile.html?id=${encodeURIComponent(profileId)}`
+                : "";
+
+            const imageHTML = image
+                ? `<img src="${escapeHTML(image)}"
+                        alt="${escapeHTML(name)}"
+                        loading="lazy"
+                        onerror="this.onerror=null;this.src='images/profiles/default.jpg';">`
+                : '<i class="bi bi-person-fill minister-appointee-placeholder" aria-hidden="true"></i>';
+
+            return `
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <article class="minister-appointee-card">
+
+                        <div class="minister-appointee-photo">
+                            ${imageHTML}
+                        </div>
+
+                        <div class="minister-appointee-content">
+
+                            <span class="minister-appointee-ministry">
+                                <i class="bi bi-building me-1"></i>
+                                ${escapeHTML(ministry)}
+                            </span>
+
+                            <h3>${escapeHTML(name)}</h3>
+
+                            <div class="minister-appointee-position">
+                                ${escapeHTML(position)}
+                            </div>
+
+                            <div class="minister-appointee-meta">
+                                ${constituency ? `
+                                    <span>
+                                        <i class="bi bi-geo-alt-fill"></i>
+                                        ${escapeHTML(constituency)}
+                                    </span>` : ""}
+
+                                ${record.appointmentDate ? `
+                                    <span>
+                                        <i class="bi bi-calendar3"></i>
+                                        Appointed: ${escapeHTML(record.appointmentDate)}
+                                    </span>` : ""}
+                            </div>
+
+                            ${profileURL ? `
+                                <a class="minister-appointee-view"
+                                   href="${profileURL}">
+                                    View Profile
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>` : `
+                                <span class="text-muted small">
+                                    Profile link will be available when an ID is assigned.
+                                </span>`}
+                        </div>
+                    </article>
+                </div>
+            `;
+        }
+
+        function renderDirectory() {
+            const allRecords = getRecords();
+
+            if (!Array.isArray(window.ministersAppointeeData) &&
+                !Array.isArray(window.ministerAppointeeData)) {
+
+                dataMessage.classList.remove("d-none");
+                dataMessage.classList.add("text-danger");
+                dataMessage.textContent =
+                    "Ministers' Appointees data could not be loaded. Check js/ministers-appointee-data.js.";
+
+                grid.innerHTML = "";
+                resultCount.textContent = "0";
+                noResults.style.display = "none";
+                return;
+            }
+
+            dataMessage.classList.add("d-none");
+
+            const searchTerm = normalize(searchInput.value);
+            const selectedMinistry = normalize(ministryFilter.value);
+            const selectedConstituency = normalize(constituencyFilter.value);
+
+            const filtered = allRecords.filter(function (record) {
+                const searchableText = normalize([
+                    getName(record),
+                    getPosition(record),
+                    getMinistry(record),
+                    getConstituency(record),
+                    record.region || "",
+                    record.biography || ""
+                ].join(" "));
+
+                return searchableText.includes(searchTerm) &&
+                    (!selectedMinistry ||
+                     normalize(getMinistry(record)) === selectedMinistry) &&
+                    (!selectedConstituency ||
+                     normalize(getConstituency(record)) === selectedConstituency);
+            });
+
+            grid.innerHTML = filtered.map(createCard).join("");
+            resultCount.textContent = String(filtered.length);
+            noResults.style.display = filtered.length ? "none" : "block";
+        }
+
+        function resetFilters() {
+            searchInput.value = "";
+            ministryFilter.value = "";
+            constituencyFilter.value = "";
+            renderDirectory();
+        }
+
+        const initialRecords = getRecords();
+
+        if (Array.isArray(window.ministersAppointeeData) ||
+            Array.isArray(window.ministerAppointeeData)) {
+            populateFilters(initialRecords);
+        }
+
+        searchInput.addEventListener("input", renderDirectory);
+        ministryFilter.addEventListener("change", renderDirectory);
+        constituencyFilter.addEventListener("change", renderDirectory);
+        resetButton.addEventListener("click", resetFilters);
+        noResultsReset.addEventListener("click", resetFilters);
+
+        document.getElementById("ministerAppointeeScrollTop")
+            .addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+        document.getElementById("ministerAppointeeScrollDown")
+            .addEventListener("click", function () {
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: "smooth"
+                });
+            });
+
+        renderDirectory();
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Revoked Appointees - Youth Parliament Ghana">
+
+    <title>Revoked Appointees | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+
+    <!-- =========================
+         BOOTSTRAP
+    ========================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         BOOTSTRAP ICONS
+    ========================== -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+
+    <!-- =========================
+         MAIN CSS
+    ========================== -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+   <style>
+
+        /* ========================================
+           PAGE NAVIGATION
+        ======================================== */
+
+        .page-navigation {
+            position: fixed;
+            right: 25px;
+            bottom: 30px;
+            z-index: 9999;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        .page-navigation button {
+            width: 45px;
+            height: 45px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #b08d57;
+            color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+            cursor: pointer;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+            transition: all 0.3s ease;
+        }
+
+
+        .page-navigation button:hover {
+            background: #8f713f;
+            transform: translateY(-3px);
+        }
+
+
+        .page-navigation button:active {
+            transform: scale(0.95);
+        }
+
+
+        /* ========================================
+           DIRECTORY HEADER
+        ======================================== */
+
+        .directory-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 27, 53, 0.98),
+                    rgba(13, 43, 80, 0.95)
+                );
+
+            padding: 150px 0 80px;
+
+            color: white;
+        }
+
+
+        .directory-header h1 {
+
+            font-size: clamp(38px, 5vw, 58px);
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+
+        .directory-header p {
+
+            max-width: 650px;
+
+            color: rgba(255,255,255,0.72);
+
+            line-height: 1.8;
+
+            margin: 0 auto;
+        }
+
+
+        /* ========================================
+           REVOKED BUTTON
+        ======================================== */
+
+        .btn-revoked {
+            display: inline-flex;
+
+            align-items: center;
+            gap: 8px;
+
+            padding: 12px 22px;
+
+            border-radius: 7px;
+
+            font-weight: 700;
+
+            background: #dc3545;
+            border: 1px solid #dc3545;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .btn-revoked:hover {
+            background: #bb2d3b;
+            border-color: #bb2d3b;
+
+            color: #ffffff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ========================================
+           FILTER AREA
+        ======================================== */
+
+        .directory-tools {
+
+            margin-top: -35px;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        .filter-card {
+
+            background: white;
+
+            border-radius: 14px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(7, 27, 53, 0.10);
+
+            border: 1px solid var(--border);
+        }
+
+
+        .filter-card label {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--navy);
+
+            margin-bottom: 8px;
+        }
+
+
+        .filter-card .form-control,
+        .filter-card .form-select {
+
+            min-height: 48px;
+
+            border-color: var(--border);
+
+            border-radius: 7px;
+        }
+
+
+        .filter-card .form-control:focus,
+        .filter-card .form-select:focus {
+
+            border-color: var(--gold);
+
+            box-shadow:
+                0 0 0 0.2rem
+                rgba(215, 169, 40, 0.12);
+        }
+
+
+        /* ========================================
+           REVOKED APPOINTEE CARDS
+        ======================================== */
+
+        .appointee-card {
+
+            height: 100%;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        .appointee-card:hover {
+
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(7, 27, 53, 0.10);
+        }
+
+
+        /* ========================================
+           RESPONSIVE PROFILE PHOTO
+        ======================================== */
+
+        .appointee-photo {
+
+            width: 100%;
+
+            /*
+               Consistent portrait profile shape
+               on desktop, tablet and mobile.
+            */
+            aspect-ratio: 4 / 5;
+
+            background: #f5f7fa;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            position: relative;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+
+        /* ========================================
+           PROFILE IMAGE
+        ======================================== */
+
+        .appointee-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            display: block;
+
+            /*
+               Makes the image fill the
+               complete profile container.
+            */
+            object-fit: cover;
+
+            /*
+               Keeps the upper part of the
+               person visible.
+            */
+            object-position: center top;
+
+            margin: 0;
+
+            padding: 0;
+
+            /*
+               Prevent unwanted zoom.
+            */
+            transform: none !important;
+
+            transition: none !important;
+
+            /*
+               Slightly reduce the harshness
+               of revoked profile photos.
+            */
+            filter: grayscale(15%);
+        }
+
+
+        /* ========================================
+           DISABLE IMAGE ZOOM
+        ======================================== */
+
+        .appointee-card:hover
+        .appointee-photo img {
+
+            transform: none !important;
+        }
+
+
+        /* ========================================
+           REVOKED BADGE
+        ======================================== */
+
+        .revoked-badge {
+
+            position: absolute;
+
+            top: 15px;
+            left: 15px;
+
+            background: #dc3545;
+
+            color: #ffffff;
+
+            padding: 7px 13px;
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.20);
+
+            z-index: 5;
+        }
+
+
+        /* ========================================
+           APPOINTEE CONTENT
+        ======================================== */
+
+        .appointee-content {
+
+            padding: 25px;
+
+            flex: 1;
+        }
+
+
+        .appointee-content h3 {
+
+            color: var(--navy);
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            margin-bottom: 7px;
+        }
+
+
+        .appointee-position {
+
+            color: #9a7410;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+
+        .appointee-meta {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 9px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .appointee-meta span {
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        .appointee-meta i {
+
+            color: #9a7410;
+
+            margin-right: 7px;
+        }
+
+
+        /* ========================================
+           VIEW PROFILE
+        ======================================== */
+
+        .view-profile {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            color: #9a7410;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .view-profile i {
+
+            margin-left: 7px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .view-profile:hover {
+
+            color: var(--gold);
+        }
+
+
+        .view-profile:hover i {
+
+            transform: translateX(4px);
+        }
+
+
+        /* ========================================
+           RESULT COUNT
+        ======================================== */
+
+        .result-count {
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .result-count strong {
+
+            color: var(--navy);
+        }
+
+
+        /* ========================================
+           NO RESULTS
+        ======================================== */
+
+        .no-results {
+
+            display: none;
+
+            padding: 70px 20px;
+
+            text-align: center;
+        }
+
+
+        .no-results i {
+
+            font-size: 55px;
+
+            color: #b8c0c9;
+
+            margin-bottom: 20px;
+        }
+
+
+        .no-results h3 {
+
+            color: var(--navy);
+
+            font-weight: 800;
+        }
+
+
+        .no-results p {
+
+            color: var(--muted);
+        }
+
+
+        /* ========================================
+           LARGE DESKTOP
+        ======================================== */
+
+        @media (min-width: 1200px) {
+
+            .appointee-photo {
+
+                aspect-ratio: 4 / 5;
+            }
+
+        }
+
+
+        /* ========================================
+           LAPTOP
+        ======================================== */
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+
+            .appointee-photo {
+
+                aspect-ratio: 4 / 5;
+            }
+
+            .appointee-content {
+
+                padding: 20px;
+            }
+
+            .appointee-content h3 {
+
+                font-size: 19px;
+            }
+
+            .appointee-position {
+
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* ========================================
+           TABLET / IPAD
+        ======================================== */
+
+        @media (min-width: 768px) and (max-width: 991px) {
+
+            .appointee-photo {
+
+                aspect-ratio: 4 / 5;
+            }
+
+            .appointee-content {
+
+                padding: 18px;
+            }
+
+            .appointee-content h3 {
+
+                font-size: 18px;
+            }
+
+            .appointee-position {
+
+                font-size: 13px;
+            }
+
+            .appointee-meta span {
+
+                font-size: 12px;
+            }
+
+            .view-profile {
+
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 767px) {
+
+            .directory-header {
+
+                padding: 130px 20px 70px;
+            }
+
+
+            .directory-header h1 {
+
+                font-size: 38px;
+            }
+
+
+            .directory-tools {
+
+                margin-top: -25px;
+            }
+
+
+            .filter-card {
+
+                padding: 20px;
+            }
+
+
+            .appointee-photo {
+
+                aspect-ratio: 4 / 5;
+            }
+
+
+            .appointee-content {
+
+                padding: 20px;
+            }
+
+
+            .appointee-content h3 {
+
+                font-size: 19px;
+            }
+
+
+            .appointee-position {
+
+                font-size: 13px;
+            }
+
+        }
+
+
+        /* ========================================
+           SMALL MOBILE
+        ======================================== */
+
+        @media (max-width: 576px) {
+
+            .page-navigation {
+
+                right: 15px;
+
+                bottom: 20px;
+            }
+
+
+            .page-navigation button {
+
+                width: 40px;
+
+                height: 40px;
+
+                font-size: 17px;
+            }
+
+
+            .appointee-photo {
+
+                aspect-ratio: 4 / 5;
+            }
+
+
+            .appointee-content {
+
+                padding: 18px;
+            }
+
+
+            .appointee-content h3 {
+
+                font-size: 18px;
+            }
+
+        }
+
+
+        /* ========================================
+           VERY SMALL PHONES
+        ======================================== */
+
+        @media (max-width: 400px) {
+
+            .appointee-photo {
+
+                aspect-ratio: 4 / 5;
+            }
+
+
+            .appointee-content {
+
+                padding: 16px;
+            }
+
+
+            .appointee-content h3 {
+
+                font-size: 17px;
+            }
+
+
+            .appointee-position {
+
+                font-size: 12px;
+            }
+
+
+            .appointee-meta span {
+
+                font-size: 12px;
+            }
+
+        }
+
+
+        /* ========================================
+           CARD GRID CONSISTENCY
+        ======================================== */
+
+        #appointeeGrid > [class*="col-"] {
+
+            display: flex;
+        }
+
+
+        #appointeeGrid .appointee-card {
+
+            width: 100%;
+
+            height: 100%;
+        }
+
+
+        /* ========================================
+           FINAL IMAGE PROTECTION
+        ======================================== */
+
+        .appointee-photo img,
+        .appointee-card img {
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            transform: none !important;
+        }
+       /* ========================================
+   REVOCATION REASON
+======================================== */
+
+.revocation-reason {
+    margin-top: 15px;
+    padding: 12px 14px;
+    background: #fff5f5;
+    border-left: 4px solid #dc3545;
+    border-radius: 6px;
+    color: #842029;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.revocation-reason i {
+    color: #dc3545;
+    margin-right: 6px;
+}
+
+.revocation-reason strong {
+    display: block;
+    margin-top: 3px;
+    color: #721c24;
+    font-weight: 700;
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center"
+           href="index.html">
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana"
+                class="site-logo">
+
+            <span class="brand-text">
+
+                <strong>
+                    Youth Parliament Ghana
+                </strong>
+
+                <small>
+                    Parliamentary Directory
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <i class="bi bi-list text-white fs-3"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="mps.html">
+
+                        MPs
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="appointees.html">
+
+                        Appointees
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="ministries.html">
+
+                        Ministries
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="news.html">
+
+                        News
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        href="appointees.html"
+                        class="btn btn-gold">
+
+                        Appointees Directory
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     PAGE HEADER
+========================== -->
+
+<section class="directory-header">
+
+    <div class="container text-center">
+
+        <div class="section-label light">
+            ADMINISTRATIVE RECORD
+        </div>
+
+
+        <h1>
+            Revoked Appointees
+        </h1>
+
+
+        <p>
+            View appointed officials whose appointments
+            have been marked as revoked in the Youth
+            Parliament Ghana directory.
+        </p>
+
+
+        <div class="mt-4">
+
+            <a
+                href="appointees.html"
+                class="btn btn-gold">
+
+                <i class="bi bi-arrow-left"></i>
+
+                Active Appointees
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FILTERS
+========================== -->
+
+<section class="directory-tools">
+
+    <div class="container">
+
+        <div class="filter-card">
+
+            <div class="row g-3">
+
+
+                <!-- SEARCH -->
+
+                <div class="col-lg-6">
+
+                    <label for="appointeeSearch">
+
+                        Search Revoked Appointee
+
+                    </label>
+
+
+                    <div class="input-group">
+
+                        <span
+                            class="input-group-text bg-white">
+
+                            <i class="bi bi-search"></i>
+
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="appointeeSearch"
+                            class="form-control"
+                            placeholder="Search by name or position...">
+
+                    </div>
+
+                </div>
+
+
+                <!-- MINISTRY -->
+
+                <div class="col-lg-3">
+
+                    <label for="ministryFilter">
+
+                        Ministry
+
+                    </label>
+
+
+                    <select
+                        id="ministryFilter"
+                        class="form-select">
+
+                        <option value="">
+                            All Ministries
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- REGION -->
+
+                <div class="col-lg-3">
+
+                    <label for="appointeeRegion">
+
+                        Region
+
+                    </label>
+
+
+                    <select
+                        id="appointeeRegion"
+                        class="form-select">
+
+                        <option value="">
+                            All Regions
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     REVOKED APPOINTEES
+========================== -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <div
+            class="d-flex justify-content-between
+                   align-items-center mb-4">
+
+            <h2 class="section-title mb-0">
+
+                Revoked Appointees
+
+            </h2>
+
+
+            <div class="result-count">
+
+                Showing
+
+                <strong id="resultCount">
+                    0
+                </strong>
+
+                revoked profiles
+
+            </div>
+
+        </div>
+
+
+        <!-- DYNAMIC GRID -->
+
+        <div
+            class="row g-4"
+            id="appointeeGrid">
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="no-results"
+            id="noResults">
+
+            <i class="bi bi-person-x"></i>
+
+
+            <h3>
+                No Revoked Appointee Found
+            </h3>
+
+
+            <p>
+                No revoked appointee matches your
+                search or filter criteria.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE NAVIGATION
+========================== -->
+
+<div class="page-navigation">
+
+    <button
+        id="scrollTopBtn"
+        title="Go to top">
+
+        <i class="bi bi-chevron-up"></i>
+
+    </button>
+
+
+    <button
+        id="scrollDownBtn"
+        title="Go down">
+
+        <i class="bi bi-chevron-down"></i>
+
+    </button>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo">
+
+
+                    <div>
+
+                        <strong>
+                            Youth Parliament Ghana
+                        </strong>
+
+                        <small>
+                            Parliamentary Directory
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    A public directory designed to provide
+                    accessible information about parliamentary
+                    representatives, appointees and ministries.
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+                    Directory
+                </h5>
+
+
+                <a href="mps.html">
+                    Members of Parliament
+                </a>
+
+
+                <a href="appointees.html">
+                    Appointees
+                </a>
+
+
+                <a href="ministries.html">
+                    Ministries
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+                <h5>
+                    Explore
+                </h5>
+
+
+                <a href="news.html">
+                    News
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-4">
+
+                <h5>
+                    Information
+                </h5>
+
+
+                <p>
+
+                    This directory is intended to provide
+                    accessible civic information.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+
+            </span>
+
+
+            <span>
+                Parliamentary Directory
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     BOOTSTRAP JS
+========================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =========================
+     MAIN JS
+========================== -->
+
+<script src="js/main.js"></script>
+
+
+<!-- =========================
+     APPOINTEE DATA
+========================== -->
+
+<script src="js/appointee-data.js"></script>
+
+
+<!-- =========================
+     REVOKED APPOINTEE JS
+========================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const grid =
+            document.getElementById(
+                "appointeeGrid"
+            );
+
+
+        const searchInput =
+            document.getElementById(
+                "appointeeSearch"
+            );
+
+
+        const ministryFilter =
+            document.getElementById(
+                "ministryFilter"
+            );
+
+
+        const regionFilter =
+            document.getElementById(
+                "appointeeRegion"
+            );
+
+
+        const resultCount =
+            document.getElementById(
+                "resultCount"
+            );
+
+
+        const noResults =
+            document.getElementById(
+                "noResults"
+            );
+
+
+        /* =========================
+           CHECK DATA
+        ========================== */
+
+        if (
+            typeof appointeeData === "undefined"
+        ) {
+
+            console.error(
+                "appointeeData was not found."
+            );
+
+            return;
+        }
+
+
+        /* =========================
+           GET ONLY REVOKED
+        ========================== */
+
+        const revokedAppointees =
+            appointeeData.filter(
+                function (person) {
+
+                    return (
+                        String(person.status || "")
+                            .toLowerCase()
+                            .trim() === "revoked"
+                    );
+
+                }
+            );
+
+
+        /* =========================
+           ESCAPE HTML
+        ========================== */
+
+        function escapeHTML(value) {
+
+            return String(value)
+
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+
+        /* =========================
+           CREATE CARD
+        ========================== */
+
+        function createAppointeeCard(
+            appointee
+        ) {
+
+
+            const column =
+                document.createElement("div");
+
+
+            column.className =
+                "col-lg-4 col-md-6 appointee-item";
+
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "appointee-card";
+
+
+            /* =========================
+               PHOTO
+            ========================== */
+
+            const photo =
+                document.createElement("div");
+
+
+            photo.className =
+                "appointee-photo";
+
+
+            const image =
+                document.createElement("img");
+
+
+            image.src =
+                appointee.image ||
+                "images/profiles/default.jpg";
+
+
+            image.alt =
+                appointee.name ||
+                "Appointee";
+
+
+            image.loading = "lazy";
+
+
+            image.onerror =
+                function () {
+
+                    this.onerror = null;
+
+                    this.src =
+                        "images/profiles/default.jpg";
+
+                };
+
+
+            photo.appendChild(image);
+
+
+            /* =========================
+               REVOKED BADGE
+            ========================== */
+
+            const badge =
+                document.createElement("span");
+
+
+            badge.className =
+                "revoked-badge";
+
+
+            badge.innerHTML =
+                '<i class="bi bi-person-x-fill"></i> Revoked';
+
+
+            photo.appendChild(badge);
+
+
+            /* =========================
+               CONTENT
+            ========================== */
+
+            const content =
+                document.createElement("div");
+
+
+            content.className =
+                "appointee-content";
+
+
+            /* NAME */
+
+            const name =
+                document.createElement("h3");
+
+
+            name.textContent =
+                appointee.name ||
+                "Name not available";
+
+
+            /* POSITION */
+
+            const position =
+                document.createElement("div");
+
+
+            position.className =
+                "appointee-position";
+
+
+            position.textContent =
+                appointee.position ||
+                "Position not available";
+
+
+            /* META */
+
+            const meta =
+                document.createElement("div");
+
+
+            meta.className =
+                "appointee-meta";
+
+
+            /* MINISTRY */
+
+            const ministry =
+                document.createElement("span");
+
+
+            ministry.innerHTML = `
+
+                <i class="bi bi-building"></i>
+
+                ${escapeHTML(
+                    appointee.ministry ||
+                    "Ministry not available"
+                )}
+
+            `;
+
+
+            /* REGION */
+
+            const region =
+                document.createElement("span");
+
+
+            region.innerHTML = `
+
+                <i class="bi bi-geo-alt"></i>
+
+                ${escapeHTML(
+                    appointee.region ||
+                    "Region not available"
+                )}
+
+            `;
+
+            /* STATUS */
+const status =
+    document.createElement("span");
+
+status.innerHTML = `
+    <i class="bi bi-x-circle"></i>
+    Appointment Status: <strong>
+        Revoked
+    </strong>
+`;
+
+/* REVOCATION REASON */
+const reason =
+    document.createElement("div");
+
+reason.className = "revocation-reason";
+
+reason.innerHTML = `
+    <i class="bi bi-exclamation-triangle-fill"></i>
+    <strong>Revocation Reason</strong>
+    <span>
+        ${escapeHTML(
+            appointee.revocationReason ||
+            "Reason not specified"
+        )}
+    </span>
+`;
+
+            /* PROFILE LINK */
+
+            const profileLink =
+                document.createElement("a");
+
+
+            profileLink.className =
+                "view-profile";
+
+
+            profileLink.href =
+                `appointee-profile.html?id=${
+                    encodeURIComponent(
+                        appointee.id
+                    )
+                }`;
+
+
+            profileLink.innerHTML = `
+
+                View Profile
+
+                <i class="bi bi-arrow-right"></i>
+
+            `;
+
+
+            /* APPEND */
+
+            meta.appendChild(ministry);
+             meta.appendChild(region);
+            meta.appendChild(status);
+            meta.appendChild(reason);
+
+
+            content.appendChild(name);
+
+            content.appendChild(position);
+
+            content.appendChild(meta);
+
+            content.appendChild(profileLink);
+
+
+            card.appendChild(photo);
+
+            card.appendChild(content);
+
+
+            column.appendChild(card);
+
+
+            return column;
+        }
+
+
+        /* =========================
+           RENDER
+        ========================== */
+
+        function renderAppointees(data) {
+
+            grid.innerHTML = "";
+
+
+            data.forEach(
+                function (appointee) {
+
+                    grid.appendChild(
+                        createAppointeeCard(
+                            appointee
+                        )
+                    );
+
+                }
+            );
+
+
+            resultCount.textContent =
+                data.length;
+
+
+            if (data.length === 0) {
+
+                noResults.style.display =
+                    "block";
+
+            } else {
+
+                noResults.style.display =
+                    "none";
+            }
+        }
+
+
+        /* =========================
+           LOAD MINISTRIES
+        ========================== */
+
+        function loadMinistries() {
+
+            const ministries = [
+
+                ...new Set(
+
+                    revokedAppointees
+
+                        .map(
+                            person =>
+                                person.ministry
+                        )
+
+                        .filter(Boolean)
+
+                )
+
+            ].sort();
+
+
+            ministries.forEach(
+                function (ministry) {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+
+                    option.value =
+                        ministry;
+
+
+                    option.textContent =
+                        ministry
+
+                            .replace(
+                                /^Ministry of /i,
+                                ""
+                            )
+
+                            .replace(
+                                /^Ministry for /i,
+                                ""
+                            );
+
+
+                    ministryFilter.appendChild(
+                        option
+                    );
+
+                }
+            );
+        }
+
+
+        /* =========================
+           LOAD REGIONS
+        ========================== */
+
+        function loadRegions() {
+
+            const regions = [
+
+                ...new Set(
+
+                    revokedAppointees
+
+                        .map(
+                            person =>
+                                person.region
+                        )
+
+                        .filter(Boolean)
+
+                )
+
+            ].sort();
+
+
+            regions.forEach(
+                function (region) {
+
+                    const option =
+                        document.createElement(
+                            "option"
+                        );
+
+
+                    option.value =
+                        region;
+
+
+                    option.textContent =
+                        region;
+
+
+                    regionFilter.appendChild(
+                        option
+                    );
+
+                }
+            );
+        }
+
+
+        /* =========================
+           FILTER
+        ========================== */
+
+        function filterAppointees() {
+
+
+            const search =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const ministry =
+                ministryFilter.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const region =
+                regionFilter.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const filtered =
+                revokedAppointees.filter(
+                    function (person) {
+
+
+                        const name =
+                            (
+                                person.name || ""
+                            ).toLowerCase();
+
+
+                        const position =
+                            (
+                                person.position || ""
+                            ).toLowerCase();
+
+
+                        const constituency =
+                            (
+                                person.constituency || ""
+                            ).toLowerCase();
+
+
+                        const personMinistry =
+                            (
+                                person.ministry || ""
+                            ).toLowerCase();
+
+
+                        const personRegion =
+                            (
+                                person.region || ""
+                            ).toLowerCase();
+
+
+                        const matchesSearch =
+                            !search ||
+
+                            name.includes(search) ||
+
+                            position.includes(search) ||
+
+                            constituency.includes(search);
+
+
+                        const matchesMinistry =
+                            !ministry ||
+
+                            personMinistry === ministry;
+
+
+                        const matchesRegion =
+                            !region ||
+
+                            personRegion === region;
+
+
+                        return (
+
+                            matchesSearch &&
+
+                            matchesMinistry &&
+
+                            matchesRegion
+
+                        );
+
+                    }
+                );
+
+
+            renderAppointees(
+                filtered
+            );
+        }
+
+
+        /* =========================
+           EVENTS
+        ========================== */
+
+        searchInput.addEventListener(
+            "input",
+            filterAppointees
+        );
+
+
+        ministryFilter.addEventListener(
+            "change",
+            filterAppointees
+        );
+
+
+        regionFilter.addEventListener(
+            "change",
+            filterAppointees
+        );
+
+
+        /* =========================
+           INITIALIZE
+        ========================== */
+
+        loadMinistries();
+
+        loadRegions();
+
+        renderAppointees(
+            revokedAppointees
+        );
+
+    }
+
+);
+
+
+/* =========================
+   SCROLL BUTTONS
+========================= */
+
+const scrollTopBtn =
+    document.getElementById(
+        "scrollTopBtn"
+    );
+
+
+const scrollDownBtn =
+    document.getElementById(
+        "scrollDownBtn"
+    );
+
+
+scrollTopBtn.addEventListener(
+    "click",
+    function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }
+);
+
+
+scrollDownBtn.addEventListener(
+    "click",
+    function () {
+
+        window.scrollBy({
+
+            top: window.innerHeight * 0.8,
+
+            behavior: "smooth"
+
+        });
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

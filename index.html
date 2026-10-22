@@ -1,0 +1,4299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          <meta name="google-site-verification" content="UaJ2GgotbrMoe4RZZ0q7jkRoagdIkzzRhnzRP8AatjI" />
+
+    <title>Youth Parliament Ghana | Official Website</title>
+    <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+    <meta name="description"
+          content="Official website of Youth Parliament Ghana. Discover our Members of Parliament, leadership, ministries, programmes, news, events and opportunities for youth participation and representation in Ghana.">
+
+    <meta name="keywords"
+          content="Youth Parliament Ghana, Youth Parliament, Ghana youth parliament, youth representation Ghana, youth leadership Ghana, Youth Parliament Ghana MPs, Youth Parliament Ghana ministries">
+
+    <meta name="author" content="Youth Parliament Ghana">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://youthparliamentghanasite.vercel.app/">
+
+    <!-- Bootstrap 5 -->
+    ...
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/birthday.css">
+
+    <style>
+
+        /* =====================================================
+           GREETING POPUP
+        ===================================================== */
+
+        #greeting-popup {
+            position: fixed !important;
+            top: 100px !important;
+            left: 50% !important;
+
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+
+            gap: 7px !important;
+            padding: 8px 16px !important;
+
+            background: rgba(255, 255, 255, 0.96) !important;
+            color: #111827 !important;
+
+            border-radius: 25px !important;
+
+            font-size: 14px !important;
+            font-weight: 700 !important;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.15) !important;
+
+            z-index: 99999999 !important;
+
+            opacity: 0 !important;
+            visibility: hidden !important;
+
+            transform:
+                translate(-50%, -25px)
+                scale(0.9) !important;
+
+            transition:
+                opacity 1.2s ease,
+                transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+                visibility 1.2s ease !important;
+        }
+
+        #greeting-popup.show {
+            opacity: 1 !important;
+            visibility: visible !important;
+
+            transform:
+                translate(-50%, 0)
+                scale(1) !important;
+        }
+
+        #greeting-icon {
+            font-size: 17px !important;
+        }
+
+        @media (max-width: 600px) {
+
+            #greeting-popup {
+                top: 80px !important;
+                padding: 7px 14px !important;
+                font-size: 13px !important;
+            }
+
+            #greeting-icon {
+                font-size: 16px !important;
+            }
+        }
+
+
+        /* =====================================================
+           NEWS IMAGE
+        ===================================================== */
+
+        .news-image {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 0 !important;
+
+            padding: 0 !important;
+            margin: 0 !important;
+
+            overflow: hidden !important;
+            background: #f5f5f5;
+
+            line-height: 0;
+            display: block !important;
+        }
+
+        .news-image img {
+            width: 100% !important;
+            max-width: none !important;
+            height: auto !important;
+            min-width: 100% !important;
+
+            display: block !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            object-fit: fill !important;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+            width: 100% !important;
+            max-width: none !important;
+
+            margin: 0 !important;
+            padding: 80px 0 35px !important;
+
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.65);
+
+            border-top: 4px solid var(--gold);
+
+            position: relative;
+
+            display: block !important;
+            flex-shrink: 0 !important;
+        }
+
+        .footer > .container {
+            width: 100% !important;
+            max-width: 1200px !important;
+
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .footer-bottom {
+            width: 100%;
+
+            margin: 45px 0 0;
+            padding: 20px 0 0;
+
+            border-top:
+                1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .footer hr {
+            display: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+
+        /* =====================================================
+           PAGE RESET
+        ===================================================== */
+
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+
+            width: 100% !important;
+
+            overflow-x: hidden !important;
+        }
+
+        body {
+            min-height: 100vh;
+
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        body::after {
+            display: none !important;
+            content: none !important;
+        }
+
+
+        /* =====================================================
+           MOBILE FOOTER
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .footer {
+                padding: 75px 0 35px !important;
+            }
+
+            .footer > .container {
+                width: 100% !important;
+                max-width: 100% !important;
+
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .footer .row {
+                row-gap: 40px;
+            }
+
+            .footer-bottom {
+                display: flex;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                gap: 10px;
+            }
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 576px) {
+
+            .footer {
+                padding: 65px 0 30px !important;
+            }
+
+            .footer > .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .footer-brand .site-logo {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+
+        /* =====================================================
+           FINAL CTA + FOOTER POLISH
+           Preserves existing page content and fixes bottom gap.
+        ===================================================== */
+
+        /* CTA */
+
+        .cta-section {
+            width: 100% !important;
+
+            margin: 0 !important;
+
+            padding: 90px 0 !important;
+
+            position: relative !important;
+
+            overflow: hidden !important;
+
+            background:
+                var(--dark, #0b1220) !important;
+
+            color: #fff !important;
+        }
+
+        .cta-section::before {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(212, 175, 55, 0.08);
+
+            top: -220px;
+            left: -180px;
+
+            pointer-events: none;
+        }
+
+        .cta-section::after {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(212, 175, 55, 0.06);
+
+            right: -150px;
+            bottom: -200px;
+
+            pointer-events: none;
+        }
+
+        .cta-section .container {
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            max-width: 850px;
+
+            margin:
+                18px auto 20px;
+
+            font-size:
+                clamp(2rem, 5vw, 3.5rem);
+
+            line-height: 1.15;
+
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            max-width: 680px;
+
+            margin:
+                0 auto 30px;
+
+            color:
+                rgba(255, 255, 255, 0.75);
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            min-width: 190px;
+        }
+
+
+        /* =====================================================
+           UPDATED FOOTER
+        ===================================================== */
+
+        .footer {
+            width: 100% !important;
+
+            max-width: none !important;
+
+            margin: 0 !important;
+
+            padding:
+                80px 0 0 !important;
+
+            background:
+                var(--dark);
+
+            color:
+                rgba(255, 255, 255, 0.68);
+
+            border-top:
+                4px solid var(--gold);
+
+            position: relative;
+
+            display: block !important;
+
+            flex-shrink: 0 !important;
+        }
+
+        .footer > .container {
+            width: 100% !important;
+
+            max-width: 1200px !important;
+
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .footer-brand {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-brand .site-logo {
+            width: 58px;
+            height: 58px;
+
+            object-fit: contain;
+
+            flex-shrink: 0;
+        }
+
+        .footer-brand span {
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .footer-brand strong {
+            color: #ffffff;
+
+            font-size: 1.1rem;
+
+            font-weight: 800;
+
+            line-height: 1.3;
+        }
+
+        .footer-brand small {
+            margin-top: 4px;
+
+            color: var(--gold);
+
+            font-size: 0.78rem;
+
+            font-weight: 600;
+        }
+
+        .footer-description {
+            max-width: 450px;
+
+            margin:
+                0 0 25px;
+
+            color:
+                rgba(255, 255, 255, 0.62);
+
+            line-height: 1.8;
+        }
+
+        .footer h5 {
+            color: #ffffff;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            margin:
+                0 0 22px;
+
+            position: relative;
+        }
+
+        .footer h5::after {
+            content: "";
+
+            display: block;
+
+            width: 35px;
+            height: 2px;
+
+            background:
+                var(--gold);
+
+            margin-top: 9px;
+        }
+
+        .footer-links {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color:
+                rgba(255, 255, 255, 0.65);
+
+            text-decoration: none;
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color:
+                var(--gold);
+
+            transform:
+                translateX(4px);
+        }
+
+        .footer-contact {
+            color:
+                rgba(255, 255, 255, 0.62);
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+        .social-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.15);
+
+            border-radius: 50%;
+
+            color:
+                rgba(255, 255, 255, 0.75);
+
+            text-decoration: none;
+
+            transition:
+                all 0.25s ease;
+        }
+
+        .social-links a:hover {
+            background:
+                var(--gold);
+
+            border-color:
+                var(--gold);
+
+            color:
+                #111827;
+
+            transform:
+                translateY(-3px);
+        }
+
+        .footer-bottom {
+            width: 100%;
+
+            margin:
+                55px 0 0 !important;
+
+            padding:
+                22px 0 !important;
+
+            border-top:
+                1px solid
+                rgba(255, 255, 255, 0.12);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .footer-bottom span {
+            color:
+                rgba(255, 255, 255, 0.48);
+
+            font-size: 0.85rem;
+        }
+
+
+        /* =====================================================
+           REMOVE BOTTOM GAP
+        ===================================================== */
+
+        html,
+        body {
+            width: 100% !important;
+
+            margin: 0 !important;
+
+            padding: 0 !important;
+
+            overflow-x: hidden !important;
+        }
+
+        body {
+            min-height: 100vh !important;
+
+            margin-bottom: 0 !important;
+
+            padding-bottom: 0 !important;
+        }
+
+        body > .footer,
+        footer.footer {
+            margin-bottom: 0 !important;
+        }
+
+
+        /* =====================================================
+           MOBILE CTA + FOOTER
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .cta-section {
+                padding:
+                    75px 20px;
+            }
+
+            .cta-section h2 {
+                font-size:
+                    2rem;
+            }
+
+            .cta-section p {
+                font-size:
+                    0.95rem;
+            }
+
+            .cta-buttons {
+                flex-direction:
+                    column;
+
+                width: 100%;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+
+                max-width: 320px;
+            }
+
+            .footer {
+                padding:
+                    65px 0 0 !important;
+            }
+
+            .footer > .container {
+                max-width:
+                    100% !important;
+
+                padding-left:
+                    25px;
+
+                padding-right:
+                    25px;
+            }
+
+            .footer .row {
+                row-gap:
+                    40px;
+            }
+
+            .footer-bottom {
+                margin-top:
+                    45px !important;
+
+                padding:
+                    20px 0 !important;
+
+                display:
+                    flex;
+
+                flex-direction:
+                    column;
+
+                align-items:
+                    flex-start;
+
+                gap:
+                    8px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .cta-section {
+                padding:
+                    65px 18px;
+            }
+
+            .cta-section h2 {
+                font-size:
+                    1.75rem;
+            }
+
+            .footer {
+                padding-top:
+                    55px !important;
+            }
+
+            .footer > .container {
+                padding-left:
+                    20px;
+
+                padding-right:
+                    20px;
+            }
+
+            .footer-brand .site-logo {
+                width:
+                    50px;
+
+                height:
+                    50px;
+            }
+
+            .footer-bottom span {
+                font-size:
+                    0.78rem;
+            }
+        }
+        .hero-badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    background: rgba(215, 169, 40, 0.15);
+
+    border: 1px solid rgba(215, 169, 40, 0.45);
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    border-radius: 30px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero-section h1 {
+    color: var(--white);
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    max-width: 850px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-section h1 span {
+    color: var(--gold-light);
+}
+
+
+.hero-text {
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin-bottom: 32px;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    color: var(--white);
+
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.btn-outline-light:hover {
+    background: var(--white);
+
+    border-color: var(--white);
+
+    color: var(--navy);
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+    padding: 100px 0;
+}
+
+
+.section-light {
+    background: var(--light);
+}
+
+
+.section-label {
+    display: inline-block;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+
+.section-label.light {
+    color: var(--gold-light);
+}
+
+
+.section-heading {
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 55px;
+}
+
+
+.section-heading h2,
+.section-title {
+    color: var(--navy);
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+
+.section-heading p {
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.feature-card {
+    height: 100%;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 38px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(215, 169, 40, 0.45);
+
+    box-shadow:
+        0 18px 45px rgba(7, 27, 53, 0.10);
+}
+
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(215, 169, 40, 0.12);
+
+    color: var(--gold);
+
+    border-radius: 10px;
+
+    font-size: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.feature-card h3 {
+    color: var(--navy);
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    margin-bottom: 14px;
+}
+
+
+.feature-card p {
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.feature-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.feature-link:hover {
+    color: var(--gold);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-image-wrapper {
+    width: 100%;
+
+    max-width: 390px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+}
+
+
+.profile-image-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    width: 85%;
+
+    height: 85%;
+
+    right: -18px;
+    bottom: -18px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 12px;
+
+    z-index: 0;
+}
+
+
+.profile-image {
+    width: 100%;
+
+    aspect-ratio: 1 / 1.15;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    position: relative;
+
+    z-index: 1;
+
+    box-shadow:
+        0 20px 50px rgba(7, 27, 53, 0.16);
+}
+
+
+.section-light h2 {
+    color: var(--navy);
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+
+.section-light h4 {
+    color: var(--gold);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-light p,
+.section p {
+    color: var(--muted);
+
+    line-height: 1.85;
+
+    margin-bottom: 25px;
+}
+
+/* =========================================================
+   RESPONSIVE STATISTICS / COUNTERS
+========================================================= */
+
+.stats-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: var(--navy, #071b35);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   COUNTER CONTAINER
+========================================================= */
+
+.stats-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.stats-section .row {
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.stat-box {
+    width: 100%;
+    height: 100%;
+
+    min-height: 170px;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.stat-box:hover {
+    transform: translateY(-6px);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border-color:
+        rgba(212, 175, 55, 0.45);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.stat-box i {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212, 175, 55, 0.12);
+
+    color:
+        var(--gold-light, #e5c45a);
+
+    font-size: 23px;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.stat-box h3,
+.stat-number {
+    display: block;
+
+    width: 100%;
+
+    margin: 0 0 10px;
+
+    color:
+        var(--gold-light, #e5c45a);
+
+    font-size:
+        clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    min-height: 56px;
+
+    font-variant-numeric:
+        tabular-nums;
+
+    white-space: nowrap;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.stat-box p,
+.stat-label {
+    width: 100%;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1400px and above
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .stats-section {
+        padding: 95px 20px;
+    }
+
+    .stats-section .container {
+        max-width: 1280px;
+    }
+
+    .stat-box {
+        min-height: 190px;
+
+        padding: 35px 25px;
+    }
+
+    .stat-box i {
+        width: 58px;
+        height: 58px;
+
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 3.5rem;
+
+        min-height: 60px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   DESKTOP
+   1200px – 1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .stats-section {
+        padding: 85px 20px;
+    }
+
+    .stat-box {
+        min-height: 180px;
+
+        padding: 30px 20px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 3.2rem;
+
+        min-height: 55px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+   992px – 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .stats-section {
+        padding: 75px 20px;
+    }
+
+    .stats-section .container {
+        max-width: 960px;
+    }
+
+    .stat-box {
+        min-height: 165px;
+
+        padding: 28px 15px;
+    }
+
+    .stat-box i {
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+
+        margin-bottom: 16px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 2.8rem;
+
+        min-height: 48px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   768px – 991px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .stats-section {
+        padding: 70px 20px;
+    }
+
+    .stats-section .container {
+        max-width: 720px;
+    }
+
+    .stat-box {
+        min-height: 155px;
+
+        padding: 25px 12px;
+    }
+
+    .stat-box i {
+        width: 46px;
+        height: 46px;
+
+        font-size: 20px;
+
+        margin-bottom: 14px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 2.5rem;
+
+        min-height: 43px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   576px – 767px
+========================================================= */
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .stats-section {
+        padding: 65px 20px;
+    }
+
+    .stats-section .container {
+        max-width: 540px;
+    }
+
+    .stat-box {
+        min-height: 150px;
+
+        padding: 24px 15px;
+    }
+
+    .stat-box i {
+        width: 44px;
+        height: 44px;
+
+        font-size: 19px;
+
+        margin-bottom: 13px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 2.35rem;
+
+        min-height: 40px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 12.5px;
+    }
+}
+
+
+/* =========================================================
+   LARGE MOBILE
+   425px – 575px
+========================================================= */
+
+@media (min-width: 425px) and (max-width: 575px) {
+
+    .stats-section {
+        padding: 60px 15px;
+    }
+
+    .stats-section .row {
+        --bs-gutter-x: 14px;
+        --bs-gutter-y: 14px;
+    }
+
+    .stat-box {
+        min-height: 145px;
+
+        padding: 22px 10px;
+
+        border-radius: 10px;
+    }
+
+    .stat-box i {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+
+        margin-bottom: 12px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 2.15rem;
+
+        min-height: 37px;
+
+        margin-bottom: 8px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+}
+
+
+/* =========================================================
+   STANDARD MOBILE
+   375px – 424px
+========================================================= */
+
+@media (min-width: 375px) and (max-width: 424px) {
+
+    .stats-section {
+        padding: 55px 12px;
+    }
+
+    .stats-section .row {
+        --bs-gutter-x: 12px;
+        --bs-gutter-y: 12px;
+    }
+
+    .stat-box {
+        min-height: 138px;
+
+        padding: 20px 8px;
+
+        border-radius: 10px;
+    }
+
+    .stat-box i {
+        width: 40px;
+        height: 40px;
+
+        font-size: 17px;
+
+        margin-bottom: 10px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 2rem;
+
+        min-height: 34px;
+
+        margin-bottom: 7px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 11.5px;
+
+        line-height: 1.35;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   320px – 374px
+========================================================= */
+
+@media (max-width: 374px) {
+
+    .stats-section {
+        padding: 50px 10px;
+    }
+
+    .stats-section .row {
+        --bs-gutter-x: 10px;
+        --bs-gutter-y: 10px;
+    }
+
+    .stat-box {
+        min-height: 130px;
+
+        padding: 18px 6px;
+
+        border-radius: 9px;
+    }
+
+    .stat-box i {
+        width: 36px;
+        height: 36px;
+
+        font-size: 16px;
+
+        margin-bottom: 9px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 1.8rem;
+
+        min-height: 31px;
+
+        margin-bottom: 6px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 10.5px;
+
+        line-height: 1.3;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   280px – 319px
+========================================================= */
+
+@media (max-width: 319px) {
+
+    .stats-section {
+        padding: 45px 8px;
+    }
+
+    .stats-section .row {
+        --bs-gutter-x: 8px;
+        --bs-gutter-y: 8px;
+    }
+
+    .stat-box {
+        min-height: 120px;
+
+        padding: 15px 4px;
+    }
+
+    .stat-box i {
+        width: 32px;
+        height: 32px;
+
+        font-size: 14px;
+
+        margin-bottom: 7px;
+    }
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 1.55rem;
+
+        min-height: 27px;
+
+        margin-bottom: 5px;
+    }
+
+    .stat-box p,
+    .stat-label {
+        font-size: 9.5px;
+
+        line-height: 1.25;
+    }
+}
+
+
+/* =========================================================
+   PREVENT NUMBER WRAPPING
+========================================================= */
+
+.stat-box h3,
+.stat-number {
+    white-space: nowrap !important;
+
+    word-break: normal !important;
+
+    overflow-wrap: normal !important;
+}
+
+
+/* =========================================================
+   COUNTER ANIMATION
+========================================================= */
+
+.stat-box h3[data-count],
+.stat-number[data-count] {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stat-box,
+    .stat-box h3,
+    .stat-number {
+        transition: none !important;
+    }
+
+}
+
+
+.news-card {
+    height: 100%;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.news-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(7, 27, 53, 0.10);
+}
+
+
+.news-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: var(--light);
+}
+
+
+.news-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.news-card:hover .news-image img {
+    transform: scale(1.04);
+}
+
+
+.news-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    color: var(--gold-light);
+
+    font-size: 45px;
+}
+
+
+.news-content {
+    padding: 28px;
+}
+
+
+.news-date {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+
+.news-content h3 {
+    color: var(--navy);
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    line-height: 1.35;
+
+    margin-bottom: 14px;
+}
+
+
+.news-content p {
+    color: var(--muted);
+
+    line-height: 1.75;
+
+    margin-bottom: 20px;
+}
+
+
+.news-content a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.news-content a:hover {
+    color: var(--gold);
+
+    gap: 12px;
+}
+
+
+.view-all {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--navy);
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+
+.view-all:hover {
+    color: var(--gold);
+
+    gap: 12px;
+}
+
+/* =========================================================
+   STATISTICS COUNTERS
+========================================================= */
+
+.stat-box h3,
+.stat-number {
+    display: block;
+
+    color: var(--gold-light);
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    min-height: 42px;
+
+    margin: 10px 0 0;
+
+    font-variant-numeric: tabular-nums;
+
+    white-space: nowrap;
+}
+
+
+/* Make the numbers visible on all screen sizes */
+
+@media (max-width: 767px) {
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 34px;
+
+        min-height: 38px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .stat-box h3,
+    .stat-number {
+        font-size: 30px;
+
+        min-height: 34px;
+    }
+
+}
+/* =========================================================
+   HERO REPRESENTATION CARD
+========================================================= */
+
+.hero-card {
+    width: 100%;
+    max-width: 430px;
+
+    margin: 0 auto;
+
+    padding: 42px 38px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.20);
+
+    text-align: left;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+.hero-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(212, 175, 55, 0.45);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.hero-card-icon {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    background:
+        rgba(212, 175, 55, 0.14);
+
+    border:
+        1px solid rgba(212, 175, 55, 0.25);
+
+    border-radius: 14px;
+
+    color:
+        var(--gold-light, #e5c45a);
+
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero-card h3 {
+    margin: 0 0 14px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-card p {
+    margin: 0;
+
+    max-width: 360px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 1200px) {
+
+    .hero-card {
+        max-width: 440px;
+
+        padding: 45px 40px;
+    }
+
+    .hero-card h3 {
+        font-size: 29px;
+    }
+
+    .hero-card p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .hero-card {
+        max-width: 400px;
+
+        padding: 38px 32px;
+    }
+
+    .hero-card h3 {
+        font-size: 25px;
+    }
+
+    .hero-card p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .hero-card {
+        max-width: 380px;
+
+        padding: 35px 30px;
+
+        margin-top: 40px;
+    }
+
+    .hero-card-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 25px;
+    }
+
+    .hero-card h3 {
+        font-size: 24px;
+    }
+
+    .hero-card p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .hero-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-top: 45px;
+
+        padding: 32px 25px;
+
+        border-radius: 15px;
+
+        text-align: center;
+    }
+
+
+    .hero-card-icon {
+        width: 58px;
+        height: 58px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        margin-bottom: 20px;
+
+        font-size: 24px;
+    }
+
+
+    .hero-card h3 {
+        font-size: 23px;
+
+        line-height: 1.25;
+
+        margin-bottom: 12px;
+    }
+
+
+    .hero-card p {
+        max-width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .hero-card {
+        padding: 28px 20px;
+
+        margin-top: 35px;
+    }
+
+
+    .hero-card-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 21px;
+
+        border-radius: 12px;
+    }
+
+
+    .hero-card h3 {
+        font-size: 21px;
+    }
+
+
+    .hero-card p {
+        font-size: 13.5px;
+
+        line-height: 1.65;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 375px) {
+
+    .hero-card {
+        padding: 25px 17px;
+    }
+
+
+    .hero-card h3 {
+        font-size: 19px;
+    }
+
+
+    .hero-card p {
+        font-size: 13px;
+    }
+
+}
+
+
+
+/* =========================================
+   BREAST CANCER AWARENESS IMAGE SLIDER
+========================================= */
+
+.breast-cancer-slider {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.breast-slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity 1s ease-in-out;
+
+    display: block;
+}
+
+.breast-slide.active {
+    opacity: 1;
+}
+
+
+/* Dark/pink overlay */
+
+.breast-cancer-slider::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.35)
+    );
+
+    pointer-events: none;
+}
+
+
+/* Slider dots */
+
+.breast-slider-dots {
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 7px;
+
+    z-index: 5;
+}
+
+.breast-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    transition: all 0.3s ease;
+}
+
+.breast-dot.active {
+    width: 22px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .breast-cancer-slider {
+        height: 220px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .breast-cancer-slider {
+        height: 200px;
+    }
+
+}
+
+
+
+/* ==============================
+   YPG SUPPORT
+================================ */
+
+.ypg-support {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 999999;
+}
+
+
+/* Floating Button */
+
+.ypg-support-button {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 7px 18px 7px 8px;
+
+    background: #071b35;
+    color: #ffffff;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    transition: all 0.3s ease;
+}
+
+.ypg-support-button:hover {
+    transform: translateY(-4px);
+    color: #ffffff;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.30);
+}
+
+
+/* WhatsApp Icon */
+
+.ypg-support-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+    color: #ffffff;
+
+    font-size: 24px;
+
+    position: relative;
+}
+
+.ypg-support-icon::after {
+    content: "";
+
+    position: absolute;
+    inset: -4px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(22,163,74,0.35);
+
+    animation: ypgSupportPulse 2s infinite;
+}
+
+@keyframes ypgSupportPulse {
+
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+
+}
+
+
+/* Button Text */
+
+.ypg-support-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.ypg-support-text strong {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ypg-support-text small {
+    margin-top: 4px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+}
+
+
+/* ==============================
+   SUPPORT PANEL
+================================ */
+
+.ypg-support-panel {
+    position: absolute;
+
+    right: 0;
+    bottom: 65px;
+
+    width: 310px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+    overflow: hidden;
+
+    display: none;
+
+    animation: ypgSupportOpen 0.25s ease;
+}
+
+.ypg-support-panel.active {
+    display: block;
+}
+
+@keyframes ypgSupportOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* Header */
+
+.ypg-support-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 18px;
+
+    background: #071b35;
+    color: #ffffff;
+}
+
+.ypg-support-header strong {
+    display: block;
+    font-size: 15px;
+}
+
+.ypg-support-header small {
+    display: block;
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    color: rgba(255,255,255,0.65);
+}
+
+
+/* Close */
+
+.ypg-support-close {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* Body */
+
+.ypg-support-body {
+    padding: 18px;
+}
+
+.ypg-support-body label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #071b35;
+}
+
+
+/* Select */
+
+.ypg-support-select {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #d9dee7;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    font-size: 13px;
+
+    color: #333;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.ypg-support-select:focus {
+    border-color: #16a34a;
+
+    box-shadow: 0 0 0 3px rgba(22,163,74,0.08);
+}
+
+
+/* Note */
+
+.ypg-support-note {
+    margin-top: 12px;
+
+    padding: 10px;
+
+    background: #f5f7fa;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #667085;
+}
+
+
+/* WhatsApp Send */
+
+.ypg-whatsapp-send {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #16a34a;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.ypg-whatsapp-send:hover {
+    background: #128c3f;
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 576px) {
+
+    .ypg-support {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    /* Small floating icon */
+
+    .ypg-support-button {
+        width: 48px;
+        height: 48px;
+
+        padding: 5px;
+
+        gap: 0;
+
+        justify-content: center;
+
+        border-radius: 50%;
+    }
+
+    .ypg-support-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 19px;
+    }
+
+    .ypg-support-text {
+        display: none;
+    }
+
+
+    /* Smaller panel */
+
+    .ypg-support-panel {
+        right: 0;
+        bottom: 58px;
+
+        width: min(310px, calc(100vw - 20px));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .ypg-support {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .ypg-support-button {
+        padding: 6px 14px 6px 6px;
+    }
+
+    .ypg-support-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 22px;
+    }
+
+    .ypg-support-text strong {
+        font-size: 13px;
+    }
+
+    .ypg-support-text small {
+        font-size: 10px;
+    }
+
+}
+@media (max-width: 576px) {
+
+    .ypg-support {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .ypg-support-button {
+        gap: 0;
+        padding: 5px;
+
+        width: 48px;
+        height: 48px;
+
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .ypg-support-icon {
+        width: 38px;
+        height: 38px;
+
+        font-size: 19px;
+    }
+
+    /* Hide text on small screens */
+    .ypg-support-text {
+        display: none;
+    }
+
+}
+/* =====================================
+   REGISTERED MPs - NAVIGATION LINK
+===================================== */
+
+.registered-mps-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    background: linear-gradient(135deg, #d7a928, #f0d477);
+    color: #071b35 !important;
+
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none !important;
+
+    border: 1px solid rgba(215, 169, 40, 0.8);
+    border-radius: 7px;
+
+    box-shadow: 0 4px 12px rgba(215, 169, 40, 0.18);
+
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.registered-mps-link:hover {
+    background: #071b35;
+    color: #f0d477 !important;
+
+    border-color: #d7a928;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(7, 27, 53, 0.2);
+}
+
+.registered-mps-link i {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.registered-mps-link .bi-arrow-up-right {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.registered-mps-link:hover .bi-arrow-up-right {
+    transform: translate(2px, -2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .registered-mps-link {
+        padding: 10px 14px;
+        font-size: 13px;
+        gap: 7px;
+    }
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         GREETING POPUP
+    ===================================================== -->
+
+    <div id="greeting-popup">
+
+        <span id="greeting-icon">🌙</span>
+
+        <span id="greeting-text">
+            Good Evening
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+        <div class="container">
+
+            <a
+                class="navbar-brand d-flex align-items-center"
+                href="index.html">
+
+                <img
+                    src="images/YPG-LOGO.webp"
+                    alt="Youth Parliament Ghana"
+                    class="site-logo">
+
+                <span>
+                    Youth Parliament Ghana
+                </span>
+
+            </a>
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="mps.html">
+                            MPs
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="appointees.html">
+                            Appointees
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="ministries.html">
+                            Ministries
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="news.html">
+                            News
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="about.html">
+                            About
+                        </a>
+                        
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+
+     <a href="https://ypgfilebook.vercel.app/"
+   class="registered-mps-link"
+   target="_blank"
+   rel="noopener noreferrer">
+    <i class="bi bi-person-vcard-fill"></i>
+    <span>Registered MPs</span>
+    <i class="bi bi-arrow-up-right"></i>
+</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero-section">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <span class="section-label">
+                        YOUTH PARLIAMENT GHANA
+                    </span>
+
+                    <h1>
+                        Empowering Young Voices,
+                        <span>
+                            Building Future Leaders.
+                        </span>
+                    </h1>
+
+                    <p class="hero-text">
+
+                        Youth Parliament Ghana provides a platform
+                        for young people to participate in democratic
+                        processes, develop leadership skills and
+                        contribute to national development.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="mps.html"
+                            class="btn btn-gold btn-lg">
+
+                            Explore Parliament
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                        <a
+                            href="about.html"
+                            class="btn btn-outline-light btn-lg">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-5">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-icon">
+
+                            <i class="bi bi-bank"></i>
+
+                        </div>
+
+                        <h3>
+                            Youth Representation
+                        </h3>
+
+                        <p>
+                            Discover the representatives,
+                            appointees and ministries shaping
+                            youth participation in Ghana.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- YPG Automatic Birthday Celebration Section -->
+<section
+    id="ypg-birthday-section"
+    hidden
+    aria-labelledby="ypg-birthday-heading"
+>
+    <div class="container">
+
+        <div class="ypg-birthday-heading">
+            <h2 id="ypg-birthday-heading">
+                🎂 Celebrating Our Honourees
+            </h2>
+
+            <p>
+                The Youth Parliament of Ghana celebrates you!
+            </p>
+        </div>
+
+        <div
+            id="ypg-birthday-grid"
+            class="ypg-birthday-grid"
+            aria-live="polite"
+        ></div>
+
+    </div>
+</section>
+
+
+    <!-- =====================================================
+         PRESIDENT
+    ===================================================== -->
+
+    <section class="section section-light">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5 text-center">
+
+                    <div class="profile-image-wrapper">
+
+                        <img
+                            src="images/president.webp"
+                            alt="HON. OSMAN ABDUL LATIF CHIBO"
+                            class="profile-image">
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <span class="section-label">
+                        OFFICE OF THE PRESIDENT
+                    </span>
+
+                    <h2>
+                        HON. OSMAN ABDUL LATIF CHIBO
+                    </h2>
+
+                    <h4>
+                        PRESIDENT
+                    </h4>
+
+                    <p>
+                        The President of Youth Parliament Ghana
+                        provides leadership and strategic direction
+                        towards strengthening youth participation,
+                        representation and civic engagement.
+                    </p>
+
+                    <a
+                        href="president-profile.html"
+                        class="btn btn-dark">
+
+                        Learn More
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAVIS OHENE BOAKYE
+    ===================================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7 order-2 order-lg-1">
+
+                    <span class="section-label">
+                        YOUTH PARLIAMENT GHANA
+                    </span>
+
+                    <h2>
+                        HON. MAVIS OHENE BOAKYE
+                    </h2>
+
+                    <h4>
+                        LEADERSHIP
+                    </h4>
+
+                    <p>
+                        Youth Parliament Ghana continues to
+                        strengthen youth leadership and create
+                        meaningful opportunities for young people
+                        to participate in national development.
+                    </p>
+
+                    <a
+                        href="mavis-ohene-boakye-profile.html"
+                        class="btn btn-dark">
+
+                        Discover More
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-lg-5 order-1 order-lg-2 text-center">
+
+                    <div class="profile-image-wrapper">
+
+                        <img
+                            src="images/mavisohene.webp"
+                            alt="HON. MAVIS OHENE BOAKYE"
+                            class="profile-image">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STATISTICS
+    ===================================================== -->
+
+  <section class="stats-section">
+
+    <div class="container">
+
+        <div class="row g-4 text-center">
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-people"></i>
+
+                    <h3 data-count="276">0</h3>
+
+                    <p>
+                        Members of Parliament
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-person-badge"></i>
+
+                    <h3 data-count="30">0</h3>
+
+                    <p>
+                        Appointees
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    <h3 data-count="16">0</h3>
+
+                    <p>
+                        Regions
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <div class="stat-box">
+
+                    <i class="bi bi-building"></i>
+
+                    <h3 data-count="20">0</h3>
+
+                    <p>
+                        Ministries
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ================= NEWS ================= -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-end mb-4">
+
+            <div>
+
+                <span class="section-label">
+                    LATEST UPDATES
+                </span>
+
+                <h2 class="section-title">
+                    News & Announcements
+                </h2>
+
+            </div>
+
+
+            <a href="news.html" class="view-all">
+
+                View all
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- NEWS 1 — SWEARING-IN CEREMONY -->
+
+            <div class="col-md-4">
+
+                <article class="news-card">
+
+
+                    <!-- SWEARING-IN IMAGE -->
+
+                    <div class="news-image">
+
+                        <img
+                            src="images/swearing.webp"
+                            alt="Youth Parliament Ghana Swearing-In Ceremony"
+                        >
+
+                    </div>
+
+
+                    <!-- NEWS CONTENT -->
+
+                    <div class="news-content">
+
+                        <span class="news-date">
+                            November 2026
+                        </span>
+
+
+                        <h3>
+                            Youth Parliament Ghana
+                            Swearing-In Ceremony
+                        </h3>
+
+
+                        <p>
+                            Youth Parliament Ghana is set to hold
+                            its official Swearing-In Ceremony for
+                            newly appointed and elected Youth
+                            Members of Parliament and officials.
+                        </p>
+
+
+                        <a href="news.html">
+
+                            Event Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+           <!-- NEWS 2 - BREAST CANCER AWARENESS -->
+
+<div class="col-md-4">
+
+    <article class="news-card">
+
+        <!-- Image Slideshow -->
+        <div class="news-image breast-cancer-slider">
+
+            <img src="images/breast-cancer-1.webp"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide active">
+
+            <img src="images/breast-cancer-2.webp"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-3.webp"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-4.webp"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-5.jpg"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-6.jpg"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-7.jpg"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-8.webp"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-9.webp"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+            <img src="images/breast-cancer-10.jpg"
+                 alt="Breast Cancer Awareness"
+                 class="breast-slide">
+
+
+            <!-- Slider indicators -->
+            <div class="breast-slider-dots">
+
+                <span class="breast-dot active"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+                <span class="breast-dot"></span>
+
+            </div>
+
+        </div>
+
+        <div class="news-content">
+
+            <span class="news-date">
+                Youth Parliament Ghana
+            </span>
+
+            <h3>
+                Breast Cancer Awareness
+            </h3>
+
+            <p>
+                Raising awareness, promoting early detection and
+                encouraging young people to take breast health seriously.
+            </p>
+
+            <a href="news.html">
+
+                Read More
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+            <!-- NEWS 3 -->
+
+            <div class="col-md-4">
+
+                <article class="news-card">
+
+                    <div class="news-image">
+
+                        <img
+                            src="images/launch.webp"
+                            alt="Upcoming Youth Parliament Activities"
+                        >
+
+                    </div>
+
+
+                    <div class="news-content">
+
+                        <span class="news-date">
+                            Events
+                        </span>
+
+
+                        <h3>
+                            Upcoming Youth Parliament Activities
+                        </h3>
+
+
+                        <p>
+                            Stay informed about upcoming programmes,
+                            meetings and parliamentary activities.
+                        </p>
+
+
+                        <a href="news.html">
+
+                            Read More
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section">
+
+    <div class="container text-center">
+
+        <span class="section-label light">
+            YOUTH LEADERSHIP
+        </span>
+
+
+        <h2>
+            Your Voice. Your Parliament. Your Future.
+        </h2>
+
+
+        <p>
+            Learn more about Youth Parliament Ghana and
+            the people serving in leadership positions.
+        </p>
+
+
+        <div class="cta-buttons">
+
+            <a
+                href="about.html"
+                class="btn btn-gold btn-lg">
+
+                Learn More About Us
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="mps.html"
+                class="btn btn-outline-light btn-lg">
+
+                Explore Directory
+
+                <i class="bi bi-people"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-5">
+
+                <a
+                    href="index.html"
+                    class="footer-brand">
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo"
+                    >
+
+                    <span>
+
+                        <strong>
+                            Youth Parliament Ghana
+                        </strong>
+
+                        <small>
+                            Leadership • Service • Representation
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p class="footer-description">
+
+                    A digital platform for accessing information
+                    about Youth Parliament Ghana, its representatives,
+                    appointees, ministries and activities.
+
+                </p>
+
+
+                <div class="social-links">
+
+    <!-- Facebook -->
+    <a
+        href="https://www.facebook.com/share/1LT8P5ibFE/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/youthparliamentgh?stkn=MTg4YjJ6NDMwa25oNA%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- X / Twitter -->
+    <a
+        href="https://x.com/youthparl?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on X">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+        href="https://www.tiktok.com/@YouthParliamentGH"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <!-- YouTube -->
+<a
+    href="https://youtube.com/@youthparliament-d4f?si=9gVg4iPJhuSQm0vC"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Youth Parliament Ghana on YouTube">
+
+    <i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    Quick Links
+                </h5>
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="mps.html">
+                        MPs
+                    </a>
+
+                    <a href="appointees.html">
+                        Appointees
+                    </a>
+
+                    <a href="ministries.html">
+                        Ministries
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    Information
+                </h5>
+
+                <div class="footer-links">
+
+                    <a href="news.html">
+                        News
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="mps.html">
+                        Directory
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Contact
+                </h5>
+
+                <p class="footer-contact">
+
+                    For official enquiries and information,
+                    please use the appropriate Youth Parliament
+                    Ghana communication channels.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+            </span>
+
+            <span>
+                Leadership • Service • Representation
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="js/main.js"></script>
+<script src="js/birthday.js"></script>
+<script src="js/mp-data.js"></script>
+<script src="js/appointee-data.js"></script>
+
+
+
+<!-- Greeting Script -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const popup =
+        document.getElementById("greeting-popup");
+
+    const text =
+        document.getElementById("greeting-text");
+
+    const icon =
+        document.getElementById("greeting-icon");
+
+
+    if (!popup || !text || !icon) return;
+
+
+    const hour = new Date().getHours();
+
+
+    if (hour >= 5 && hour < 12) {
+
+        text.textContent = "Good Morning";
+        icon.textContent = "🌅";
+
+    }
+
+    else if (hour >= 12 && hour < 18) {
+
+        text.textContent = "Good Afternoon";
+        icon.textContent = "☀️";
+
+    }
+
+    else if (hour >= 18 && hour < 22) {
+
+        text.textContent = "Good Evening";
+        icon.textContent = "🌆";
+
+    }
+
+    else {
+
+        text.textContent = "Good Night";
+        icon.textContent = "🌙";
+
+    }
+
+
+    /* SHOW AFTER 0.3 SECONDS */
+
+    setTimeout(function () {
+
+        popup.classList.add("show");
+
+    }, 300);
+
+
+    /* START DISAPPEARING AFTER 4.5 SECONDS */
+
+    setTimeout(function () {
+
+        popup.classList.remove("show");
+
+    }, 4500);
+
+});
+
+/* =========================================================
+   YOUTH PARLIAMENT GHANA
+   MAIN JAVASCRIPT
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       STATISTICS COUNTER
+    ===================================================== */
+
+    const counters = document.querySelectorAll("[data-count]");
+
+    if (counters.length > 0) {
+
+        const animateCounter = (counter) => {
+
+            const target =
+                parseInt(counter.getAttribute("data-count"), 10);
+
+            if (isNaN(target)) {
+                return;
+            }
+
+            let current = 0;
+
+            const duration = 1800;
+
+            const startTime = performance.now();
+
+
+            function updateCounter(currentTime) {
+
+                const elapsed =
+                    currentTime - startTime;
+
+                const progress =
+                    Math.min(elapsed / duration, 1);
+
+
+                /*
+                 * Ease-out effect
+                 * Makes the counter start quickly
+                 * and slow down near the final number.
+                 */
+
+                const easedProgress =
+                    1 - Math.pow(1 - progress, 3);
+
+
+                current =
+                    Math.floor(
+                        easedProgress * target
+                    );
+
+
+                counter.textContent =
+                    current.toLocaleString();
+
+
+                if (progress < 1) {
+
+                    requestAnimationFrame(
+                        updateCounter
+                    );
+
+                } else {
+
+                    counter.textContent =
+                        target.toLocaleString();
+
+                }
+
+            }
+
+
+            requestAnimationFrame(
+                updateCounter
+            );
+
+        };
+
+
+        /* =================================================
+           START COUNTERS WHEN THEY ENTER THE SCREEN
+        ================================================= */
+
+        if ("IntersectionObserver" in window) {
+
+            const observer =
+                new IntersectionObserver(
+                    function (entries, obs) {
+
+                        entries.forEach(function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                animateCounter(
+                                    entry.target
+                                );
+
+                                obs.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        });
+
+                    },
+                    {
+                        threshold: 0.35
+                    }
+                );
+
+
+            counters.forEach(function (counter) {
+
+                observer.observe(counter);
+
+            });
+
+        } else {
+
+            /* Fallback for older browsers */
+
+            counters.forEach(function (counter) {
+
+                animateCounter(counter);
+
+            });
+
+        }
+
+    }
+
+
+    /* =====================================================
+       NAVBAR SCROLL EFFECT
+    ===================================================== */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    if (navbar) {
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 50) {
+
+                    navbar.classList.add(
+                        "navbar-scrolled"
+                    );
+
+                } else {
+
+                    navbar.classList.remove(
+                        "navbar-scrolled"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       SMOOTH INTERNAL LINKS
+    ===================================================== */
+
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    const targetId =
+                        this.getAttribute("href");
+
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+                        return;
+                    }
+
+
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
+
+
+                    if (target) {
+
+                        event.preventDefault();
+
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+
+                }
+            );
+
+        });
+
+});
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".breast-slide");
+    const dots = document.querySelectorAll(".breast-dot");
+
+    if (!slides.length) return;
+
+    let currentSlide = 0;
+
+    function showBreastSlide(index) {
+
+        slides.forEach((slide, i) => {
+
+            slide.classList.toggle(
+                "active",
+                i === index
+            );
+
+        });
+
+        dots.forEach((dot, i) => {
+
+            dot.classList.toggle(
+                "active",
+                i === index
+            );
+
+        });
+
+    }
+
+
+    setInterval(() => {
+
+        currentSlide++;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+
+        showBreastSlide(currentSlide);
+
+    }, 4000);
+
+
+    /* Allow users to click the dots */
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener("click", () => {
+
+            currentSlide = index;
+
+            showBreastSlide(currentSlide);
+
+        });
+
+    });
+
+});
+
+</script>
+<script>
+
+function toggleYPGSupport() {
+
+    const panel = document.getElementById("ypgSupportPanel");
+
+    panel.classList.toggle("active");
+
+}
+
+
+function sendYPGSupport() {
+
+    const issue = document.getElementById("ypgIssue").value;
+
+    if (!issue) {
+
+        alert("Please select the issue you need assistance with.");
+
+        return;
+    }
+
+
+    let message = "";
+
+
+    if (issue === "image") {
+
+        message =
+            "Hello YPG Support, I need assistance because my profile image is not showing on the YPG system.";
+
+    }
+
+
+    else if (issue === "constituency") {
+
+        message =
+            "Hello YPG Support, I need assistance with my constituency verification on the YPG system. My constituency information needs to be checked or rectified.";
+
+    }
+
+
+    else if (issue === "position") {
+
+        message =
+            "Hello YPG Support, I need assistance with rectifying my position on the YPG system. My current position displayed on the system is incorrect.";
+
+    }
+
+
+    const whatsappNumber = "233542044490";
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+<!-- YPG FLOATING SUPPORT -->
+<div class="ypg-support">
+
+    <!-- Floating Button -->
+    <button class="ypg-support-button" onclick="toggleYPGSupport()" aria-label="YPG Support">
+        <span class="ypg-support-icon">
+            <i class="bi bi-whatsapp"></i>
+        </span>
+
+        <span class="ypg-support-text">
+            <strong>YPG Support</strong>
+            <small>Need assistance?</small>
+        </span>
+    </button>
+
+
+    <!-- Support Panel -->
+    <div class="ypg-support-panel" id="ypgSupportPanel">
+
+        <div class="ypg-support-header">
+            <div>
+                <strong>YPG Support</strong>
+                <small>How can we assist you?</small>
+            </div>
+
+            <button onclick="toggleYPGSupport()" class="ypg-support-close">
+                &times;
+            </button>
+        </div>
+
+
+        <div class="ypg-support-body">
+
+            <label for="ypgIssue">
+                Select an issue
+            </label>
+
+            <select id="ypgIssue" class="ypg-support-select">
+                <option value="">Choose an option</option>
+                <option value="image">Image Not Showing</option>
+                <option value="constituency">Constituency Verification</option>
+                <option value="position">Position Rectification</option>
+            </select>
+
+
+            <div class="ypg-support-note">
+                Select the issue you need assistance with. 
+                Your request will be sent directly to YPG Support via WhatsApp.
+            </div>
+
+
+            <button onclick="sendYPGSupport()" class="ypg-whatsapp-send">
+                <i class="bi bi-whatsapp"></i>
+                Send via WhatsApp
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

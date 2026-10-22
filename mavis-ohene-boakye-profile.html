@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="National Directorate for Projects, Programs & Logistics - Youth Parliament Ghana">
+
+    <title>HON. MAVIS OHENE BOAKYE | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+    /* =====================================================
+       MAVIS PROFILE PAGE HEADER
+    ===================================================== */
+
+    .mavis-page-header {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(4, 18, 36, 0.96),
+                rgba(4, 18, 36, 0.82)
+            ),
+            url("images/ypg.webp") center/cover no-repeat;
+
+        padding: 150px 0 90px;
+        color: #fff;
+    }
+
+    .mavis-page-header h1 {
+        font-size: clamp(40px, 6vw, 60px);
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .mavis-page-header p {
+        max-width: 680px;
+        color: rgba(255, 255, 255, 0.76);
+        line-height: 1.8;
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       MAVIS PROFILE
+    ===================================================== */
+
+    .mavis-profile-section {
+        padding: 100px 0;
+        background: #fff;
+    }
+
+    .mavis-profile-grid {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+
+    /* =====================================================
+       MAVIS IMAGE
+       RESPONSIVE 4:5 PROFILE RATIO
+    ===================================================== */
+
+    .mavis-profile-image {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        border-radius: 18px;
+        overflow: visible;
+        margin: 0 auto;
+    }
+
+    .mavis-profile-image::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: var(--gold);
+        top: -15px;
+        left: -15px;
+        z-index: 0;
+        border-radius: 12px;
+    }
+
+    .mavis-profile-image::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: var(--navy);
+        right: -15px;
+        bottom: -15px;
+        z-index: 0;
+        border-radius: 12px;
+    }
+
+    .mavis-profile-image img {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: cover;
+        object-position: center top;
+
+        border-radius: 18px;
+        display: block;
+
+        margin: 0;
+        padding: 0;
+
+        transform: none !important;
+        transition: none !important;
+    }
+
+    /* Prevent image zoom when hovering */
+    .mavis-profile-image:hover img {
+        transform: none !important;
+    }
+
+
+    /* =====================================================
+       MAVIS CONTENT
+    ===================================================== */
+
+    .mavis-profile-content {
+        padding: 10px 0;
+    }
+
+    .mavis-profile-content .section-label {
+        display: inline-block;
+        color: #a67c0d;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .mavis-profile-content h2 {
+        color: var(--navy);
+        font-size: clamp(32px, 4vw, 48px);
+        line-height: 1.15;
+        font-weight: 800;
+        margin: 0 0 12px;
+    }
+
+    .mavis-profile-content h3 {
+        color: #a67c0d;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 22px;
+    }
+
+    .mavis-heading-line {
+        width: 65px;
+        height: 4px;
+        background: var(--gold);
+        margin-bottom: 28px;
+        border-radius: 5px;
+    }
+
+    .mavis-profile-content p {
+        color: var(--muted);
+        line-height: 1.9;
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+
+    /* =====================================================
+       MAVIS INFORMATION
+    ===================================================== */
+
+    .mavis-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin: 30px 0;
+    }
+
+    .mavis-info-item {
+        background: var(--light);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .mavis-info-item i {
+        display: block;
+        color: #a67c0d;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .mavis-info-item span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+    }
+
+    .mavis-info-item strong {
+        color: var(--navy);
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       DIRECTORATE SECTION
+    ===================================================== */
+
+    .directorate-section {
+        padding: 90px 0;
+        background: var(--light);
+    }
+
+    .mandate-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 35px;
+        height: 100%;
+        transition: 0.3s ease;
+    }
+
+    .mandate-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(7, 27, 53, 0.08);
+    }
+
+    .mandate-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(215, 169, 40, 0.14);
+        color: #a67c0d;
+        border-radius: 12px;
+        font-size: 25px;
+        margin-bottom: 22px;
+    }
+
+    .mandate-card h3 {
+        color: var(--navy);
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .mandate-card p {
+        color: var(--muted);
+        line-height: 1.8;
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       PROFESSIONAL INFORMATION
+    ===================================================== */
+
+    .professional-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 35px;
+        height: 100%;
+        transition: 0.3s ease;
+    }
+
+    .professional-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(7, 27, 53, 0.08);
+    }
+
+    .professional-card h3 {
+        color: var(--navy);
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    .professional-card p {
+        color: var(--muted);
+        line-height: 1.8;
+        margin: 0;
+    }
+
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+
+    .contact-panel {
+        margin-top: 20px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 22px;
+        text-decoration: none;
+        color: var(--navy);
+        transition: 0.3s ease;
+    }
+
+    .contact-item:hover {
+        transform: translateY(-3px);
+        border-color: var(--gold);
+        color: var(--navy);
+        box-shadow: 0 10px 25px rgba(7, 27, 53, 0.06);
+    }
+
+    .contact-item > i {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: rgba(215, 169, 40, 0.14);
+        color: #a67c0d;
+        font-size: 20px;
+    }
+
+    .contact-item span {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-item small {
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .contact-item strong {
+        font-size: 14px;
+        word-break: break-word;
+    }
+
+
+    /* =====================================================
+       OFFICE NOTE
+    ===================================================== */
+
+    .office-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 25px;
+        background: #fff;
+        border-left: 4px solid var(--gold);
+        border-radius: 5px;
+        box-shadow: 0 5px 20px rgba(7, 27, 53, 0.04);
+    }
+
+    .office-note > i {
+        color: #a67c0d;
+        font-size: 26px;
+    }
+
+    .office-note h3 {
+        margin: 0 0 8px;
+        color: var(--navy);
+        font-size: 17px;
+    }
+
+    .office-note p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    /* Large Laptop / Small Desktop */
+    @media (max-width: 1199px) {
+
+        .mavis-profile-grid {
+            grid-template-columns: 430px 1fr;
+            gap: 50px;
+        }
+
+        .mavis-profile-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+        }
+    }
+
+
+    /* Tablet / iPad */
+    @media (max-width: 991px) {
+
+        .mavis-profile-grid {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .mavis-profile-image {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 4 / 5;
+            margin: 0 auto;
+        }
+
+        .mavis-profile-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mavis-info {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+
+    /* Mobile */
+    @media (max-width: 767px) {
+
+        .mavis-page-header {
+            padding: 130px 0 70px;
+        }
+
+        .mavis-profile-section,
+        .directorate-section {
+            padding: 65px 0;
+        }
+
+        .mavis-profile-image {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 4 / 5;
+        }
+
+        .mavis-info {
+            grid-template-columns: 1fr;
+        }
+
+        .mandate-card,
+        .professional-card {
+            padding: 28px;
+        }
+    }
+
+
+    /* Small Mobile */
+    @media (max-width: 576px) {
+
+        .mavis-profile-image {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 4 / 5;
+        }
+
+        .mavis-profile-content h2 {
+            font-size: 32px;
+        }
+    }
+
+
+    /* Very Small Phones */
+    @media (max-width: 375px) {
+
+        .mavis-profile-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+        }
+
+        .mavis-profile-content h2 {
+            font-size: 29px;
+        }
+    }
+
+
+    /* =====================================================
+       FINAL IMAGE PROTECTION
+    ===================================================== */
+
+    .mavis-profile-image img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center"
+           href="index.html">
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana Logo"
+                class="site-logo">
+
+            <span class="brand-text">
+
+                <strong>Youth Parliament Ghana</strong>
+
+                <small>
+                    Leadership • Service • Representation
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="mps.html">
+                        MPs
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="appointees.html">
+                        Appointees
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="ministries.html">
+                        Ministries
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">
+                        News
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+
+                    <a class="btn btn-gold" href="mps.html">
+                        Explore Directory
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+===================================================== -->
+
+<section class="mavis-page-header">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8">
+
+                <span class="hero-badge">
+
+                    <i class="bi bi-kanban"></i>
+
+                    NATIONAL DIRECTORATE
+
+                </span>
+
+                <h1>
+                    Projects, Programs &amp; Logistics
+                </h1>
+
+                <p>
+                    Meet HON. MAVIS OHENE BOAKYE, National Director for
+                    Projects, Programs &amp; Logistics of Youth Parliament Ghana.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAVIS PROFILE
+===================================================== -->
+
+<section class="mavis-profile-section">
+
+    <div class="container">
+
+        <div class="mavis-profile-grid">
+
+
+            <!-- MAVIS IMAGE -->
+
+            <div class="mavis-profile-image">
+
+                <img
+                    src="images/mavisohene.webp"
+                    alt="HON. MAVIS OHENE BOAKYE">
+
+            </div>
+
+
+
+            <!-- MAVIS INFORMATION -->
+
+            <div class="mavis-profile-content">
+
+                <span class="section-label">
+                    NATIONAL DIRECTORATE FOR PROJECTS, PROGRAMS &amp; LOGISTICS
+                </span>
+
+                <h2>
+                    HON. MAVIS OHENE BOAKYE
+                </h2>
+
+                <h3>
+                    National Director for Projects, Programs &amp; Logistics
+                </h3>
+
+                <div class="mavis-heading-line"></div>
+
+
+                <p>
+                    HON. MAVIS OHENE BOAKYE serves as the National Director
+                    for Projects, Programs &amp; Logistics of Youth Parliament
+                    Ghana. She supports the planning, coordination and
+                    implementation of impactful youth projects, programs,
+                    national sittings, summits and logistical operations
+                    across the organization.
+                </p>
+
+
+                <p>
+                    Working directly under the Office of the President of
+                    Youth Parliament Ghana, the Directorate supports effective
+                    program delivery, youth participation in governance,
+                    civic leadership and community development.
+                </p>
+
+
+
+                <!-- INFORMATION -->
+
+                <div class="mavis-info">
+
+
+                    <div class="mavis-info-item">
+
+                        <i class="bi bi-building"></i>
+
+                        <span>
+                            DIRECTORATE
+                        </span>
+
+                        <strong>
+                            PROJECTS, PROGRAMS &amp; LOGISTICS
+                        </strong>
+
+                    </div>
+
+
+                    <div class="mavis-info-item">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        <span>
+                            LOCATION
+                        </span>
+
+                        <strong>
+                            MANHYIA SOUTH, ASHANTI REGION
+                        </strong>
+
+                    </div>
+
+
+                    <div class="mavis-info-item">
+
+                        <i class="bi bi-person-workspace"></i>
+
+                        <span>
+                            PROFESSION
+                        </span>
+
+                        <strong>
+                            NURSE
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DIRECTORATE MANDATE
+===================================================== -->
+
+<section class="directorate-section">
+
+    <div class="container">
+
+
+        <div class="section-heading text-center mb-5">
+
+            <span class="section-label">
+                NATIONAL DIRECTORATE FOR PROJECTS, PROGRAMS &amp; LOGISTICS
+            </span>
+
+            <h2>
+                Directorate Mandate
+            </h2>
+
+            <p>
+                The Directorate coordinates projects, programs, national
+                parliamentary activities and logistical operations that support
+                the work and development of Youth Parliament Ghana.
+            </p>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- MANDATE 1 -->
+
+            <div class="col-lg-4">
+
+                <div class="mandate-card">
+
+                    <div class="mandate-icon">
+
+                        <i class="bi bi-lightbulb-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        Projects, Programs &amp; Development
+                    </h3>
+
+                    <p>
+                        Conceptualize, plan and execute national projects and
+                        youth empowerment programs aligned with the Sustainable
+                        Development Goals (SDGs) and Ghana's youth development
+                        agenda.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MANDATE 2 -->
+
+            <div class="col-lg-4">
+
+                <div class="mandate-card">
+
+                    <div class="mandate-icon">
+
+                        <i class="bi bi-calendar2-event-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        National Sittings &amp; Summits Coordination
+                    </h3>
+
+                    <p>
+                        Coordinate the planning and execution of parliamentary
+                        sittings, leadership training camps and national youth
+                        summits of Youth Parliament Ghana.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MANDATE 3 -->
+
+            <div class="col-lg-4">
+
+                <div class="mandate-card">
+
+                    <div class="mandate-icon">
+
+                        <i class="bi bi-truck"></i>
+
+                    </div>
+
+                    <h3>
+                        Logistics &amp; Operations Management
+                    </h3>
+
+                    <p>
+                        Manage end-to-end logistics for official delegations,
+                        including accommodation, transportation, venue setup
+                        and delegate welfare.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROFESSIONAL INFORMATION
+        ================================================= -->
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-lg-6">
+
+                <div class="professional-card">
+
+                    <div class="mandate-icon">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        Education
+                    </h3>
+
+                    <p>
+                        Wisconsin International University College
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-6">
+
+                <div class="professional-card">
+
+                    <div class="mandate-icon">
+
+                        <i class="bi bi-person-badge-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        Professional Background
+                    </h3>
+
+                    <p>
+
+                        Profession: Nurse
+                        <br>
+
+                        Constituency/Area: Manhyia South
+                        <br>
+
+                        Region: Ashanti Region
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================= -->
+
+        <div class="contact-panel">
+
+
+            <div class="section-heading mt-5 mb-4">
+
+                <span class="section-label">
+                    OFFICIAL CONTACT
+                </span>
+
+                <h2>
+                    Contact the Directorate
+                </h2>
+
+            </div>
+
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6">
+
+                    <a
+                        href="tel:0542809440"
+                        class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <span>
+
+                            <small>
+                                PHONE
+                            </small>
+
+                            <strong>
+                                0542809440
+                            </strong>
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="col-md-6">
+
+                    <a
+                        href="mailto:Mavisoheneboakye@gmail.com"
+                        class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <span>
+
+                            <small>
+                                EMAIL
+                            </small>
+
+                            <strong>
+                                Mavisoheneboakye@gmail.com
+                            </strong>
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             OFFICE NOTE
+        ================================================= -->
+
+        <div class="office-note mt-5">
+
+            <i class="bi bi-info-circle-fill"></i>
+
+            <div>
+
+                <h3>
+                    Office of the President
+                </h3>
+
+                <p>
+                    The National Directorate for Projects, Programs &amp;
+                    Logistics works directly under the Office of the President
+                    of Youth Parliament Ghana, with a commitment to youth
+                    participation in governance, civic leadership and
+                    community development.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BACK TO HOME
+===================================================== -->
+
+<section class="py-5 text-center">
+
+    <div class="container">
+
+        <a href="index.html" class="btn btn-gold">
+
+            <i class="bi bi-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- BRAND -->
+
+            <div class="col-lg-5">
+
+                <a href="index.html" class="footer-brand">
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo">
+
+                    <span>
+
+                        <strong>
+                            Youth Parliament Ghana
+                        </strong>
+
+                        <small>
+                            Leadership • Service • Representation
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+                    A digital platform for accessing information about
+                    Youth Parliament Ghana, its representatives,
+                    appointees, ministries and activities.
+                </p>
+
+
+               <div class="social-links">
+
+    <!-- Facebook -->
+    <a
+        href="https://www.facebook.com/share/1LT8P5ibFE/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="bi bi-facebook"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a
+        href="https://www.instagram.com/youthparliamentgh?stkn=MTg4YjJ6NDMwa25oNA%3D%3D&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+    </a>
+
+    <!-- X / Twitter -->
+    <a
+        href="https://x.com/youthparl?s=11"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on X">
+        <i class="bi bi-twitter-x"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a
+        href="https://www.tiktok.com/@YouthParliamentGH"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Youth Parliament Ghana on TikTok">
+        <i class="bi bi-tiktok"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a
+        href="https://www.linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+    </a>
+    <!-- YouTube -->
+<a
+    href="https://youtube.com/@youthparliament-d4f?si=9gVg4iPJhuSQm0vC"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Youth Parliament Ghana on YouTube">
+
+    <i class="bi bi-youtube"></i>
+
+</a>
+
+</div>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    Quick Links
+                </h5>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="mps.html">
+                    MPs
+                </a>
+
+                <a href="appointees.html">
+                    Appointees
+                </a>
+
+                <a href="ministries.html">
+                    Ministries
+                </a>
+
+            </div>
+
+
+
+            <!-- INFORMATION -->
+
+            <div class="col-6 col-lg-2">
+
+                <h5>
+                    Information
+                </h5>
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="mps.html">
+                    Directory
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Contact
+                </h5>
+
+                <p>
+                    For official enquiries and information,
+                    please use the appropriate Youth Parliament
+                    Ghana communication channels.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+            </span>
+
+            <span>
+                Leadership • Service • Representation
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Main JS -->
+
+<script src="js/main.js"></script>
+
+
+</body>
+
+</html>

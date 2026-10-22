@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minister's Appointee Profile | Youth Parliament Ghana</title>
+
+    <meta name="description"
+          content="Ministers' Appointees Directory - Youth Parliament Ghana">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .profile-banner {
+            background: linear-gradient(135deg, #006b3f, #003d29);
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        .profile-card {
+            max-width: 950px;
+            margin: -35px auto 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .10);
+        }
+
+        .profile-photo {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #d4af37;
+            background: #f1f1f1;
+        }
+
+        .profile-name {
+            color: #006b3f;
+            font-weight: 800;
+        }
+
+        .section-title {
+            color: #006b3f;
+            font-weight: 700;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+        }
+
+        .detail-item {
+            height: 100%;
+            padding: 14px;
+            background: #f7f9f7;
+            border-radius: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .detail-label {
+            display: block;
+            color: #666;
+            font-size: .85rem;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            color: #222;
+            font-weight: 600;
+            white-space: pre-line;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 30px;
+            background: #e0f3e8;
+            color: #006b3f;
+            font-weight: 700;
+            font-size: .85rem;
+        }
+
+        .access-denied {
+            max-width: 760px;
+            margin: 50px auto;
+            padding: 45px 25px;
+            text-align: center;
+            background: #fff;
+            border: 1px solid #f0d5d5;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+        }
+
+        .access-denied .lock-icon {
+            font-size: 65px;
+            color: #b42318;
+            margin-bottom: 15px;
+        }
+
+        .access-denied h2 {
+            color: #b42318;
+            font-weight: 800;
+        }
+
+        .access-denied p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        @media (max-width: 576px) {
+            .profile-card {
+                margin: -20px 12px 35px;
+                padding: 20px;
+            }
+
+            .profile-photo {
+                width: 135px;
+                height: 135px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="images/YPG-LOGO.webp"
+                 alt="YPG Logo"
+                 width="45"
+                 height="45"
+                 class="me-2">
+            <span>Youth Parliament Ghana</span>
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#ypgNavbar"
+                aria-controls="ypgNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ypgNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="mps.html">Registered MPs</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="appointees.html">
+                        Presidential Appointees
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active ministers-appointees-link"
+                       href="ministers-appointees.html">
+                        Ministers' Appointees
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="profile-banner">
+    <div class="container">
+        <h1 class="fw-bold" id="pageHeading">Appointee Profile</h1>
+        <p class="mb-0">
+            Youth Parliament Ghana — Ministers' Appointees Directory
+        </p>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- PROFILE: HIDDEN UNTIL STATUS IS VERIFIED -->
+    <div class="profile-card" id="profileContent" hidden>
+
+        <div class="text-center mb-4">
+            <img id="profileImage"
+                 class="profile-photo mb-3"
+                 src="images/profiles/default.jpg"
+                 alt="Appointee profile photo">
+
+            <h2 id="profileName" class="profile-name"></h2>
+
+            <p id="profilePosition" class="fs-5 mb-2"></p>
+
+            <p id="profileMinistry" class="text-muted mb-3"></p>
+
+            <span id="profileStatus" class="status-badge">
+                Active Appointment
+            </span>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- APPOINTMENT INFORMATION -->
+        <section class="mb-4">
+            <h4 class="section-title">Appointment Information</h4>
+            <div class="row g-3" id="appointmentDetails"></div>
+        </section>
+
+        <!-- BIOGRAPHY -->
+        <section id="biographySection" class="mb-4" hidden>
+            <h4 class="section-title">Biography</h4>
+            <p id="profileBiography"
+               class="text-secondary"
+               style="white-space: pre-line;"></p>
+        </section>
+
+        <!-- PROFESSIONAL BACKGROUND -->
+        <section id="backgroundSection" class="mb-4" hidden>
+            <h4 class="section-title">Education & Professional Background</h4>
+            <div class="row g-3" id="backgroundDetails"></div>
+        </section>
+
+        <!-- ADDITIONAL INFORMATION -->
+        <section id="additionalSection" class="mb-4" hidden>
+            <h4 class="section-title">Additional Information</h4>
+            <div class="row g-3" id="additionalDetails"></div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contactSection" class="mb-4" hidden>
+            <h4 class="section-title">Contact Information</h4>
+            <div class="row g-3" id="contactDetails"></div>
+        </section>
+
+        <div class="text-center mt-4">
+            <a href="ministers-appointees.html"
+               class="btn btn-success px-4">
+                <i class="bi bi-arrow-left me-2"></i>
+                Back to Ministers' Appointees
+            </a>
+        </div>
+    </div>
+
+    <!-- ACCESS DENIED / PROFILE NOT FOUND -->
+    <section id="accessMessage" class="access-denied" hidden>
+        <div class="lock-icon">
+            <i id="accessIcon" class="bi bi-lock-fill"></i>
+        </div>
+
+        <h2 id="accessTitle">Profile Unavailable</h2>
+
+        <p id="accessDescription">
+            This profile is unavailable.
+        </p>
+
+        <div class="alert alert-warning mt-4" role="note">
+            <i class="bi bi-info-circle me-1"></i>
+            Please contact the Youth Parliament Ghana administrator
+            for assistance.
+        </div>
+
+        <a href="ministers-appointees.html"
+           class="btn btn-success mt-3">
+            <i class="bi bi-arrow-left me-2"></i>
+            Back to Ministers' Appointees
+        </a>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center py-4">
+    <div class="container">
+        <p class="mb-1">
+            &copy; <span id="currentYear"></span>
+            Youth Parliament Ghana. All rights reserved.
+        </p>
+        <small>Empowering the next generation of leaders.</small>
+    </div>
+</footer>
+
+<button id="backToTop"
+        type="button"
+        class="btn btn-success rounded-circle"
+        aria-label="Back to top"
+        style="position:fixed;right:20px;bottom:20px;display:none;">
+    <i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ministers-appointee-data.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
+
+    const profileContent = document.getElementById("profileContent");
+    const accessMessage = document.getElementById("accessMessage");
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    /*
+     * Show a generic access message.
+     * Do not include the revoked person's name or personal details.
+     */
+    function showAccessMessage(title, description, iconClass) {
+        profileContent.hidden = true;
+        accessMessage.hidden = false;
+
+        document.getElementById("accessTitle").textContent = title;
+        document.getElementById("accessDescription").textContent = description;
+        document.getElementById("accessIcon").className = iconClass;
+
+        document.title = title + " | Youth Parliament Ghana";
+    }
+
+    /*
+     * Read the requested appointee ID.
+     */
+    const params = new URLSearchParams(window.location.search);
+    const requestedId = String(params.get("id") || "").trim();
+
+    const records = window.ministersAppointeeData;
+
+    /*
+     * Find the record without displaying its information yet.
+     */
+    const appointee = Array.isArray(records)
+        ? records.find(function (record) {
+            return String(record.id ?? record.appointeeId ?? "")
+                .trim()
+                .toLowerCase() === requestedId.toLowerCase();
+        })
+        : null;
+
+    /*
+     * PROFILE NOT FOUND
+     */
+    if (!requestedId || !appointee ||
+        appointee.name === "FULL NAME OF APPOINTEE") {
+
+        showAccessMessage(
+            "Profile Not Found",
+            "This profile does not exist or the profile link is invalid.",
+            "bi bi-person-exclamation"
+        );
+
+        return;
+    }
+
+    /*
+     * CRITICAL ACCESS CHECK
+     *
+     * Only status "active" is allowed to display a profile.
+     * "revoked", "suspended", "inactive", empty or any other
+     * unrecognized status will deny access.
+     */
+    const status = String(appointee.status || "")
+        .trim()
+        .toLowerCase();
+
+    if (status !== "active") {
+        showAccessMessage(
+            "PROFILE ACCESS REVOKED",
+            "Access to this appointee's profile is unavailable. " +
+            "The appointment is inactive or access has been revoked.",
+            "bi bi-lock-fill"
+        );
+
+        return;
+    }
+
+    /*
+     * No profile details are rendered before the access check above.
+     * The following functions are only reached for active records.
+     */
+    const setText = function (elementId, value) {
+        const element = document.getElementById(elementId);
+
+        if (element) {
+            element.textContent = value || "";
+        }
+    };
+
+    const addDetail = function (containerId, label, value) {
+        if (value === undefined || value === null ||
+            !String(value).trim()) {
+            return;
+        }
+
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const column = document.createElement("div");
+        column.className = "col-md-6";
+
+        const box = document.createElement("div");
+        box.className = "detail-item";
+
+        const heading = document.createElement("span");
+        heading.className = "detail-label";
+        heading.textContent = label;
+
+        const content = document.createElement("span");
+        content.className = "detail-value";
+        content.textContent = value;
+
+        box.append(heading, content);
+        column.appendChild(box);
+        container.appendChild(column);
+    };
+
+    const setOptionalSection = function (sectionId, elementId, value) {
+        if (!value || !String(value).trim()) return;
+
+        const section = document.getElementById(sectionId);
+        const element = document.getElementById(elementId);
+
+        if (section && element) {
+            element.textContent = value;
+            section.hidden = false;
+        }
+    };
+
+    /*
+     * BASIC PROFILE
+     */
+    setText("profileName", appointee.name || appointee.fullName);
+    setText("profilePosition", appointee.position || appointee.title);
+    setText("profileMinistry", appointee.ministry || appointee.department);
+    setText("profileStatus", "Active Appointment");
+
+    const image = document.getElementById("profileImage");
+
+    image.src = appointee.image || appointee.photo ||
+        "images/profiles/default.jpg";
+
+    image.alt = "Profile photo";
+
+    image.onerror = function () {
+        this.onerror = null;
+        this.src = "images/profiles/default.jpg";
+    };
+
+    /*
+     * APPOINTMENT INFORMATION
+     */
+    addDetail("appointmentDetails", "Appointee ID", appointee.id);
+    addDetail("appointmentDetails", "Position",
+        appointee.position || appointee.title);
+    addDetail("appointmentDetails", "Ministry",
+        appointee.ministry || appointee.department);
+    addDetail("appointmentDetails", "Constituency", appointee.constituency);
+    addDetail("appointmentDetails", "Region", appointee.region);
+    addDetail("appointmentDetails", "Appointment Date",
+        appointee.appointmentDate);
+
+    /*
+     * BIOGRAPHY
+     */
+    setOptionalSection(
+        "biographySection",
+        "profileBiography",
+        appointee.biography
+    );
+
+    /*
+     * PROFESSIONAL BACKGROUND
+     */
+    addDetail("backgroundDetails", "Education", appointee.education);
+    addDetail("backgroundDetails", "Profession", appointee.profession);
+    addDetail("backgroundDetails", "Experience", appointee.experience);
+
+    if (appointee.education || appointee.profession || appointee.experience) {
+        document.getElementById("backgroundSection").hidden = false;
+    }
+
+    /*
+     * ADDITIONAL PROFILE DETAILS
+     */
+    addDetail("additionalDetails", "Skills", appointee.skills);
+    addDetail("additionalDetails", "Certifications", appointee.certifications);
+    addDetail("additionalDetails", "Achievements", appointee.achievements);
+    addDetail("additionalDetails", "Projects", appointee.projects);
+    addDetail("additionalDetails", "Leadership", appointee.leadership);
+    addDetail("additionalDetails", "Languages", appointee.languages);
+
+    if (
+        appointee.skills ||
+        appointee.certifications ||
+        appointee.achievements ||
+        appointee.projects ||
+        appointee.leadership ||
+        appointee.languages
+    ) {
+        document.getElementById("additionalSection").hidden = false;
+    }
+
+    /*
+     * CONTACT INFORMATION
+     */
+    addDetail("contactDetails", "Email", appointee.email);
+    addDetail("contactDetails", "Phone", appointee.phone);
+    addDetail("contactDetails", "Website", appointee.website);
+
+    if (appointee.email || appointee.phone || appointee.website) {
+        document.getElementById("contactSection").hidden = false;
+    }
+
+    /*
+     * DISPLAY PROFILE ONLY AFTER STATUS IS CONFIRMED ACTIVE.
+     */
+    document.title =
+        (appointee.name || "Appointee") +
+        " | Youth Parliament Ghana";
+
+    profileContent.hidden = false;
+
+    /*
+     * BACK TO TOP BUTTON
+     */
+    const topButton = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", function () {
+        topButton.style.display =
+            window.scrollY > 300 ? "block" : "none";
+    });
+
+    topButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+</script>
+
+</body>
+</html>

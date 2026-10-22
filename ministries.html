@@ -1,0 +1,3187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description"
+      content="Explore the ministries of Youth Parliament Ghana, their leadership, programmes, responsibilities and appointed officials serving across Ghana.">
+
+<meta name="keywords"
+      content="Youth Parliament Ghana ministries, Youth Parliament ministries, Ghana youth ministries, Youth Parliament leadership, Youth Parliament Ghana officials">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+      href="https://youth-parliament-ghana-site.vercel.app/ministries.html">
+
+<title>Ministries & Leadership | Youth Parliament Ghana</title>
+       <!-- Youth Parliament Ghana Favicon -->
+<!-- Youth Parliament Ghana Website Logo -->
+<link rel="icon" type="image/webp" href="/images/YPG-LOGO.webp">
+<link rel="apple-touch-icon" href="/images/YPG-LOGO.webp">
+
+
+   
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+
+    <!-- Main CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+
+    <style>
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .ministry-header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 27, 53, 0.98),
+                    rgba(13, 43, 80, 0.95)
+                );
+
+            padding: 150px 0 80px;
+
+            color: white;
+        }
+
+
+        .ministry-header h1 {
+
+            font-size: clamp(40px, 5vw, 58px);
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+
+        .ministry-header p {
+
+            max-width: 680px;
+
+            margin: auto;
+
+            color:
+                rgba(255,255,255,0.72);
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FILTER AREA
+        ========================= */
+
+        .ministry-tools {
+
+            margin-top: -35px;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        .filter-card {
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(7, 27, 53, 0.10);
+        }
+
+
+        .filter-card label {
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            color: var(--navy);
+
+            margin-bottom: 8px;
+        }
+
+
+        .filter-card .form-control,
+        .filter-card .form-select {
+
+            min-height: 48px;
+
+            border-color:
+                var(--border);
+
+            border-radius: 7px;
+        }
+
+
+        .filter-card .form-control:focus,
+        .filter-card .form-select:focus {
+
+            border-color:
+                var(--gold);
+
+            box-shadow:
+                0 0 0 0.2rem
+                rgba(215,169,40,0.12);
+        }
+
+
+        /* =========================
+           MINISTRY CARD
+        ========================= */
+
+        .ministry-card {
+
+            height: 100%;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 30px;
+
+            transition: 0.3s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .ministry-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(7, 27, 53, 0.10);
+        }
+
+
+        .ministry-number {
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 25px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            color:
+                #a67c0d;
+
+            letter-spacing: 1px;
+        }
+
+
+        .ministry-icon {
+
+            width: 62px;
+
+            height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background:
+                rgba(215,169,40,0.14);
+
+            color:
+                #a67c0d;
+
+            font-size: 27px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .ministry-card h3 {
+
+            color:
+                var(--navy);
+
+            font-size: 21px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        .ministry-card p {
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           MINISTRY META
+        ========================= */
+
+        .ministry-meta {
+
+            border-top:
+                1px solid var(--border);
+
+            padding-top: 18px;
+
+            margin-top: auto;
+        }
+
+
+        .ministry-meta-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            margin-bottom: 8px;
+
+            font-size: 13px;
+
+            color:
+                var(--muted);
+        }
+
+
+        .ministry-meta-row i {
+
+            color:
+                #9a7410;
+        }
+
+
+        .ministry-link {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            color:
+                #9a7410;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            margin-top: 8px;
+        }
+
+
+        .ministry-link i {
+
+            margin-left: 7px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .ministry-link:hover {
+
+            color:
+                var(--gold);
+        }
+
+
+        .ministry-link:hover i {
+
+            transform:
+                translateX(4px);
+        }
+
+
+        /* =========================
+           RESULTS
+        ========================= */
+
+        .result-count {
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .result-count strong {
+
+            color:
+                var(--navy);
+        }
+
+
+        /* =========================
+           NO RESULTS
+        ========================= */
+
+        .no-results {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 80px 20px;
+        }
+
+
+        .no-results i {
+
+            font-size: 55px;
+
+            color:
+                #b8c0c9;
+
+            margin-bottom: 20px;
+        }
+
+
+        .no-results h3 {
+
+            color:
+                var(--navy);
+
+            font-weight: 800;
+        }
+
+
+        .no-results p {
+
+            color:
+                var(--muted);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .ministry-header {
+
+                padding:
+                    130px 20px 70px;
+            }
+
+
+            .ministry-header h1 {
+
+                font-size: 38px;
+            }
+
+
+            .ministry-tools {
+
+                margin-top: -25px;
+            }
+
+
+            .ministry-card {
+
+                padding: 25px;
+            }
+            
+
+        }
+        /* =========================================================
+   MINISTRY EXPAND BUTTON
+========================================================= */
+
+.ministry-expand {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.ministry-expand:hover {
+    background: var(--navy);
+    color: #fff;
+    border-color: var(--navy);
+    transform: rotate(90deg);
+}
+
+.ministry-expand i {
+    transition: transform 0.25s ease;
+}
+
+.ministry-card.expanded .ministry-expand {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #fff;
+}
+
+.ministry-card.expanded .ministry-expand i {
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   MINISTRY TOP ROW
+========================================================= */
+
+.ministry-title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.ministry-title-row h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   EXPANDED MINISTRY INFORMATION
+========================================================= */
+
+.ministry-details {
+    display: none;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    animation: ministryOpen 0.3s ease;
+}
+
+.ministry-card.expanded .ministry-details {
+    display: block;
+}
+
+@keyframes ministryOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ministry-details-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ministry-details-title i {
+    color: var(--gold);
+}
+
+.ministry-details p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.ministry-responsibilities {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ministry-responsibilities li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 9px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ministry-responsibilities li::before {
+    content: "\f26a";
+    font-family: "bootstrap-icons";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--gold);
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MINISTRY HEADER BADGE
+========================================================= */
+
+.ministry-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 18px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.9);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ministry-count-badge i {
+    color: var(--gold);
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+
+        <a
+            class="navbar-brand d-flex align-items-center"
+            href="index.html">
+
+
+            <img
+                src="images/YPG-LOGO.webp"
+                alt="Youth Parliament Ghana"
+                class="site-logo">
+
+
+            <span class="brand-text">
+
+                <strong>
+                    Youth Parliament Ghana
+                </strong>
+
+                <small>
+                    Parliamentary Directory
+                </small>
+
+            </span>
+
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <i class="bi bi-list text-white fs-3"></i>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+
+            <ul
+                class="navbar-nav ms-auto
+                       align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="mps.html">
+
+                        MPs
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="appointees.html">
+
+                        Appointees
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="ministries.html">
+
+                        Ministries
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="news.html">
+
+                        News
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a
+                        href="mps.html"
+                        class="btn btn-gold">
+
+                        Explore Directory
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<section class="ministry-header">
+
+    <div class="container text-center">
+
+
+        <div class="section-label light">
+
+            GOVERNMENT DIRECTORY
+
+        </div>
+
+
+        <h1>
+
+            Ministries Directory
+
+        </h1>
+
+
+       <p>
+    Explore Ghana's ministries, their mandates,
+    responsibilities and areas of work through
+    the Youth Parliament Ghana public directory.
+</p>
+
+<div class="ministry-count-badge">
+    <i class="bi bi-building"></i>
+    23 Government Ministries
+</div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FILTERS
+========================= -->
+
+<section class="ministry-tools">
+
+    <div class="container">
+
+
+        <div class="filter-card">
+
+
+            <div class="row g-3">
+
+
+                <!-- SEARCH -->
+
+                <div class="col-lg-6">
+
+                    <label for="ministrySearch">
+
+                        Search Ministry
+
+                    </label>
+
+
+                    <div class="input-group">
+
+
+                        <span
+                            class="input-group-text bg-white">
+
+                            <i class="bi bi-search"></i>
+
+                        </span>
+
+
+                        <input
+                            type="text"
+                            id="ministrySearch"
+                            class="form-control"
+                            placeholder="Search by ministry name...">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="col-lg-4">
+
+                    <label for="categoryFilter">
+
+                        Category
+
+                    </label>
+
+
+                    <select
+                        id="categoryFilter"
+                        class="form-select">
+
+
+                        <option value="">
+
+                            All Categories
+
+                        </option>
+
+
+                        <option value="social">
+
+                            Social Services
+
+                        </option>
+
+
+                        <option value="economic">
+
+                            Economic Affairs
+
+                        </option>
+
+
+                        <option value="security">
+
+                            Security & Defence
+
+                        </option>
+
+
+                        <option value="governance">
+
+                            Governance
+
+                        </option>
+
+
+                        <option value="infrastructure">
+
+                            Infrastructure
+
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+                <!-- RESET -->
+
+                <div
+                    class="col-lg-2
+                           d-flex
+                           align-items-end">
+
+
+                    <button
+                        type="button"
+                        id="resetFilters"
+                        class="btn btn-outline-secondary
+                               w-100">
+
+                        <i
+                            class="bi bi-arrow-counterclockwise">
+                        </i>
+
+                        Reset
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MINISTRY LIST
+========================= -->
+
+<section class="section-padding">
+
+    <div class="container">
+
+
+        <div
+            class="d-flex
+                   justify-content-between
+                   align-items-center
+                   mb-4">
+
+
+            <h2 class="section-title mb-0">
+
+                Ministries
+
+            </h2>
+
+
+            <div class="result-count">
+
+                Showing
+
+                <strong id="resultCount">
+                    23
+                </strong>
+
+                ministries
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row g-4" id="ministryGrid">
+
+    <!-- =====================================================
+         01. DEFENCE
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Defence"
+         data-category="security">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">01</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-shield-shaded"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Defence
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of Defence"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Responsible for national defence policy,
+                military administration and strategic
+                defence matters.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Provides policy direction and civilian
+                    oversight for Ghana's defence and
+                    national security interests.
+                </p>
+
+                <ul class="ministry-responsibilities">
+
+                    <li>Defence policy and strategy</li>
+                    <li>Civilian oversight of the Armed Forces</li>
+                    <li>National defence preparedness</li>
+                    <li>Defence cooperation and partnerships</li>
+
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Security & Defence</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         02. INTERIOR
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of the Interior"
+         data-category="security">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">02</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-house-lock"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of the Interior
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of the Interior"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Coordinates internal security,
+                public safety and related national
+                security institutions.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports the maintenance of internal
+                    peace, security and public safety.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Internal security</li>
+                    <li>Public safety</li>
+                    <li>Immigration matters</li>
+                    <li>Emergency and security coordination</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Security & Defence</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         03. EDUCATION
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Education"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">03</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-mortarboard"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Education
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of Education"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Leads national education policy and
+                supports access to quality education
+                across Ghana.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Provides policy direction for education
+                    development from basic through tertiary
+                    levels.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Education policy</li>
+                    <li>Curriculum development</li>
+                    <li>Teacher development</li>
+                    <li>Access and quality education</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         04. HEALTH
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Health"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">04</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-heart-pulse"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Health
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of Health"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Provides policy direction for Ghana's
+                healthcare system and public health.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Coordinates national health policy,
+                    healthcare delivery and public health
+                    programmes.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>National health policy</li>
+                    <li>Healthcare delivery</li>
+                    <li>Public health programmes</li>
+                    <li>Health sector development</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         05. FINANCE
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Finance"
+         data-category="economic">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">05</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-cash-stack"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Finance
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of Finance"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Leads fiscal policy, public finance
+                management and economic planning.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Oversees government financial management,
+                    budgeting and fiscal policy.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Fiscal policy</li>
+                    <li>National budgeting</li>
+                    <li>Public financial management</li>
+                    <li>Economic and financial planning</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Economic Affairs</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         06. ENERGY
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Energy and Green Transition"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">06</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-lightning-charge"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Energy and Green Transition
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of Energy and Green Transition"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Coordinates energy policy, energy security
+                and the transition toward sustainable energy.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports reliable energy supply and
+                    sustainable energy development.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Energy policy</li>
+                    <li>Energy security</li>
+                    <li>Renewable energy</li>
+                    <li>Green transition initiatives</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         07. TRANSPORT
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Transport"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">07</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-truck"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Transport
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry of Transport"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Develops policies for efficient and
+                sustainable transportation systems.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports the development and regulation
+                    of Ghana's transport sector.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Transport policy</li>
+                    <li>Road transport development</li>
+                    <li>Maritime transport</li>
+                    <li>Aviation and transport coordination</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         08. LOCAL GOVERNMENT
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Local Government, Chieftaincy and Religious Affairs"
+         data-category="governance">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">08</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-bank"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Local Government,
+                    Chieftaincy and Religious Affairs
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Supports decentralisation, local governance,
+                chieftaincy and related civic affairs.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Provides policy direction for local
+                    governance and decentralisation.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Local governance</li>
+                    <li>Decentralisation</li>
+                    <li>Chieftaincy affairs</li>
+                    <li>Local government development</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Governance</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         09. YOUTH DEVELOPMENT & EMPOWERMENT
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Youth Development and Empowerment"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">09</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-people"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Youth Development
+                    and Empowerment
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Promotes youth development, participation,
+                skills and economic empowerment.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Coordinates policies and programmes
+                    aimed at improving opportunities for
+                    young people.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Youth development</li>
+                    <li>Skills development</li>
+                    <li>Youth entrepreneurship</li>
+                    <li>Youth participation and empowerment</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         10. SPORTS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Sports and Recreation"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">10</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-trophy"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Sports and Recreation
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Supports sports development, recreation
+                and national sporting programmes.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Promotes sporting development and
+                    participation across the country.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Sports development</li>
+                    <li>National sporting programmes</li>
+                    <li>Athlete development</li>
+                    <li>Recreation</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         11. FISHERIES
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Fisheries and Aquaculture"
+         data-category="economic">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">11</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-water"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Fisheries and Aquaculture
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Oversees fisheries resources, aquaculture
+                development and sustainable fishing.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports sustainable management and
+                    development of fisheries resources.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Fisheries policy</li>
+                    <li>Aquaculture development</li>
+                    <li>Fisheries resource management</li>
+                    <li>Sustainable fishing</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Economic Affairs</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         12. TRADE, AGRIBUSINESS & INDUSTRY
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Trade, Agribusiness and Industry"
+         data-category="economic">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">12</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-shop"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Trade, Agribusiness
+                    and Industry
+                </h3>
+
+                <button
+                    type="button"
+                    class="ministry-expand"
+                    aria-label="Expand Ministry"
+                    aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Promotes trade, industrial development,
+                agribusiness and enterprise growth.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports Ghana's trade and industrial
+                    development agenda.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Trade development</li>
+                    <li>Industrialisation</li>
+                    <li>Agribusiness development</li>
+                    <li>Enterprise growth</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Economic Affairs</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         13. FOOD & AGRICULTURE
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Food and Agriculture"
+         data-category="economic">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">13</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-flower1"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Food and Agriculture
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Supports agricultural production,
+                food security and agricultural development.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Coordinates national agricultural
+                    development and food security policies.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Agricultural policy</li>
+                    <li>Food security</li>
+                    <li>Farmer support</li>
+                    <li>Agricultural productivity</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Economic Affairs</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         14. LANDS & NATURAL RESOURCES
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Lands and Natural Resources"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">14</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-tree"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Lands and Natural Resources
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Manages Ghana's land and natural resources
+                and promotes sustainable resource use.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Coordinates policy and management of
+                    land, forests and mineral resources.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Land administration</li>
+                    <li>Mineral resources</li>
+                    <li>Forestry</li>
+                    <li>Natural resource conservation</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         15. ENVIRONMENT
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Environment Science and Technology"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">15</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-globe2"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Environment,
+                    Science and Technology
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Promotes environmental protection,
+                scientific development and innovation.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports environmental sustainability
+                    and science and technology development.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Environmental policy</li>
+                    <li>Climate and environmental protection</li>
+                    <li>Science and technology</li>
+                    <li>Innovation</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         16. ROADS & HIGHWAYS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Roads and Highways"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">16</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-signpost-2"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Roads and Highways
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Coordinates national road infrastructure
+                and highway development.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Leads policy and development of Ghana's
+                    road and highway infrastructure.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Road infrastructure</li>
+                    <li>Highway development</li>
+                    <li>Road maintenance policy</li>
+                    <li>Transport connectivity</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         17. WORKS, HOUSING & WATER
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Works Housing and Water Resources"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">17</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-house"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Works, Housing
+                    and Water Resources
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Supports housing, public works and
+                water resource development.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Coordinates policies covering public
+                    works, housing and water resources.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Housing policy</li>
+                    <li>Public works</li>
+                    <li>Water resources</li>
+                    <li>Infrastructure development</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         18. EMPLOYMENT & LABOUR RELATIONS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Labour Jobs and Employment"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">18</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-briefcase"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Labour,
+                    Jobs and Employment
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Promotes employment opportunities,
+                labour relations and decent work.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports employment creation and
+                    effective labour relations.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Employment policy</li>
+                    <li>Labour relations</li>
+                    <li>Job creation</li>
+                    <li>Worker welfare</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         19. GENDER, CHILDREN & SOCIAL PROTECTION
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Gender Children and Social Protection"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">19</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-person-hearts"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Gender,
+                    Children and Social Protection
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Promotes gender equality, child welfare
+                and social protection.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports vulnerable groups and promotes
+                    inclusive social development.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Gender equality</li>
+                    <li>Child protection</li>
+                    <li>Social protection</li>
+                    <li>Support for vulnerable groups</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         20. TOURISM, CULTURE & CREATIVE ARTS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Tourism Culture and Creative Arts"
+         data-category="social">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">20</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-camera-reels"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Tourism,
+                    Culture and Creative Arts
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Promotes tourism, Ghanaian culture and
+                the creative arts industry.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Supports cultural development, tourism
+                    promotion and creative industries.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Tourism development</li>
+                    <li>Cultural promotion</li>
+                    <li>Creative arts</li>
+                    <li>Tourism investment</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Social Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         21. COMMUNICATIONS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Communication Digital Technology"
+         data-category="infrastructure">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">21</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-broadcast"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Communication,
+                    Digital Technology and Innovations
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Leads digital transformation, ICT policy
+                and technology innovation.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Promotes digital development,
+                    technology adoption and innovation.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Digital transformation</li>
+                    <li>ICT policy</li>
+                    <li>Technology innovation</li>
+                    <li>Digital inclusion</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Infrastructure</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         22. FOREIGN AFFAIRS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Foreign Affairs"
+         data-category="governance">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">22</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-globe"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Foreign Affairs
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Manages Ghana's foreign relations,
+                diplomacy and international cooperation.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Represents Ghana's interests abroad
+                    and coordinates diplomatic relations.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Foreign policy</li>
+                    <li>Diplomatic relations</li>
+                    <li>International cooperation</li>
+                    <li>Consular affairs</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Governance</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         23. PARLIAMENTARY AFFAIRS
+    ====================================================== -->
+
+    <div class="col-lg-4 col-md-6 ministry-item"
+         data-name="Ministry of Parliamentary Affairs"
+         data-category="governance">
+
+        <div class="ministry-card">
+
+            <div class="ministry-number">23</div>
+
+            <div class="ministry-icon">
+                <i class="bi bi-building"></i>
+            </div>
+
+            <div class="ministry-title-row">
+
+                <h3>
+                    Ministry of Parliamentary Affairs
+                </h3>
+
+                <button type="button"
+                        class="ministry-expand"
+                        aria-label="Expand Ministry"
+                        aria-expanded="false">
+
+                    <i class="bi bi-plus"></i>
+
+                </button>
+
+            </div>
+
+            <p>
+                Supports coordination between government
+                business and parliamentary processes.
+            </p>
+
+            <div class="ministry-details">
+
+                <div class="ministry-details-title">
+                    <i class="bi bi-info-circle"></i>
+                    Mandate & Responsibilities
+                </div>
+
+                <p>
+                    Facilitates government business and
+                    engagement with Parliament.
+                </p>
+
+                <ul class="ministry-responsibilities">
+                    <li>Government business in Parliament</li>
+                    <li>Parliamentary coordination</li>
+                    <li>Legislative engagement</li>
+                    <li>Government-Parliament relations</li>
+                </ul>
+
+            </div>
+
+            <div class="ministry-meta">
+
+                <div class="ministry-meta-row">
+                    <i class="bi bi-tag"></i>
+                    <span>Governance</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="no-results"
+            id="noResults">
+
+
+            <i class="bi bi-building-x"></i>
+
+
+            <h3>
+
+                No Ministry Found
+
+            </h3>
+
+
+            <p>
+
+                Try changing your search or
+                category filter.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-5">
+
+
+                <div class="footer-brand">
+
+
+                    <img
+                        src="images/YPG-LOGO.webp"
+                        alt="Youth Parliament Ghana"
+                        class="site-logo">
+
+
+                    <div>
+
+                        <strong>
+
+                            Youth Parliament Ghana
+
+                        </strong>
+
+
+                        <small>
+
+                            Parliamentary Directory
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    A public directory designed to provide
+                    accessible information about parliamentary
+                    representatives, appointees and ministries.
+
+                </p>
+
+
+                <div class="social-links mt-4">
+
+
+                    <a href="#">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+
+                <h5>
+
+                    Directory
+
+                </h5>
+
+
+                <a href="mps.html">
+
+                    Members of Parliament
+
+                </a>
+
+
+                <a href="appointees.html">
+
+                    Appointees
+
+                </a>
+
+
+                <a href="ministries.html">
+
+                    Ministries
+
+                </a>
+
+
+            </div>
+
+
+            <div class="col-lg-2 col-md-4">
+
+
+                <h5>
+
+                    Explore
+
+                </h5>
+
+
+                <a href="news.html">
+
+                    News
+
+                </a>
+
+
+                <a href="about.html">
+
+                    About
+
+                </a>
+
+
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-4">
+
+
+                <h5>
+
+                    Information
+
+                </h5>
+
+
+                <p>
+
+                    This directory is intended to provide
+                    accessible civic information.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+
+            <span>
+
+                © 2026 Youth Parliament Ghana.
+                All rights reserved.
+
+            </span>
+
+
+            <span>
+
+                Parliamentary Directory
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Main JS -->
+
+<script src="js/main.js"></script>
+
+
+<!-- Ministry Filtering -->
+
+<script>
+
+    const ministrySearch =
+        document.getElementById(
+            "ministrySearch"
+        );
+
+
+    const categoryFilter =
+        document.getElementById(
+            "categoryFilter"
+        );
+
+
+    const resetFilters =
+        document.getElementById(
+            "resetFilters"
+        );
+
+
+    const ministryItems =
+        document.querySelectorAll(
+            ".ministry-item"
+        );
+
+
+    const resultCount =
+        document.getElementById(
+            "resultCount"
+        );
+
+
+    const noResults =
+        document.getElementById(
+            "noResults"
+        );
+
+
+    function filterMinistries() {
+
+
+        const search =
+            ministrySearch.value
+                .toLowerCase()
+                .trim();
+
+
+        const category =
+            categoryFilter.value
+                .toLowerCase();
+
+
+        let visibleCount = 0;
+
+
+        ministryItems.forEach(
+            ministry => {
+
+
+                const name =
+                    ministry.dataset.name
+                        .toLowerCase();
+
+
+                const ministryCategory =
+                    ministry.dataset.category
+                        .toLowerCase();
+
+
+                const matchesSearch =
+                    name.includes(search);
+
+
+                const matchesCategory =
+                    !category ||
+                    ministryCategory === category;
+
+
+                if (
+                    matchesSearch &&
+                    matchesCategory
+                ) {
+
+                    ministry.style.display =
+                        "";
+
+                    visibleCount++;
+
+                } else {
+
+                    ministry.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        resultCount.textContent =
+            visibleCount;
+
+
+        if (visibleCount === 0) {
+
+            noResults.style.display =
+                "block";
+
+        } else {
+
+            noResults.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    ministrySearch.addEventListener(
+        "input",
+        filterMinistries
+    );
+
+
+    categoryFilter.addEventListener(
+        "change",
+        filterMinistries
+    );
+
+
+    resetFilters.addEventListener(
+        "click",
+        function () {
+
+            ministrySearch.value = "";
+
+            categoryFilter.value = "";
+
+            filterMinistries();
+
+        }
+    );
+    /* =========================================================
+   MINISTRY EXPAND / COLLAPSE
+========================================================= */
+
+const ministryExpandButtons =
+    document.querySelectorAll(".ministry-expand");
+
+ministryExpandButtons.forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        const card =
+            button.closest(".ministry-card");
+
+        const isExpanded =
+            card.classList.contains("expanded");
+
+
+        /* Close every other ministry */
+
+        document
+            .querySelectorAll(".ministry-card.expanded")
+            .forEach(function(otherCard) {
+
+                if (otherCard !== card) {
+
+                    otherCard.classList.remove("expanded");
+
+                    const otherButton =
+                        otherCard.querySelector(
+                            ".ministry-expand"
+                        );
+
+                    if (otherButton) {
+
+                        otherButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                        otherButton.setAttribute(
+                            "aria-label",
+                            "Expand Ministry"
+                        );
+
+                    }
+
+                }
+
+            });
+
+
+        /* Toggle selected ministry */
+
+        card.classList.toggle(
+            "expanded",
+            !isExpanded
+        );
+
+
+        button.setAttribute(
+            "aria-expanded",
+            String(!isExpanded)
+        );
+
+
+        if (!isExpanded) {
+
+            button.setAttribute(
+                "aria-label",
+                "Collapse Ministry"
+            );
+
+        } else {
+
+            button.setAttribute(
+                "aria-label",
+                "Expand Ministry"
+            );
+
+        }
+
+    });
+
+});
+
+</script>
+
+
+</body>
+</html>
