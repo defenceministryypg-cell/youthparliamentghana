@@ -2663,7 +2663,7 @@ birthday: "10-14",
     status: "active",
     isMP: false,
     mpId: "",
-    constituency: "Bibiani Ahwiaso Bekwai constituency",
+    constituency: "Bibiani-Anhwiaso-Bekwai",
 
     education:
         "Bachelor of Science in Mechanical Engineering — University of Mines and Technology (UMaT), Tarkwa, January 2024–Present; WASSCE, General Science — Prempeh College, Kumasi, September 2019–September 2022; Basic Education — Asante Gold Bibiani Limited School (AGBL), January 2008–January 2019.",
