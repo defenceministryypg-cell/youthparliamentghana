@@ -6153,6 +6153,121 @@ birthday: "10-14",
     linkedin: "#",
     tiktok: "#"
 },
+    {
+    id: "app122",
+    name: "IDDRISU MUSTAPHA",
+    position: "Director of Marketing and Promotion; Deputy of Secretariat",
+    constituency: "Suame",
+    region: "Ashanti",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Ministry of Tourism, Creative Arts and Culture; Ministry of Gender, Children and Social Protection",
+    appointmentDate: "3rd October 2026 (Director of Marketing and Promotion); 28th October 2026 (Deputy of Secretariat)",
+    isMP: false,
+    mpId: null,
+    education: [
+        "Seventh Day Adventist Senior High School, Bekwai – General Science, WASSCE Graduate"
+    ],
+    profession: "Youth Advocate and Entrepreneur",
+    experience: "Youth advocacy, entrepreneurship and youth empowerment.",
+    biography: "Hon. Iddrisu Mustapha is a Ghanaian youth advocate and entrepreneur committed to youth empowerment, leadership development and community progress. Within Youth Parliament Ghana, he serves as Director of Marketing and Promotion under the Ministry of Tourism, Creative Arts and Culture, and as Deputy of Secretariat under the Ministry of Gender, Children and Social Protection. He is also the Founder and President of Future Builders Youth Empowerment (FBYE), an initiative focused on supporting young people through leadership, personal development and positive social change. His interests include promoting Ghana's cultural heritage, encouraging youth participation and contributing to community and national development.",
+    vision: "To empower young people through leadership development, personal growth and meaningful participation in community and national development.",
+    plans: [
+        "Promote the visibility and public engagement of Youth Parliament Ghana.",
+        "Encourage youth participation in tourism, creative arts and cultural activities.",
+        "Support leadership and personal development initiatives through Future Builders Youth Empowerment.",
+        "Promote Ghana's cultural heritage among young people.",
+        "Encourage effective communication and coordination within the Secretariat."
+    ],
+    contribution: "Founder and President of Future Builders Youth Empowerment (FBYE), an initiative focused on youth leadership, personal development and positive social change.",
+    currentActivities: "Serving as Director of Marketing and Promotion and Deputy of Secretariat under Youth Parliament Ghana.",
+    leadershipExperience: [
+        "Founder and President – Future Builders Youth Empowerment (FBYE), Ashanti Region",
+        "Former Senior Disciplinary Prefect – Seventh Day Adventist Senior High School, Bekwai"
+    ],
+    professionalExperience: [
+        "Youth Advocate",
+        "Entrepreneur"
+    ],
+    focusAreas: [
+        "Youth Empowerment",
+        "Leadership Development",
+        "Tourism and Creative Arts",
+        "Cultural Heritage Promotion",
+        "Community Development",
+        "Public Relations and Marketing"
+    ],
+    slogan: "To be provided",
+    image: "images/iddrisu-mustapha.jpeg",
+    email: "Iddrisumustapha653@gmail.com",
+    phone: "0555844372",
+    website: "#",
+    facebook: "#",
+    twitter: "#",
+    instagram: "#",
+    linkedin: "#",
+    tiktok: "#"
+},
+{
+    id: "app123",
+    name: "CHARESOGA QUAJO NICHOLAS",
+    position: "Municipal Chief Executive (MCE)",
+    constituency: "Kintampo North Municipality",
+    region: "Bono East",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Kintampo North Municipal Assembly",
+    appointmentDate: "23rd October 2026",
+    isMP: false,
+    mpId: null,
+    education: [
+        "Kwame Nkrumah University of Science and Technology (KNUST) – Bachelor of Arts in Geography and Rural Development (Currently Pursuing, Expected 2027)",
+        "Abeaseman Senior High School"
+    ],
+    profession: "Student",
+    experience: "Student leadership, political organising, community service and youth mobilisation.",
+    biography: "Hon. Charesoga Quajo Nicholas is a Ghanaian student leader and youth advocate serving as Youth Municipal Chief Executive for Kintampo North Municipality under Youth Parliament Ghana. He is currently pursuing a Bachelor of Arts in Geography and Rural Development at Kwame Nkrumah University of Science and Technology (KNUST), with an expected completion year of 2027. His leadership experience includes serving as Deputy Judicial Chairperson of the Geography Student Association and Head of the Sports Committee for the Mastercard Scholars Program at KNUST during the 2025/2026 academic year. He also served as Compound Overseer at Abeaseman Senior High School in 2022. His interests and experience include student leadership, political organising, community service, youth mobilisation and student welfare.",
+    vision: "To promote inclusive local governance, youth participation and sustainable community development in Kintampo North Municipality.",
+    plans: [
+        "Encourage young people to participate actively in local governance and decision-making.",
+        "Promote community service and youth mobilisation.",
+        "Support initiatives that improve student welfare and leadership development.",
+        "Encourage awareness of sustainable development and community planning.",
+        "Promote responsible leadership and effective collaboration among young people."
+    ],
+    contribution: "Has participated in student leadership, community service and youth engagement, with a focus on student welfare and youth mobilisation.",
+    currentActivities: "Currently pursuing a Bachelor of Arts in Geography and Rural Development at KNUST and serving as Youth MCE for Kintampo North Municipality.",
+    leadershipExperience: [
+        "Deputy Judicial Chairperson – Geography Student Association, KNUST (2025/2026 Academic Year)",
+        "Head, Sports Committee – Mastercard Scholars Program, KNUST (2025/2026 Academic Year)",
+        "Compound Overseer – Abeaseman Senior High School (2022)"
+    ],
+    professionalExperience: [
+        "Student Leadership",
+        "Political Organising",
+        "Community Service",
+        "Youth Mobilisation"
+    ],
+    focusAreas: [
+        "Youth Empowerment",
+        "Local Governance",
+        "Community Development",
+        "Student Welfare",
+        "Sustainable Development",
+        "Leadership Development"
+    ],
+    slogan: "To be provided",
+    image: "images/charesoga-quajo-nicholas.jpeg",
+    email: "quajonicholas13@gmail.com",
+    phone: "0558616039",
+    website: "#",
+    facebook: "https://www.facebook.com/share/19qFohCNLG/?mibextid=wwXIfr",
+    twitter: "#",
+    instagram: "#",
+    linkedin: "https://www.linkedin.com/in/nicholas-quajo-bb7a51306",
+    tiktok: "#"
+},
+
 
 
 
