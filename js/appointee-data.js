@@ -6153,7 +6153,7 @@ birthday: "10-14",
     linkedin: "#",
     tiktok: "#"
 },
-    {
+{
     id: "app122",
     name: "IDDRISU MUSTAPHA",
     position: "Director of Marketing and Promotion; Deputy of Secretariat",
@@ -6267,7 +6267,7 @@ birthday: "10-14",
     linkedin: "https://www.linkedin.com/in/nicholas-quajo-bb7a51306",
     tiktok: "#"
 },
-    {
+{
     id: "app124",
     name: "HENRY ANGMAALANUBA NGMINBAHAARA",
     position: "Metropolitan Chief Executive (MCE)",
@@ -6520,7 +6520,7 @@ birthday: "10-14",
     linkedin: "#",
     tiktok: "#"
 },
-    {
+{
     id: "app128",
     name: "ANASTASIA ACHEAMPONG",
     position: "Municipal Chief Executive (MCE)",
