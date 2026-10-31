@@ -6520,10 +6520,69 @@ birthday: "10-14",
     linkedin: "#",
     tiktok: "#"
 },
-
-
-
-
+    {
+    id: "app128",
+    name: "ANASTASIA ACHEAMPONG",
+    position: "Municipal Chief Executive (MCE)",
+    constituency: "Suame",
+    region: "Ashanti",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Suame Municipal Assembly",
+    appointmentDate: "17th October 2026",
+    isMP: false,
+    mpId: null,
+    education: [
+        "Adonia Angels Academy (2008–2018)",
+        "Anomangye M/A Junior High School (2019–2021)",
+        "Anglican Senior High School (2022–2024)",
+        "Kwame Nkrumah University of Science and Technology (KNUST) – Agricultural Engineering (Currently Pursuing, Expected 2029)"
+    ],
+    profession: "Agricultural Engineering Student and Entrepreneur",
+    experience: "Student leadership, entrepreneurship, project coordination, youth mentorship and community development.",
+    biography: "Hon. Anastasia Acheampong was born and raised in Suame-Maakro in the Ashanti Region of Ghana. She is passionate about leadership, youth empowerment, entrepreneurship and community development. She received her basic education at Adonia Angels Academy before proceeding to Anomangye M/A Junior High School and later Anglican Senior High School, where she completed her secondary education in 2024. She is currently pursuing Agricultural Engineering at Kwame Nkrumah University of Science and Technology (KNUST), with an expected completion year of 2029. Her leadership experience includes serving as President of the 2024 Old Students' Association of Kumasi Anglican Senior High School and President of the KASSOSA 24 Year Group. She has also served as Project Committee Head for a first-year corn sheller machine project and as a member of the Women Commissioner's team of the Faculty of Mechanical and Chemical Engineering Association. Beyond academics, she is the Young CEO of Adomba's Flaps and Bags and is involved in community initiatives, including the Let Clean Suame Project, Youth Mentorship and Entrepreneurship Project, and Future Innovators Project. She is committed to supporting young people through leadership, innovation, mentorship and community participation.",
+    vision: "To promote youth empowerment, entrepreneurship, innovation and sustainable community development in Suame.",
+    plans: [
+        "Promote youth mentorship and entrepreneurship opportunities.",
+        "Encourage innovation and practical skills development among young people.",
+        "Support community cleanliness and environmental improvement initiatives.",
+        "Encourage educational advancement and women's participation in leadership.",
+        "Promote community engagement and inclusive local development."
+    ],
+    contribution: "Has participated in community development initiatives, including the Let Clean Suame Project, Youth Mentorship and Entrepreneurship Project, and Future Innovators Project.",
+    currentActivities: "Currently pursuing Agricultural Engineering at KNUST, serving as MCE for Suame under Youth Parliament Ghana, and managing Adomba's Flaps and Bags.",
+    leadershipExperience: [
+        "President – Kumasi Anglican Senior High School 2024 Old Students' Association",
+        "President – KASSOSA 24 Year Group",
+        "Project Committee Head – First-Year Corn Sheller Machine Project",
+        "Member – Women Commissioner's Team, Faculty of Mechanical and Chemical Engineering Association"
+    ],
+    professionalExperience: [
+        "Young CEO – Adomba's Flaps and Bags",
+        "Community Development Volunteer – Let Clean Suame Project",
+        "Youth Mentorship and Entrepreneurship Project",
+        "Future Innovators Project"
+    ],
+    focusAreas: [
+        "Youth Empowerment",
+        "Entrepreneurship",
+        "Agricultural Engineering",
+        "Innovation and Technology",
+        "Community Development",
+        "Environmental Cleanliness",
+        "Women in Leadership"
+    ],
+    slogan: "To be provided",
+    image: "images/anastasia-acheampong.jpeg",
+    email: "acheamponganastasia51@gmail.com",
+    phone: "0536439075",
+    website: "#",
+    facebook: "#",
+    twitter: "#",
+    instagram: "#",
+    linkedin: "#",
+    tiktok: "#"
+},
 
 ];
 // Make appointee records accessible to the birthday system
