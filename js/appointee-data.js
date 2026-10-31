@@ -1684,7 +1684,7 @@ region: "Ashanti",
     constituency: "Suhum Constituency",
     region: "Eastern",
     appointmentDate: "26th September,2026.",
-     status: "active",
+     status: "inactive",
     isMP: true,
 
     education:
@@ -4120,7 +4120,7 @@ birthday: "10-14",
     constituency: "Bantama",
     region: "Ashanti",
     parliament: "Youth Parliament Ghana",
-    status: "active",
+    status: "inactive",
 
     ministry: "Kumasi Metropolitan Assembly",
     appointmentDate: "7th October, 2026",
