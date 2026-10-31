@@ -6267,6 +6267,259 @@ birthday: "10-14",
     linkedin: "https://www.linkedin.com/in/nicholas-quajo-bb7a51306",
     tiktok: "#"
 },
+    {
+    id: "app124",
+    name: "HENRY ANGMAALANUBA NGMINBAHAARA",
+    position: "Metropolitan Chief Executive (MCE)",
+    constituency: "Wa Central",
+    region: "Upper West",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Wa Metropolitan Assembly",
+    appointmentDate: "10th October 2026",
+    isMP: false,
+    mpId: null,
+    education: [
+        "University of Mines and Technology (UMaT), Tarkwa – Undergraduate Degree in Petroleum Refining and Petrochemical Engineering (Expected 2027)"
+    ],
+    profession: "Student Engineer",
+    experience: "Student leadership, engineering, public service and community development.",
+    biography: "Henry Angmaalanuba Ngminbahaara is a Ghanaian student engineer, young leader, and emerging public servant passionate about leadership, youth development, and national transformation. He is a student of the University of Mines and Technology (UMaT), Tarkwa, pursuing Petroleum Refining and Petrochemical Engineering. He currently serves as the Deputy Transportation Officer of the UMaT SRC, Sports Committee Chairman of the Ghana Institution of Engineering (GHIE), and Metropolitan Chief Executive (MCE) for Wa in the Youth Parliament of Ghana. He is a member of the Society of Petroleum Engineers (SPE) and the Ghana Institution of Engineering (GHIE). His interests include engineering, public service, youth empowerment, and community development. Henry believes in leadership through service, integrity, accountability, and action, with a commitment to making a meaningful impact in society.",
+    vision: "To promote responsible leadership, youth empowerment and community development while encouraging young people to contribute meaningfully to national transformation.",
+    plans: [
+        "Encourage active youth participation in local governance and decision-making.",
+        "Promote leadership development and mentorship among young people.",
+        "Support community development and youth empowerment initiatives.",
+        "Encourage collaboration between students, professional bodies and community stakeholders.",
+        "Promote accountability, integrity and service-oriented leadership."
+    ],
+    contribution: "Contributes to student leadership and professional engagement through his roles with the UMaT SRC and Ghana Institution of Engineering.",
+    currentActivities: "Pursuing Petroleum Refining and Petrochemical Engineering at UMaT, serving as Deputy Transportation Officer of the UMaT SRC, Sports Committee Chairman of GHIE, and MCE for Wa in Youth Parliament Ghana.",
+    leadershipExperience: [
+        "Deputy Transportation Officer – UMaT Students' Representative Council (SRC)",
+        "Sports Committee Chairman – Ghana Institution of Engineering (GHIE)",
+        "Metropolitan Chief Executive – Wa, Youth Parliament Ghana"
+    ],
+    professionalExperience: [
+        "Member – Society of Petroleum Engineers (SPE)",
+        "Member – Ghana Institution of Engineering (GHIE)"
+    ],
+    focusAreas: [
+        "Youth Empowerment",
+        "Leadership Development",
+        "Engineering and Innovation",
+        "Public Service",
+        "Community Development",
+        "Accountability and Integrity"
+    ],
+    slogan: "Leadership through service, integrity, accountability and action.",
+    image: "images/henry-angmaalanuba-ngminbahaara.jpeg",
+    email: "ngminbahaarahenry@gmail.com",
+    phone: "0594912945",
+    website: "#",
+    facebook: "https://www.facebook.com/share/19buFmSPYy/?mibextid=wwXIfr",
+    twitter: "#",
+    instagram: "https://www.instagram.com/itsmrhenryelite_1?xtok=MTB5ZWJzM2gycWVmNA%3D%3D&utm_source=qr",
+    linkedin: "#",
+    tiktok: "#"
+},
+{
+    id: "app125",
+    name: "DIMANTO Z. SAMUEL MUNIRU",
+    position: "District Chief Executive (DCE)",
+    constituency: "Lambussie",
+    region: "Upper West",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Lambussie District Assembly",
+    appointmentDate: "9th October 2026",
+    isMP: false,
+    mpId: null,
+    education: [
+        "Kanton Senior High School – Completed 2022",
+        "University of Ghana – Political Science and Information Studies (Level 300, Currently Pursuing)"
+    ],
+    profession: "Student and Public Service Professional",
+    experience: "Student leadership, administrative support, company supervision and community development.",
+    biography: "Hon. Dimanto Z. Samuel Muniru is a young Ghanaian leader who is passionate about contributing to community development. He hails from Billaw, a community within the Lambussie Constituency, and currently resides in Accra due to his education and work commitments. He completed his secondary education at Kanton Senior High School in 2022 and is currently a Level 300 student at the University of Ghana, pursuing Political Science and Information Studies. His leadership journey includes serving as Senior Prefect at Billaw Junior High School and Dining Hall Prefect at Kanton Senior High School. At the university level, he has also served as a member of the JCR Welfare and Events Committee under the current administration. Beyond student leadership, he has been assisting a Director at the Ministry of Foreign Affairs for the past two years and has played supervisory roles in three companies. He is committed to community development, responsible leadership and service.",
+    vision: "To promote inclusive community development, responsible leadership and meaningful youth participation in the development of Lambussie.",
+    plans: [
+        "Encourage youth participation in community development and local governance.",
+        "Promote educational opportunities and leadership development for young people.",
+        "Support initiatives that address community needs and improve livelihoods.",
+        "Encourage accountability, collaboration and responsible leadership.",
+        "Promote constructive engagement between young people and community stakeholders."
+    ],
+    contribution: "Has contributed to student leadership, administrative support and organisational supervision through his various leadership and work experiences.",
+    currentActivities: "Currently pursuing Political Science and Information Studies at the University of Ghana while serving as DCE for Lambussie under Youth Parliament Ghana.",
+    leadershipExperience: [
+        "Senior Prefect – Billaw Junior High School",
+        "Dining Hall Prefect – Kanton Senior High School",
+        "Welfare and Events Committee Member – JCR, Current Administration"
+    ],
+    professionalExperience: [
+        "Administrative Assistant to a Director – Ministry of Foreign Affairs (Past Two Years)",
+        "Supervisory Roles – Three Companies"
+    ],
+    focusAreas: [
+        "Community Development",
+        "Youth Empowerment",
+        "Education",
+        "Local Governance",
+        "Leadership Development",
+        "Administrative Accountability"
+    ],
+    slogan: "To be provided",
+    image: "images/dimanto-z-samuel-muniru.jpeg",
+    email: "dimantosamuel20@gmail.com",
+    phone: "0549870374",
+    website: "#",
+    facebook: "#",
+    twitter: "#",
+    instagram: "#",
+    linkedin: "#",
+    tiktok: "#"
+},
+{
+    id: "app126",
+    name: "KWOFIE EUSTACE ALOYSIUS",
+    position: "Municipal Chief Executive (MCE)",
+    constituency: "Komenda-Edina-Eguafo-Abirem",
+    region: "Central",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Komenda Edina Eguafo Abirem Municipal Assembly; Ministry of Education",
+    appointmentDate: "To be provided",
+    isMP: false,
+    mpId: null,
+    education: [
+        "University of Cape Coast – Bachelor of Arts (Hons) in Classics and Philosophy (Currently Pursuing, Expected 2028)",
+        "St. Augustine's College, Cape Coast – General Arts",
+        "Hariom International School, Saltpond"
+    ],
+    profession: "Student Leader",
+    experience: "Student governance, institutional administration, records management, programme coordination, organisational leadership and youth engagement.",
+    biography: "Hon. Kwofie Eustace Aloysius hails from Elmina in the Central Region of Ghana. He is a young student leader with a keen interest in public service, education, leadership and institutional development. He is passionate about reading, writing, singing and contributing meaningfully to society through leadership and service. He is currently pursuing a Bachelor of Arts (Hons) degree in Classics and Philosophy at the University of Cape Coast, with an expected completion date of 2028. He attended St. Augustine's College, Cape Coast, where he studied General Arts and served as SRC General Secretary. Before his secondary education, he attended Hariom International School, Saltpond, where he served as Library Prefect. His leadership journey spans secondary and tertiary education, student governance, institutional administration and youth development. He previously served as Students' Representative Council (SRC) General Secretary of St. Augustine's College from October 2023 to September 2024. At the University of Cape Coast, he has held several leadership positions, including General Secretary of the EKO Impact Society, Secretary of the Classics and Philosophy Students' Association (CLAPHSA), Secretary of the Casely Hayford Hall Editorial Board and Operations Manager of the GSIC-UCC Chapter. He also serves in administrative and documentation capacities within the 64th UCC-SRC Administrative Secretariat, contributing to institutional coordination, records management and student governance. His leadership philosophy is anchored in accountability, service, transparency and the belief that effective leadership should create meaningful opportunities and lasting impact. He is actively involved in youth leadership, educational advocacy, student development and community-oriented initiatives.",
+    vision: "To promote educational development, effective leadership, institutional growth and meaningful opportunities for young people through accountability, transparency and service.",
+    plans: [
+        "Promote reading, literacy and access to learning resources among young people.",
+        "Encourage educational advocacy and student development initiatives.",
+        "Support effective library and learning resource management.",
+        "Promote youth participation in leadership and institutional decision-making.",
+        "Encourage accountability, transparency and proper records management.",
+        "Strengthen collaboration between educational institutions and youth organisations."
+    ],
+    contribution: "Has contributed to student governance, institutional administration, documentation, records management and youth development through various leadership positions in secondary and tertiary institutions.",
+    currentActivities: "Currently pursuing a BA (Hons) in Classics and Philosophy at the University of Cape Coast while serving in student governance, organisational and Youth Parliament Ghana leadership roles.",
+    leadershipExperience: [
+        "Municipal Chief Executive (MCE) – Komenda Edina Eguafo Abirem Constituency, Youth Parliament Ghana",
+        "Director for Library and Learning Resources – Ministry of Education, Youth Parliament Ghana",
+        "General Secretary – EKO Impact Society",
+        "Secretary – Classics and Philosophy Students' Association (CLAPHSA)",
+        "Operations Manager – Ghana Students' Internship Council (GSIC), UCC Chapter",
+        "Documentation and Records Officer – 64th UCC-SRC Administrative Secretariat",
+        "Secretary – W'Afrique Foundation, Accra",
+        "Acting Deputy Premier – Casely Hayford Hall Editorial Board",
+        "Member, Global Advisory Council – Flagbearers International Network, Nigeria",
+        "Secretary – Casely Hayford Hall Editorial Board (November 2025 – July 2026)",
+        "SRC General Secretary – St. Augustine's College (October 2023 – September 2024)",
+        "Library Prefect – Hariom International School (2019–2021)"
+    ],
+    professionalExperience: [
+        "Student Administration",
+        "Records Management",
+        "Programme Coordination",
+        "Institutional Development",
+        "Student Governance",
+        "Youth Engagement"
+    ],
+    focusAreas: [
+        "Education and Literacy",
+        "Library and Learning Resources",
+        "Youth Empowerment",
+        "Leadership Development",
+        "Institutional Administration",
+        "Records Management",
+        "Student Governance"
+    ],
+    slogan: "Leadership through accountability, service and transparency.",
+    image: "images/kwofie-eustace-aloysius.jpeg",
+    email: "eustacealoysiuskwofie@gmail.com",
+    phone: "+233201913765",
+    website: "#",
+    facebook: "#",
+    twitter: "#",
+    instagram: "#",
+    linkedin: "#",
+    tiktok: "#"
+},
+{
+    id: "app127",
+    name: "JABONG SAMUEL SANLIKA",
+    position: "North East Regional Minister",
+    constituency: "Bunkpurugu-Nakpanduri",
+    region: "North East",
+    parliament: "Youth Parliament Ghana",
+    status: "active",
+    ministry: "Office of the North East Regional Minister",
+    appointmentDate: "1st June 2026 (Subject to Confirmation)",
+    isMP: false,
+    mpId: null,
+    education: [
+        "University of Cape Coast (UCC) – Bachelor of Education (Social Science), Currently Pursuing",
+        "Bunkpurugu Senior High School",
+        "Gbankoni Junior High School"
+    ],
+    profession: "Student and Youth Leader",
+    experience: "Student leadership, church leadership, youth organisation, student welfare and community development.",
+    biography: "Hon. Jabong Samuel Sanlika is a Ghanaian student, youth leader, and advocate for youth empowerment, education, and community development. He is passionate about promoting effective leadership, student welfare, and youth participation in decision-making. He has gained leadership experience through various positions in schools, church, student associations, and youth organisations. His leadership journey reflects his commitment to service, teamwork, accountability, and positive change. He is currently pursuing a Bachelor of Education in Social Science at the University of Cape Coast. His previous leadership roles include serving as a school prefect at the primary and junior high school levels, General Prefect and General Secretary at Bunkpurugu Senior High School, General Secretary of the Bimoba Students' Union (BISU-UCC), and Welfare Committee Chairperson of ESAG. He has also participated in church leadership activities at the Church of Apostolic Apostle. Through organising programmes and activities aimed at empowering young people, developing communities, supporting schools, and promoting positive social change, he remains committed to contributing meaningfully to national development.",
+    vision: "To promote responsible leadership, empower the youth, strengthen communities, and create opportunities for young people to participate actively in governance and development.",
+    plans: [
+        "Promote youth participation in governance and decision-making.",
+        "Encourage educational development and improved student welfare.",
+        "Support youth empowerment and leadership development programmes.",
+        "Promote community participation and sustainable development.",
+        "Encourage teamwork, accountability and responsible leadership among young people.",
+        "Support initiatives that inspire young people to contribute to national development."
+    ],
+    contribution: "Has contributed to organising programmes and activities aimed at youth empowerment, community development, school support and positive social change.",
+    currentActivities: "Serving as North East Regional Minister under Youth Parliament Ghana while pursuing a Bachelor of Education in Social Science at the University of Cape Coast.",
+    leadershipExperience: [
+        "School Prefect – Primary School",
+        "School Prefect – Junior High School",
+        "General Prefect – Bunkpurugu Senior High School",
+        "General Secretary – Bunkpurugu Senior High School",
+        "General Secretary – Bimoba Students' Union (BISU-UCC)",
+        "Welfare Committee Chairperson – ESAG",
+        "Church Leadership – Church of Apostolic Apostle"
+    ],
+    professionalExperience: [
+        "Student Leadership",
+        "Youth Advocacy",
+        "Student Welfare",
+        "Community Development",
+        "Programme Organisation"
+    ],
+    focusAreas: [
+        "Youth Empowerment",
+        "Education",
+        "Student Welfare",
+        "Community Development",
+        "Leadership Development",
+        "Youth Participation in Governance",
+        "Social Change"
+    ],
+    slogan: "To be provided",
+    image: "images/jabong-samuel-sanlika.jpeg",
+    email: "#",
+    phone: "#",
+    website: "#",
+    facebook: "#",
+    twitter: "#",
+    instagram: "#",
+    linkedin: "#",
+    tiktok: "#"
+},
 
 
 
